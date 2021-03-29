@@ -6,8 +6,8 @@
 
 :root {
   --btn-font-size: 1em;
-  --btn-padding-x: var(--space-lg);
-  --btn-padding-y: var(--space-md);
+  --btn-padding-x: 2rem;
+  --btn-padding-y: 1.5rem;
   --btn-radius: 0em;
 }
 
@@ -15,83 +15,71 @@
   cursor: pointer;
   text-decoration: none;
   line-height: 1.2;
+  font-family: var(--font-primary);
+  font-weight: 700;
   @include fontSmooth;
   box-shadow: none;
   transition: all 0.2s ease;
   will-change: transform;
-
-  &:hover {
-    box-shadow: var(--shadow-sm);
-  }
-
-  &:focus {
-    box-shadow: 0px 0px 0px 2px alpha(var(--color-contrast-higher), 0.15);
-    outline: none;
-  }
-
-  &:active {
-    transform: translateY(2px);
-  }
+  background: var(--btn-bg, var(--color-primary));
+  color: var(--btn-fg, var(--color-white));
 }
 
-// themes
 .btn--primary {
-  background: var(--color-primary);
-  color: var(--color-white);
-  cursor: pointer;
+  &::after {
+    content: '';
+    width: 1.5rem;
+    height: 1.125rem;
+    background: url(../images/icons/icon-arrow.svg) no-repeat;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+  }
 
-  &:hover {
+  &:hover,
+  &:focus {
     background: var(--color-primary-light);
   }
 
-  &:focus {
-    box-shadow: 0px 0px 0px 2px alpha(var(--color-primary), 0.2);
-  }
-
   &:active {
-    background: var(--color-contrast-low);
+    background: var(--color-black-light);
   }
 }
 
+//this will have the arrow and just an underline when hovering
 .btn--subtle {
-  background: var(--color-contrast-lower);
-  color: var(--color-contrast-higher);
-}
+  --btn-bg: var(--color-contrast-lower);
+  --btn-fg: var(--color-contrast-higher);
 
-.btn--accent {
-  background: var(--color-accent);
-  color: var(--color-white);
-
-  &:hover {
-    background: var(--color-accent-dark);
-  }
-
-  &:focus {
-    box-shadow: 0px 0px 0px 2px alpha(var(--color-accent), 0.2);
+  &::after {
+    content: '';
+    width: 1.5rem;
+    height: 1.125rem;
+    background: url(../images/icons/icon-arrow.svg) no-repeat;
   }
 }
 
-.btn--arrow {
-  background: var(--color-primary);
-  color: var(--color-white);
 
-  &:hover {
-    background: var(--color-contrast-medium);
-  }
-
-  &:active {
-    background: var(--color-contrast-low);
-  }
+.btn--primary--icon {
+  --btn-padding-x: 28px;
+  --btn-padding-y: 31px;
 }
 
 .btn--number {
-  background: var(--color-white);
-  color: var(--color-contrast-medium);
-  font-family: var(--font-primary);
-  font-weight: 700;
+  --btn-bg: var(--color-white);
+  --btn-fg: var(--color-primary-light);
+  --btn-padding-x: 1.9375rem;
+  --btn-padding-y: 1.75rem;
+
+  width: 5rem;
+  height: 5rem;
+
+  &.current {
+    --btn-bg: var(--color-primary);
+    --btn-fg: var(--color-white);
+  }
 
   &:hover {
-    background: var(--color-contrast-lower);
+    background: var(--color-black-lighter);
+    color: var(--color-primary-lighter);
   }
 
   &:active {
