@@ -1,0 +1,52 @@
+// --------------------------------
+
+// (START) Global editor code https://codyhouse.co/ds/globals/spacing
+
+// --------------------------------
+
+:root {
+  --space-unit: 0.9em;
+}
+
+:root, * {
+  --space-xxxxs: calc(0.237 * var(--space-unit));
+  --space-xxxs: calc(0.316 * var(--space-unit));
+  --space-xxs: calc(0.422 * var(--space-unit));
+  --space-xs: calc(0.563 * var(--space-unit));
+  --space-sm: calc(0.75 * var(--space-unit));
+  --space-md: calc(1 * var(--space-unit));
+  --space-lg: calc(1.333 * var(--space-unit));
+  --space-xl: calc(1.777 * var(--space-unit));
+  --space-xxl: calc(2.369 * var(--space-unit));
+  --space-xxxl: calc(3.157 * var(--space-unit));
+  --space-xxxxl: calc(4.21 * var(--space-unit));
+  --component-padding: var(--space-md);
+}
+
+@supports(--css: variables) {
+  @include breakpoint(md) {
+    :root {
+      --space-unit: 1.525em;
+    }
+
+    :root, * {
+      --space-xxxxs: calc(0.133 * var(--space-unit));
+      --space-xxxs: calc(0.2 * var(--space-unit));
+      --space-xxs: calc(0.296 * var(--space-unit));
+      --space-xs: calc(0.444 * var(--space-unit));
+      --space-sm: calc(0.667 * var(--space-unit));
+      --space-md: calc(1 * var(--space-unit));
+      --space-lg: calc(1.5 * var(--space-unit));
+      --space-xl: calc(2.25 * var(--space-unit));
+      --space-xxl: calc(3.375 * var(--space-unit));
+      --space-xxxl: calc(5.063 * var(--space-unit));
+      --space-xxxxl: calc(7.59 * var(--space-unit));
+    }
+  }
+}
+
+// --------------------------------
+
+// (END) Global editor code
+
+// --------------------------------
