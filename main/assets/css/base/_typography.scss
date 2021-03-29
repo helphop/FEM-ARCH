@@ -46,7 +46,7 @@
 
   a, .link {
     color: var(--color-primary, hsl(220, 90%, 56%));
-    text-decoration: underline;
+    text-decoration: none;
   }
 
   strong {
@@ -80,7 +80,7 @@
     p, blockquote, ul li, ol li {
       line-height: calc(var(--body-line-height) * var(--line-height-multiplier, 1));
     }
-    
+
     ul, ol, p, blockquote, .text-component__block {
       margin-bottom: calc(var(--space-unit) * 0.75 * var(--text-vspace-multiplier, 1));
     }
@@ -106,7 +106,7 @@
       text-align: center;
       margin-top: calc(var(--space-unit) * 0.5);
     }
-    
+
     em {
       font-style: italic;
     }
@@ -134,7 +134,7 @@
   }
 
   @include breakpoint(sm) {
-    .text-component__block--left, 
+    .text-component__block--left,
     .text-component__block--right {
       width: 45%;
 

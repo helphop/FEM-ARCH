@@ -11,20 +11,27 @@
   --btn-radius: 0em;
 }
 
-.btn {
+.btn { // basic button style
+  background: var(--btn-bg, var(--color-primary));
+  color: var(--btn-fg, var(--color-white));
+  position: relative;
+  display: inline-grid;
+  grid-auto-flow: column;
+  gap: 24px;
+  place-items: center;
+  white-space: nowrap;
+  font-size: var(--btn-font-size, 1em);
+  padding: var(--btn-padding-y, 0.5em) var(--btn-padding-x, 0.75em);
   cursor: pointer;
-  text-decoration: none;
   line-height: 1.2;
   font-family: var(--font-primary);
   font-weight: 700;
   @include fontSmooth;
-  box-shadow: none;
   transition: all 0.2s ease;
   will-change: transform;
-  background: var(--btn-bg, var(--color-primary));
-  color: var(--btn-fg, var(--color-white));
 }
 
+//black button with arrow
 .btn--primary {
   &::after {
     content: '';
