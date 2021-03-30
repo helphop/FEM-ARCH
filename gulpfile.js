@@ -4,8 +4,8 @@ var sassGlob = require('gulp-sass-glob');
 var browserSync = require('browser-sync').create();
 var postcss      = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
-var cssvariables = require('postcss-css-variables'); 
-var calc = require('postcss-calc');  
+var cssvariables = require('postcss-css-variables');
+var calc = require('postcss-calc');
 var concat = require('gulp-concat');
 var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
@@ -23,14 +23,14 @@ var scssFilesPath = 'main/assets/css/**/*.scss'; // scss files to watch
 function reload(done) {
   browserSync.reload();
   done();
-} 
+}
 
 /* Gulp watch task */
-// This task is used to convert the scss to css and compress it. No fallback for IE is created  
+// This task is used to convert the scss to css and compress it. No fallback for IE is created
 gulp.task('sass', function() {
   return gulp.src(scssFilesPath)
   .pipe(sassGlob())
-  .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+  .pipe(sass({outputStyle: 'extended'}).on('error', sass.logError))
   .pipe(postcss([autoprefixer()]))
   .pipe(gulp.dest(cssFolder))
   .pipe(browserSync.reload({
@@ -108,7 +108,7 @@ gulp.task('dist', async function(){
   await moveJS();
   // copy all the assets inside main/assets/img folder to the dist folder
   await moveAssets();
-  // copy all html files inside main folder to the dist folder 
+  // copy all html files inside main folder to the dist folder
   await moveContent();
   console.log('Distribution task completed!')
 });
@@ -122,7 +122,7 @@ function purgeCSS() {
       defaultExtractor: content => content.match(/[\w-/:%@]+(?<!:)/g) || []
     }))
     .pipe(gulp.dest(distFolder+'/assets/css'));
-    
+
     stream.on('finish', function() {
       resolve();
     });
@@ -134,7 +134,7 @@ function minifyJs() {
     var stream = gulp.src(scriptsJsPath+'/scripts.js')
     .pipe(uglify())
     .pipe(gulp.dest(distFolder+'/assets/js'));
-    
+
     stream.on('finish', function() {
       resolve();
     });
@@ -145,7 +145,7 @@ function moveCSS() {
   return new Promise(function(resolve, reject) {
     var stream = gulp.src(cssFolder+'/style-fallback.css', { allowEmpty: true })
     .pipe(gulp.dest(assetsFolder+'css'));
-    
+
     stream.on('finish', function() {
       resolve();
     });
@@ -156,7 +156,7 @@ function moveJS() {
   return new Promise(function(resolve, reject) {
     var stream = gulp.src([scriptsJsPath+'/*.js', '!'+scriptsJsPath+'/scripts.js', '!'+scriptsJsPath+'/scripts.min.js'], { allowEmpty: true })
     .pipe(gulp.dest(assetsFolder+'js'));
-    
+
     stream.on('finish', function() {
       resolve();
     });
@@ -167,7 +167,7 @@ function moveAssets() {
   return new Promise(function(resolve, reject) {
     var stream = gulp.src(['main/assets/img/**'], { allowEmpty: true })
     .pipe(gulp.dest(assetsFolder+'img'));
-    
+
     stream.on('finish', function() {
       resolve();
     });
@@ -178,7 +178,7 @@ function moveContent() {
   return new Promise(function(resolve, reject) {
     var stream = gulp.src('main/*.html')
     .pipe(gulp.dest(distFolder));
-    
+
     stream.on('finish', function() {
       resolve();
     });
