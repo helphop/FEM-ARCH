@@ -1221,7 +1221,8 @@ u {
       width: 100%; }
   .text-component__block--outset:not(.text-component__block--right) {
     margin-left: calc(-5.25 * var(--space-unit)); }
-  .text-component__block--left, .text-component__block--right {
+  .text-component__block--left,
+  .text-component__block--right {
     width: 50%; }
   .text-component__block--right.text-component__block--outset {
     margin-right: calc(-5.25 * var(--space-unit)); } }
@@ -6888,9 +6889,25 @@ mark {
   --btn-padding-x: 2rem;
   --btn-padding-y: 1.5rem; }
 
+.btn--primary:after, :is(.btn--primary--dark, .btn--icon):after {
+  content: '';
+  width: 1.5rem;
+  height: 1.125rem;
+  background: url(../images/icons/icon-arrow.svg) no-repeat; }
+
+:is(.btn--primary--dark, .btn--icon) {
+  --btn-bg: var(--color-primary);
+  --btn-fg: var(--color-white); }
+  :is(.btn--primary--dark, .btn--icon):after {
+    filter: invert(100%); }
+  :hover:is(.btn--primary--dark, .btn--icon), :focus:is(.btn--primary--dark, .btn--icon) {
+    background: var(--color-primary-light); }
+  :active:is(.btn--primary--dark, .btn--icon) {
+    background: var(--color-black-light); }
+
 .btn {
-  background: var(--btn-bg, var(--color-primary));
-  color: var(--btn-fg, var(--color-white));
+  background: var(--btn-bg, var(--color-white));
+  color: var(--btn-fg, var(--color-primary));
   position: relative;
   display: inline-grid;
   grid-auto-flow: column;
@@ -6908,38 +6925,17 @@ mark {
   transition: all 0.2s ease;
   will-change: transform; }
 
-.btn--primary::after {
-  content: '';
-  width: 1.5rem;
-  height: 1.125rem;
-  background: url(../images/icons/icon-arrow.svg) no-repeat;
-  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%); }
+.btn--primary:hover {
+  text-decoration: underline; }
 
-.btn--primary:hover, .btn--primary:focus {
-  background: var(--color-primary-light); }
-
-.btn--primary:active {
-  background: var(--color-black-light); }
-
-.btn--subtle {
-  --btn-bg: transparent; }
-  .btn--subtle::after {
-    content: '';
-    width: 1.5rem;
-    height: 1.125rem;
-    background: url(../images/icons/icon-arrow.svg) no-repeat; }
-
-.btn--primary--icon {
-  --btn-padding-x: 28px;
-  --btn-padding-y: 31px; }
+.btn--number,
+.btn--icon {
+  width: 5rem;
+  height: 5rem; }
 
 .btn--number {
   --btn-bg: var(--color-white);
-  --btn-fg: var(--color-primary-light);
-  --btn-padding-x: 1.9375rem;
-  --btn-padding-y: 1.75rem;
-  width: 5rem;
-  height: 5rem; }
+  --btn-fg: var(--color-primary-light); }
   .btn--number--current {
     --btn-bg: var(--color-primary);
     --btn-fg: var(--color-white); }

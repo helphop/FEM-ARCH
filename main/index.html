@@ -14,25 +14,24 @@
       <div class="container-outer">
         <div class="nav-bar">
           <img src="assets/images/logo.svg" alt="arch logo">
-          <div class="nav-list">
+          <nav class="nav">
             <a href="portfolio.html" class="nav-link">Portfolio</a>
             <a href="about.html" class="nav-link">About Us</a>
             <a href="contact.html" class="nav-link">contact</a>
-          </div>
+          </nav>
         </div>
       </div>
       <div class="container-outer container-outer-100@mobile">
         <div class="hero">
-          <div class="hero__content">
-            <div class="text-component color-white">
-              <h2>Project Paramour</h2>
-              <p>Project made for an art museum near Southwest London. Project Paramour is
-              a statement of bold, modern architecture.</p>
+          <div class="photo-card">
+            <div class="container">
+              <div class="text-component color-white">
+                <h2>Project Paramour</h2>
+                <p>Project made for an art museum near Southwest London. Project Paramour is
+                  a statement of bold, modern architecture.</p>
+              </div>
+              <a href="portfolio.html" class="btn btn--primary--dark">See Our Portfolio</a>
             </div>
-            <!-- add margin to arrow in css so don't have to write it on every button color of arrow controlled by button -->
-            <a href="portfolio.html" class="btn btn--primary">See Our Portfolio</a>
-            <a href="portfolio.html" class="btn btn--icon"></a>
-            <a href="portfolio.html" class="btn btn--subtle">Some Text</a>
           </div>
           <ul class="slide-list">
             <li class="slide-item"><a class="btn btn--number btn--number--current" href="#slide-1" class="slide-link">01</a></li>
@@ -46,15 +45,80 @@
     <main>
       <!-- give a margin  top to the main and the same margin button to all children -->
       <section class="welcome">
-        <h1>Welcome</h1>
-        <div class="welcome__content">
-          <div class="welcome__text">
-            <h3>Welcome to Arch Studio</h3>
+        <div class="container-outer">
+          <h1>Welcome</h1>
+          <div class="welcome__content">
+            <div class="container">
+              <div class="text-component">
+                <h3>Welcome to Arch Studio</h3>
+                <p>We have a unique network and skillset to help bring your projects to life. Our
+                small team of highly skilled individuals combined with our large network put us
+                in a strong position to deliver exceptional results.</p>
+                <p>Over the past 10 years, we have worked on all kinds of projects. From stations
+                to high-rise buildings, we create spaces that inspire and delight.</p>
+                <p>We work closely with our clients so that we understand the intricacies of each
+                project. This allows us to work in harmony the surrounding area to create truly
+                stunning projects that will stand the test of time.</p>
+              </div>
+              <div class="welcome__image">
+                <img src="assets/images/home/desktop/image-welcome.jpg" alt="image of side of building">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="teams">
+        <div class="container-outer">
+          <div class="photo-card">
+            <div class="container">
+              <h3>Small team, big ideas</h3>
+              <a href="about.html" class-"btn--primary--dark">About Us</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="featured">
+        <div class="outer-container">
+          <div class="featured__header">
+            <h2>Featured</h2>
+            <a href="portfolio.html" class="btn btn--primary--dark">See All</a>
+          </div>
+          <div class="project-cards">
+
+            <div class="project-card" id="project1">
+             <div class="large-number">1</div>
+              <p class="project__title">Project Del Sol</p>
+              <a class="link--subtle" href="portfolio.html">View All Projects</a>
+            </div>
+
+            <div class="project-card" id="project2">
+              <div class="large-number">2</div>
+              <p class="project__title">228B Tower</p>
+              <a class="link--subtle" href="portfolio.html">View All Projects</a>
+            </div>
+
+            <div class="project-card" id="project3">
+              <div class="large-number">3</div>
+              <p class="project__title">Le Prototype</p>
+              <a class="link--subtle" href="portfolio.html">View All Projects</a>
+            </div>
+
           </div>
         </div>
       </section>
     </main>
-    </div>
+    <footer class="footer">
+      <div class="footer__logo">
+        <img src="assets/images/logo.svg" alt="logo white">
+      </div>
+      <nav class="footer__nav">
+        <a href="portfolio.html" class="nav-link">Portfolio</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="contact.html" class="nav-link">contact</a>
+      </nav>
+    </footer>
   <script src="assets/js/scripts.js"></script>
   </body>
 </html>

@@ -8,9 +8,43 @@
   --btn-padding-y: 1.5rem;
 }
 
+// +++++++++++++++++++++++++
+// ++ MODULES FOR BUTTONS ++
+// +++++++++++++++++++++++++
+
+//add the arrow svg icon to the after pseudo element
+%arrow-icon {
+  &:after {
+   content: '';
+  width: 1.5rem;
+  height: 1.125rem;
+  background: url(../images/icons/icon-arrow.svg) no-repeat;
+  }
+}
+
+//style the button in dark mode
+%btn-dark {
+  --btn-bg: var(--color-primary);
+  --btn-fg: var(--color-white);
+
+  &:after {
+    filter: invert(100%);
+  }
+
+  &:hover,
+  &:focus {
+    background: var(--color-primary-light);
+  }
+
+  &:active {
+    background: var(--color-black-light);
+  }
+}
+
+
 .btn { // basic button style
-  background: var(--btn-bg, var(--color-primary));
-  color: var(--btn-fg, var(--color-white));
+  background: var(--btn-bg, var(--color-white));
+  color: var(--btn-fg, var(--color-primary));
   position: relative;
   display: inline-grid;
   grid-auto-flow: column;
@@ -28,56 +62,33 @@
   will-change: transform;
 }
 
-//black button with text and arrow
+//white button with text and arrow icon
 .btn--primary {
+  @extend %arrow-icon;
 
-  &::after {
-    content: '';
-    width: 1.5rem;
-    height: 1.125rem;
-    background: url(../images/icons/icon-arrow.svg) no-repeat;
-    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
-  }
-
-  &:hover,
-  &:focus {
-    background: var(--color-primary-light);
-  }
-
-  &:active {
-    background: var(--color-black-light);
+  &:hover {
+    text-decoration: underline;
   }
 }
 
-//this will have the arrow and just an underline when hovering
-//button with text and arrow and no background color
-.btn--subtle {
-  --btn-bg: transparent;
-
-  &::after {
-    content: '';
-    width: 1.5rem;
-    height: 1.125rem;
-    background: url(../images/icons/icon-arrow.svg) no-repeat;
-  }
+//dark button with text and arrow, and dark button with only the arrow icon
+:is(.btn--primary--dark, .btn--icon) {
+  @extend %arrow-icon;
+  @extend %btn-dark;
 }
 
-//modifier to change the padding when only the arrow icon is showing
-.btn--primary--icon {
-  --btn-padding-x: 28px;
-  --btn-padding-y: 31px;
+
+.btn--number,
+.btn--icon {
+  width: 5rem; //set size of buttons so they don't change with content
+  height: 5rem;
 }
 
-//the buttons that contain only numbers on the bottom of the slides
+
+//button that contain only numbers on the bottom of the slides
 .btn--number {
   --btn-bg: var(--color-white);
   --btn-fg: var(--color-primary-light);
-  --btn-padding-x: 1.9375rem;
-  --btn-padding-y: 1.75rem;
-
-  //ensures the buttons remain the same size no matter what number they contain
-  width: 5rem;
-  height: 5rem;
 
   &--current {
     --btn-bg: var(--color-primary);
