@@ -6799,33 +6799,11 @@ html:not(.js) .no-js\:is-hidden {
       --space-xxxl: calc(5.063 * var(--space-unit));
       --space-xxxxl: calc(7.59 * var(--space-unit)); } } }
 
-:root {
-  --radius: 0.25em; }
-
-.hover\:reduce-opacity {
-  opacity: 1;
-  transition: all 0.3s ease; }
-  .hover\:reduce-opacity:hover {
-    opacity: 0.8; }
-
-.hover\:scale {
-  transition: transform 0.3s var(--ease-out-back); }
-  .hover\:scale:hover {
-    transform: scale(1.1); }
-
-.hover\:elevate {
-  box-shadow: var(--shadow-sm);
-  transition: all 0.3s ease; }
-  .hover\:elevate:hover {
-    box-shadow: var(--shadow-md); }
-
-.link-subtle {
-  color: inherit;
-  cursor: pointer;
-  text-decoration: none;
-  transition: all 0.2s ease; }
-  .link-subtle:hover {
-    color: var(--color-primary); }
+.container-outer {
+  display: grid;
+  grid-template-columns: 11.45% 1fr 11.45%; }
+  .container-outer > * {
+    grid-column: 2; }
 
 :root {
   --font-primary: 'Spartan', sans-serif;
