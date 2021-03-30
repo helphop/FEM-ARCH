@@ -1,14 +1,9 @@
-// --------------------------------
 
-// (START) Global editor code https://codyhouse.co/ds/globals/buttons
-
-// --------------------------------
 
 :root {
   --btn-font-size: 1em;
   --btn-padding-x: 2rem;
   --btn-padding-y: 1.5rem;
-  --btn-radius: 0em;
 }
 
 .btn { // basic button style
@@ -31,8 +26,9 @@
   will-change: transform;
 }
 
-//black button with arrow
+//black button with text and arrow
 .btn--primary {
+
   &::after {
     content: '';
     width: 1.5rem;
@@ -52,9 +48,9 @@
 }
 
 //this will have the arrow and just an underline when hovering
+//button with text and arrow and no background color
 .btn--subtle {
-  --btn-bg: var(--color-contrast-lower);
-  --btn-fg: var(--color-contrast-higher);
+  --btn-bg: transparent;
 
   &::after {
     content: '';
@@ -64,22 +60,24 @@
   }
 }
 
-
+//modifier to change the padding when only the arrow icon is showing
 .btn--primary--icon {
   --btn-padding-x: 28px;
   --btn-padding-y: 31px;
 }
 
+//the buttons that contain only numbers on the bottom of the slides
 .btn--number {
   --btn-bg: var(--color-white);
   --btn-fg: var(--color-primary-light);
   --btn-padding-x: 1.9375rem;
   --btn-padding-y: 1.75rem;
 
+  //ensures the buttons remain the same size no matter what number they contain
   width: 5rem;
   height: 5rem;
 
-  &.current {
+  &--current {
     --btn-bg: var(--color-primary);
     --btn-fg: var(--color-white);
   }
@@ -101,21 +99,3 @@
   cursor: not-allowed;
 }
 
-// size
-.btn--sm {
-  font-size: 0.8em;
-}
-
-.btn--md {
-  font-size: 1.2em;
-}
-
-.btn--lg {
-  font-size: 1.4em;
-}
-
-// --------------------------------
-
-// (END) Global editor code
-
-// --------------------------------
