@@ -23,17 +23,6 @@
     visibility: hidden;
   }
 
-  .nav-open-icon {
-    visibility: visible;
-    opacity: 1;
-    transition: all 0.2s;
-  }
-
-  .nav-close-icon {
-    visibility: hidden;
-    opacity: 0;
-    transition: all 0.2s;
-  }
 }
 
 .nav {
@@ -46,8 +35,15 @@
   transform: translateX(100%);
   display: grid;
   row-gap: 2rem;
-  transition: all 0.2s ease;
+  transition: all 0.4s ease;
   opacity: 1;
+}
+
+.nav-icon {
+  width: 24px;
+  height: 17px;
+  background: url(../images/icons/icon-hamburger.svg) no-repeat;
+   @include rotate-fade(rotate1, 1);
 }
 
 .nav-bar.open {
@@ -57,20 +53,18 @@
   opacity: 1;
  }
 
+ .nav-icon {
+  width: 20px;
+  height: 21px;
+  background: url(../images/icons/icon-close.svg) no-repeat;
+   @include rotate-fade(rotate2, 1);
+}
+
  & + .overlay {
   opacity: 1;
   visibility: visible;
  }
 
- .nav-open-icon {
-   visibility: hidden;
-   opacity: 0;
- }
-
-  .nav-close-icon {
-   visibility: visible;
-   opacity: 1;
- }
 }
 
 @include breakpoint(sm) {
