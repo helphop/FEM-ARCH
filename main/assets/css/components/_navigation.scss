@@ -1,15 +1,51 @@
 .nav-bar {
-  padding: 3.5rem 0;
+  --nav-bar-height: 6rem;
+  height: var(--nav-bar-height);
+  position: fixed;
+  width: calc(100% - 2 * var(--outer-container-column)) ;
+  left: var(--outer-container-column);
   display: flex;
   align-items: center;
+  justify-content: space-between;
 
   &__logo {
     margin-right: 5.875rem;
+    height: 32px;
     }
 }
 
 .nav {
+  background: var(--color-black-lighter);
+  padding: 48px;
+  position: absolute;
+  right: calc(-1.2 * var(--outer-container-column));;
+  left: 0;
+  top: var(--nav-bar-height);
+
   display: grid;
-  grid-auto-flow: column;
-  gap: 3.5rem;
+  row-gap: 2rem;
+}
+
+@include breakpoint(sm) {
+
+  .nav-bar, .nav {
+    position: static;
+  }
+
+  .nav-bar {
+    --nav-bar-height: 9.5rem;
+    width: 100%;
+    justify-content: start;
+
+    &__logo {
+      height: 40px;
+    }
+  }
+
+  .nav {
+     grid-auto-flow: column;
+     background: inherit;
+     column-gap: 3.5rem;
+     padding: 0;
+  }
 }
