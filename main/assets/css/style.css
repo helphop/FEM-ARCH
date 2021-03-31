@@ -40,6 +40,13 @@ blockquote, q {
 button, input, textarea, select {
   margin: 0; }
 
+button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 0;
+  border-radius: 0; }
+
 .btn, .form-control, .link, .reset {
   background-color: transparent;
   padding: 0;
@@ -7091,14 +7098,6 @@ Usage: codyhouse.co/license
     top: var(--nav-bar-height);
     opacity: 0;
     visibility: hidden; }
-  .nav-bar .nav-open-icon {
-    visibility: visible;
-    opacity: 1;
-    transition: all 0.2s; }
-  .nav-bar .nav-close-icon {
-    visibility: hidden;
-    opacity: 0;
-    transition: all 0.2s; }
 
 .nav {
   background: var(--color-black-lighter);
@@ -7110,25 +7109,63 @@ Usage: codyhouse.co/license
   transform: translateX(100%);
   display: grid;
   row-gap: 2rem;
-  transition: all 0.2s ease;
+  transition: all 0.4s ease;
   opacity: 1; }
+
+.nav-icon {
+  width: 24px;
+  height: 17px;
+  background: url(../images/icons/icon-hamburger.svg) no-repeat;
+  -webkit-animation: rotate1 1s;
+          animation: rotate1 1s; }
+
+@-webkit-keyframes rotate1 {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0; }
+  100% {
+    transform: rotate(360deg);
+    opacity: 1; } }
+
+@keyframes rotate1 {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0; }
+  100% {
+    transform: rotate(360deg);
+    opacity: 1; } }
 
 .nav-bar.open .nav {
   transform: translateX(0%);
   visibility: visible;
   opacity: 1; }
 
+.nav-bar.open .nav-icon {
+  width: 20px;
+  height: 21px;
+  background: url(../images/icons/icon-close.svg) no-repeat;
+  -webkit-animation: rotate2 1s;
+          animation: rotate2 1s; }
+
+@-webkit-keyframes rotate2 {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0; }
+  100% {
+    transform: rotate(360deg);
+    opacity: 1; } }
+
+@keyframes rotate2 {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0; }
+  100% {
+    transform: rotate(360deg);
+    opacity: 1; } }
+
 .nav-bar.open + .overlay {
   opacity: 1;
   visibility: visible; }
-
-.nav-bar.open .nav-open-icon {
-  visibility: hidden;
-  opacity: 0; }
-
-.nav-bar.open .nav-close-icon {
-  visibility: visible;
-  opacity: 1; }
 
 @media (min-width: 48rem) {
   :root {
