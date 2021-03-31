@@ -7091,6 +7091,14 @@ Usage: codyhouse.co/license
     top: var(--nav-bar-height);
     opacity: 0;
     visibility: hidden; }
+  .nav-bar .menu-open-icon {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.2s; }
+  .nav-bar .menu-close-icon {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.2s; }
 
 .nav {
   background: var(--color-black-lighter);
@@ -7113,6 +7121,14 @@ Usage: codyhouse.co/license
 .nav-bar.open + .overlay {
   opacity: 1;
   visibility: visible; }
+
+.nav-bar.open .menu-open-icon {
+  visibility: hidden;
+  opacity: 0; }
+
+.nav-bar.open .menu-close-icon {
+  visibility: visible;
+  opacity: 1; }
 
 @media (min-width: 48rem) {
   :root {

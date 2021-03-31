@@ -22,6 +22,18 @@
     opacity: 0;
     visibility: hidden;
   }
+
+  .menu-open-icon {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.2s;
+  }
+
+  .menu-close-icon {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.2s;
+  }
 }
 
 .nav {
@@ -48,6 +60,16 @@
  & + .overlay {
   opacity: 1;
   visibility: visible;
+ }
+
+ .menu-open-icon {
+   visibility: hidden;
+   opacity: 0;
+ }
+
+  .menu-close-icon {
+   visibility: visible;
+   opacity: 1;
  }
 }
 
