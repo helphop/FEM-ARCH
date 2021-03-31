@@ -1,0 +1,105 @@
+:root {
+ --nav-bar-height: 6rem;
+}
+
+.nav-bar {
+  height: var(--nav-bar-height);
+  position: fixed;
+  width: calc(100% - 2 * var(--outer-container-column)) ;
+  left: var(--outer-container-column);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: var(--zindex-fixed-element);
+
+  &__logo {
+    margin-right: 5.875rem;
+    height: 32px;
+    }
+
+  & + .overlay {
+    top: var(--nav-bar-height);
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .nav-open-icon {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.2s;
+  }
+
+  .nav-close-icon {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.2s;
+  }
+}
+
+.nav {
+  background: var(--color-black-lighter);
+  padding: 48px;
+  position: absolute;
+  right: calc(-1.2 * var(--outer-container-column));;
+  left: 0;
+  top: var(--nav-bar-height);
+  transform: translateX(100%);
+  display: grid;
+  row-gap: 2rem;
+  transition: all 0.2s ease;
+  opacity: 1;
+}
+
+.nav-bar.open {
+ .nav {
+  transform: translateX(0%);
+  visibility: visible;
+  opacity: 1;
+ }
+
+ & + .overlay {
+  opacity: 1;
+  visibility: visible;
+ }
+
+ .nav-open-icon {
+   visibility: hidden;
+   opacity: 0;
+ }
+
+  .nav-close-icon {
+   visibility: visible;
+   opacity: 1;
+ }
+}
+
+@include breakpoint(sm) {
+
+  :root {
+    --nav-bar-height: 9.5rem;
+  }
+
+  .nav-bar,
+  .nav {
+    position: static;
+  }
+
+  .nav-bar {
+    width: 100%;
+    justify-content: start;
+
+    &__logo {
+      height: 40px;
+    }
+  }
+
+  .nav {
+     grid-auto-flow: column;
+     background: inherit;
+     column-gap: 3.5rem;
+     padding: 0;
+     visibility: visible;
+     opacity: 1;
+     transform: translateX(0%);
+  }
+}

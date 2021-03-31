@@ -1,8 +1,13 @@
 .container-outer {
+  --outer-container-column: 8.5%;
   display: grid;
-  grid-template-columns: 11.45% 1fr 11.45%;
+  grid-template-columns: var(--outer-container-column) 1fr var(--outer-container-column);
 
   > * {
     grid-column: 2;
+  }
+
+  @include breakpoint(sm) {
+    --outer-container-column: 11.45%;
   }
 }

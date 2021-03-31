@@ -11,38 +11,47 @@
   </head>
   <body>
     <div class="container-outer">
-      <header>
+      <section class="navigation">
         <div class="nav-bar">
-          <img src="assets/images/logo.svg" alt="arch logo">
+          <img class="nav-bar__logo" src="assets/images/logo.svg" alt="arch logo">
           <nav class="nav">
-            <a href="portfolio.html" class="nav-link">Portfolio</a>
-            <a href="about.html" class="nav-link">About Us</a>
-            <a href="contact.html" class="nav-link">contact</a>
+              <a href="portfolio.html" class="nav-link">Portfolio</a>
+              <a href="about.html" class="nav-link">About Us</a>
+              <a href="contact.html" class="nav-link">Contact</a>
           </nav>
+          <img class="nav-open-icon hide@sm" src="assets/images/icons/icon-hamburger.svg" alt="hamburger menu icon">
+          <img class="nav-close-icon hide@sm" src="assets/images/icons/icon-close.svg" alt="menu close icon">
         </div>
-        <div class="hero">
-          <div class="photo-card">
-            <div class="container">
-              <div class="text-component color-white">
-                <h2>Project Paramour</h2>
-                <p>Project made for an art museum near Southwest London. Project Paramour is
-                  a statement of bold, modern architecture.</p>
-              </div>
-              <a href="portfolio.html" class="btn btn--primary--dark">See Our Portfolio</a>
+        <div class="overlay"></div>
+      </section>
+<!-- Add a utility class for 100%width using the grid-column: span 3 -->
+<!-- Add another utility class for span 1 @sm -->
+    <!-- <header class="header">
+      <div class="hero">
+        <div class="photo-card">
+          <div class="container">
+            <div class="text-component color-white">
+              <h2>Project Paramour</h2>
+              <p>Project made for an art museum near Southwest London. Project Paramour is
+                a statement of bold, modern architecture.</p>
             </div>
+            <a href="portfolio.html" class="btn btn--primary--dark">See Our Portfolio</a>
           </div>
-          <ul class="slide-list">
-            <li class="slide-item"><a class="btn btn--number btn--number--current" href="#slide-1" class="slide-link">01</a></li>
-            <li class="slide-item"><a class="btn btn--number" href="#slide-2" class="slide-link">02</a></li>
-            <li class="slide-item"><a class="btn btn--number" href="#slide-3" class="slide-link">03</a></li>
-            <li class="slide-item"><a class="btn btn--number" href="#slide-4" class="slide-link">04</a></li>
-          </ul>
         </div>
-    </header>
+        <ul class="slide-list">
+          <li class="slide-item"><a class="btn btn--number btn--number--current" href="#slide-1" class="slide-link">01</a></li>
+          <li class="slide-item"><a class="btn btn--number" href="#slide-2" class="slide-link">02</a></li>
+          <li class="slide-item"><a class="btn btn--number" href="#slide-3" class="slide-link">03</a></li>
+          <li class="slide-item"><a class="btn btn--number" href="#slide-4" class="slide-link">04</a></li>
+        </ul>
+      </div>
+    </header> -->
 
-    <main>
+
+
+    <!-- <main> -->
       <!-- give a margin  top to the main and the same margin button to all children -->
-      <section class="welcome">
+      <!-- <section class="welcome">
         <h1>Welcome</h1>
         <div class="welcome__content">
           <div class="container">
@@ -100,10 +109,10 @@
             </div>
 
           </div>
-      </section>
-    </main>
+      </section> -->
+    <!-- </main> -->
 
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="footer__logo">
         <img src="assets/images/logo.svg" alt="logo white">
       </div>
@@ -112,7 +121,7 @@
         <a href="about.html" class="nav-link">About Us</a>
         <a href="contact.html" class="nav-link">contact</a>
       </nav>
-    </footer>
+    </footer> -->
   </div>
   <script src="assets/js/scripts.js"></script>
   </body>
