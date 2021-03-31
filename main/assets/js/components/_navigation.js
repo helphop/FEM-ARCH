@@ -17,8 +17,7 @@ window.addEventListener('keyup', function(event){
 //close or open the navbar and change aria-expanded state
 const toggleNavbar = () => {
   navbar.classList.toggle('open');
-  state = navbarOpen();
-  navIcon.setAttribute('aria-expanded', state);
+  navIcon.setAttribute('aria-expanded', navbarOpen());
   nav.hidden = !nav.hidden;
 };
 
