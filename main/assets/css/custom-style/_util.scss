@@ -1,19 +1,13 @@
-// --------------------------------
-
-// How to create custom utility classes
-
-// --------------------------------
-
-// 👇 your custom utility class
-// .my-util-class { 
-//   property: value;
-// }
-
-// 👇 (optional) create responsive variations - edit only [my-util-class, property, value]
-// @each $breakpoint, $value in $breakpoints { 
-//   @include breakpoint(#{$breakpoint}) {
-//     .my-util-class\@#{$breakpoint} {
-//       property: value;
-//     }
-//   }
-// }
+.overlay {
+  content: '';
+  width: 100%;
+  height: 100vh;
+  background: alpha(var(--color-black), 0.8);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.2s;
+}
