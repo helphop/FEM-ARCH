@@ -7091,11 +7091,11 @@ Usage: codyhouse.co/license
     top: var(--nav-bar-height);
     opacity: 0;
     visibility: hidden; }
-  .nav-bar .menu-open-icon {
+  .nav-bar .nav-open-icon {
     visibility: visible;
     opacity: 1;
     transition: all 0.2s; }
-  .nav-bar .menu-close-icon {
+  .nav-bar .nav-close-icon {
     visibility: hidden;
     opacity: 0;
     transition: all 0.2s; }
@@ -7122,11 +7122,11 @@ Usage: codyhouse.co/license
   opacity: 1;
   visibility: visible; }
 
-.nav-bar.open .menu-open-icon {
+.nav-bar.open .nav-open-icon {
   visibility: hidden;
   opacity: 0; }
 
-.nav-bar.open .menu-close-icon {
+.nav-bar.open .nav-close-icon {
   visibility: visible;
   opacity: 1; }
 

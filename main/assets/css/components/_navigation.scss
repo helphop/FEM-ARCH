@@ -23,13 +23,13 @@
     visibility: hidden;
   }
 
-  .menu-open-icon {
+  .nav-open-icon {
     visibility: visible;
     opacity: 1;
     transition: all 0.2s;
   }
 
-  .menu-close-icon {
+  .nav-close-icon {
     visibility: hidden;
     opacity: 0;
     transition: all 0.2s;
@@ -62,12 +62,12 @@
   visibility: visible;
  }
 
- .menu-open-icon {
+ .nav-open-icon {
    visibility: hidden;
    opacity: 0;
  }
 
-  .menu-close-icon {
+  .nav-close-icon {
    visibility: visible;
    opacity: 1;
  }
