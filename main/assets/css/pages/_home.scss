@@ -2,7 +2,17 @@ header {
   margin-top: var(--nav-bar-height);
 }
 
+  .slides {
+    overflow: hidden;
+    display: grid;
+    grid-auto-flow: column;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+  }
+
+
 .slide {
+  width: MIN(100vw, 69.375rem);
   background: linear-gradient(alpha(var(--color-black), 0.4),alpha(var(--color-black), 0.4) ), var(--slide-bg) no-repeat;
   background-size: cover;
   padding: 6.875rem var(--outer-container-column);
@@ -19,6 +29,18 @@ header {
 
 #slide1 {
   --slide-bg: url(../images/home/mobile/image-hero-paramour.jpg);
+}
+
+#slide2 {
+  --slide-bg: url(../images/home/mobile/image-hero-seraph.jpg);
+}
+
+#slide3 {
+  --slide-bg: url(../images/home/mobile/image-hero-federal.jpg);
+}
+
+#slide4 {
+  --slide-bg: url(../images/home/mobile/image-hero-trinity.jpg);
 }
 
 @include breakpoint(sm) {
@@ -38,15 +60,40 @@ header {
   #slide1 {
     --slide-bg: url(../images/home/tablet/image-hero-paramour.jpg);
   }
+
+  #slide2 {
+    --slide-bg: url(../images/home/tablet/image-hero-seraph.jpg);
+  }
+
+  #slide3 {
+    --slide-bg: url(../images/home/tablet/image-hero-federal.jpg);
+  }
+
+  #slide4 {
+    --slide-bg: url(../images/home/tablet/image-hero-trinity.jpg);
+  }
 }
 
 
 @include breakpoint(md) {
+
   .slide {
     padding: 11.25rem  11.875rem;
   }
 
   #slide1 {
     --slide-bg: url(../images/home/desktop/image-hero-paramour.jpg);
+  }
+
+  #slide2 {
+    --slide-bg: url(../images/home/desktop/image-hero-seraph.jpg);
+  }
+
+  #slide3 {
+    --slide-bg: url(../images/home/desktop/image-hero-federal.jpg);
+  }
+
+  #slide4 {
+    --slide-bg: url(../images/home/desktop/image-hero-trinity.jpg);
   }
 }
