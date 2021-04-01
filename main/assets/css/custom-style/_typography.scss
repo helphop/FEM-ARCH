@@ -9,13 +9,13 @@
   --font-primary: 'Spartan', sans-serif;
 
   // font size
-  --text-base-size: 1em; // body font-size
+  --text-base-size: 0.9375em; // body font-size
   --text-scale-ratio: 1.414; // multiplier used to generate the type scale values 👇
-  
+
   // line-height
   --body-line-height: 1.6;
   --heading-line-height: 1;
-  
+
   // capital letters - used in combo with the lhCrop mixin
   --font-primary-capital-letter: 1;
 
@@ -36,9 +36,16 @@
 }
 
 @supports(--css: variables) {
+
+  h1 {
+    font-size: 3rem;
+  }
+
+
+
   @include breakpoint(sm) {
     :root {
-      --text-base-size: 1em;
+      --text-base-size: 0.9375em;
       --text-scale-ratio: 1.5;
     }
   }
@@ -52,6 +59,7 @@ body {
 h1, h2, h3, h4 {
   font-family: var(--font-primary);
   font-weight: 700;
+  color: inherit;
 }
 
 // font family

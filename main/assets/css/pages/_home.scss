@@ -1,3 +1,53 @@
-.header {
-  grid-column: span 3;
+header {
+  margin-top: var(--nav-bar-height);
+}
+
+.slide {
+  background: var(--slide-bg) no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: var(--outer-container-column) minmax(19rem, 28.5rem) var(--outer-container-column);
+  grid-template-rows: 6.875rem 1fr 6.875rem;
+  > * {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .text-component {
+    --text-vspace-multiplier: 0.2;
+
+    > a {
+      margin-top: 1.8rem;
+    }
+  }
+}
+
+#slide1 {
+  --slide-bg: url(../images/home/mobile/image-hero-paramour.jpg);
+}
+
+@include breakpoint(sm) {
+
+  header {
+    margin-top: initial;
+  }
+
+  .slide {
+    grid-template-columns: 3.625rem 29rem 1fr;
+  }
+
+  #slide1 {
+    --slide-bg: url(../images/home/tablet/image-hero-paramour.jpg);
+  }
+}
+
+
+@include breakpoint(md) {
+  .slide {
+   grid-template-columns: 11.875rem 29rem 1fr;
+  }
+
+  #slide1 {
+    --slide-bg: url(../images/home/desktop/image-hero-paramour.jpg);
+  }
 }

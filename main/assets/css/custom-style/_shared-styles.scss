@@ -1,7 +1,10 @@
 .container-outer {
   --outer-container-column: 8.5%;
+  --min: calc(375px - 2 * (var(--outer-container-column)));
+  max-width: 1440px;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: var(--outer-container-column) 1fr var(--outer-container-column);
+  grid-template-columns: var(--outer-container-column) minmax(var(--min), 1110px) var(--outer-container-column);
 
   > * {
     grid-column: 2;
@@ -11,3 +14,5 @@
     --outer-container-column: 11.45%;
   }
 }
+
+

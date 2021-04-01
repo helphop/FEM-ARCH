@@ -6808,8 +6808,11 @@ html:not(.js) .no-js\:is-hidden {
 
 .container-outer {
   --outer-container-column: 8.5%;
+  --min: calc(375px - 2 * (var(--outer-container-column)));
+  max-width: 1440px;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: var(--outer-container-column) 1fr var(--outer-container-column); }
+  grid-template-columns: var(--outer-container-column) minmax(var(--min), 1110px) var(--outer-container-column); }
   .container-outer > * {
     grid-column: 2; }
   @media (min-width: 48rem) {
@@ -6818,7 +6821,7 @@ html:not(.js) .no-js\:is-hidden {
 
 :root {
   --font-primary: 'Spartan', sans-serif;
-  --text-base-size: 1em;
+  --text-base-size: 0.9375em;
   --text-scale-ratio: 1.414;
   --body-line-height: 1.6;
   --heading-line-height: 1;
@@ -6836,9 +6839,11 @@ html:not(.js) .no-js\:is-hidden {
   --text-xxxxl: calc(var(--text-xxxl) * var(--text-scale-ratio)); }
 
 @supports (--css: variables) {
+  h1 {
+    font-size: 3rem; }
   @media (min-width: 48rem) {
     :root {
-      --text-base-size: 1em;
+      --text-base-size: 0.9375em;
       --text-scale-ratio: 1.5; } } }
 
 body {
@@ -6847,7 +6852,8 @@ body {
 
 h1, h2, h3, h4 {
   font-family: var(--font-primary);
-  font-weight: 700; }
+  font-weight: 700;
+  color: inherit; }
 
 .font-primary {
   font-family: var(--font-primary); }
@@ -6996,8 +7002,46 @@ mark {
   visibility: visible;
   transition: all 0.2s; }
 
-.header {
-  grid-column: span 3; }
+.full-width {
+  grid-column: 1 / span 3; }
+
+@media (min-width: 48rem) {
+  .col1\@sm {
+    grid-column: 2 / span 1; } }
+
+header {
+  margin-top: var(--nav-bar-height); }
+
+.slide {
+  background: var(--slide-bg) no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: var(--outer-container-column) minmax(19rem, 28.5rem) var(--outer-container-column);
+  grid-template-rows: 6.875rem 1fr 6.875rem; }
+  .slide > * {
+    grid-column: 2;
+    grid-row: 2; }
+  .slide .text-component {
+    --text-vspace-multiplier: 0.2; }
+    .slide .text-component > a {
+      margin-top: 1.8rem; }
+
+#slide1 {
+  --slide-bg: url(../images/home/mobile/image-hero-paramour.jpg); }
+
+@media (min-width: 48rem) {
+  header {
+    margin-top: initial; }
+  .slide {
+    grid-template-columns: 3.625rem 29rem 1fr; }
+  #slide1 {
+    --slide-bg: url(../images/home/tablet/image-hero-paramour.jpg); } }
+
+@media (min-width: 64rem) {
+  .slide {
+    grid-template-columns: 11.875rem 29rem 1fr; }
+  #slide1 {
+    --slide-bg: url(../images/home/desktop/image-hero-paramour.jpg); } }
 
 /* -------------------------------- 
 

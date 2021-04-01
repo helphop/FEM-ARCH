@@ -11,3 +11,13 @@
   visibility: visible;
   transition: all 0.2s;
 }
+
+.full-width {
+  grid-column: 1 / span 3;
+}
+
+.col1\@sm {
+  @include breakpoint(sm) {
+    grid-column: 2 / span 1;
+  }
+}
