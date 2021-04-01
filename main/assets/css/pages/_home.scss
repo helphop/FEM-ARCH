@@ -3,7 +3,7 @@ header {
 }
 
 .slide {
-  background: var(--slide-bg) no-repeat;
+  background: linear-gradient(alpha(var(--color-black), 0.4),alpha(var(--color-black), 0.4) ), var(--slide-bg) no-repeat;
   background-size: cover;
   padding: 6.875rem var(--outer-container-column);
 

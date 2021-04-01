@@ -7013,7 +7013,7 @@ header {
   margin-top: var(--nav-bar-height); }
 
 .slide {
-  background: var(--slide-bg) no-repeat;
+  background: linear-gradient(hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.4), hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.4)), var(--slide-bg) no-repeat;
   background-size: cover;
   padding: 6.875rem var(--outer-container-column); }
   .slide .text-component {
