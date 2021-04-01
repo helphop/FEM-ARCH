@@ -7012,6 +7012,9 @@ mark {
 header {
   margin-top: var(--nav-bar-height); }
 
+.hero {
+  position: relative; }
+
 .slides {
   overflow: hidden;
   display: grid;
@@ -7043,6 +7046,9 @@ header {
 #slide4 {
   --slide-bg: url(../images/home/mobile/image-hero-trinity.jpg); }
 
+.slide-nav {
+  display: none; }
+
 @media (min-width: 48rem) {
   header {
     margin-top: initial; }
@@ -7069,7 +7075,15 @@ header {
   #slide3 {
     --slide-bg: url(../images/home/desktop/image-hero-federal.jpg); }
   #slide4 {
-    --slide-bg: url(../images/home/desktop/image-hero-trinity.jpg); } }
+    --slide-bg: url(../images/home/desktop/image-hero-trinity.jpg); }
+  .slide-nav {
+    position: absolute;
+    border-bottom: 1px solid var(--color-black-lighter);
+    bottom: 0px;
+    left: -78px;
+    display: flex; }
+    .slide-nav a {
+      border-right: 1px solid var(--color-black-lighter); } }
 
 /* -------------------------------- 
 

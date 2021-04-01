@@ -2,6 +2,10 @@ header {
   margin-top: var(--nav-bar-height);
 }
 
+.hero {
+  position: relative;
+}
+
   .slides {
     overflow: hidden;
     display: grid;
@@ -43,6 +47,10 @@ header {
   --slide-bg: url(../images/home/mobile/image-hero-trinity.jpg);
 }
 
+.slide-nav {
+  display: none;
+}
+
 @include breakpoint(sm) {
 
   header {
@@ -72,6 +80,7 @@ header {
   #slide4 {
     --slide-bg: url(../images/home/tablet/image-hero-trinity.jpg);
   }
+
 }
 
 
@@ -95,5 +104,17 @@ header {
 
   #slide4 {
     --slide-bg: url(../images/home/desktop/image-hero-trinity.jpg);
+  }
+
+  .slide-nav {
+    position: absolute;
+    border-bottom: 1px solid var(--color-black-lighter);
+    bottom: 0px;
+    left: -78px;
+    display: flex;
+
+     a {
+       border-right: 1px solid var(--color-black-lighter);
+    }
   }
 }
