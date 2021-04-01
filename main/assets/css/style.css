@@ -7015,16 +7015,12 @@ header {
 .slide {
   background: var(--slide-bg) no-repeat;
   background-size: cover;
-  display: grid;
-  grid-template-columns: var(--outer-container-column) minmax(19rem, 28.5rem) var(--outer-container-column);
-  grid-template-rows: 6.875rem 1fr 6.875rem; }
-  .slide > * {
-    grid-column: 2;
-    grid-row: 2; }
+  padding: 6.875rem var(--outer-container-column); }
   .slide .text-component {
-    --text-vspace-multiplier: 0.2; }
+    --text-vspace-multiplier: 1;
+    max-width: 19rem; }
     .slide .text-component > a {
-      margin-top: 1.8rem; }
+      margin-top: 2.8rem; }
 
 #slide1 {
   --slide-bg: url(../images/home/mobile/image-hero-paramour.jpg); }
@@ -7033,13 +7029,15 @@ header {
   header {
     margin-top: initial; }
   .slide {
-    grid-template-columns: 3.625rem 29rem 1fr; }
+    padding: 11.25rem 3.625rem; }
+    .slide .text-component {
+      max-width: 28.75rem; }
   #slide1 {
     --slide-bg: url(../images/home/tablet/image-hero-paramour.jpg); } }
 
 @media (min-width: 64rem) {
   .slide {
-    grid-template-columns: 11.875rem 29rem 1fr; }
+    padding: 11.25rem  11.875rem; }
   #slide1 {
     --slide-bg: url(../images/home/desktop/image-hero-paramour.jpg); } }
 
