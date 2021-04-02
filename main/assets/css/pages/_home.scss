@@ -67,6 +67,7 @@ header {
 @include breakpoint(md) {
   .slide {
     padding: 11.25rem  11.875rem;
+    width: calc(1440px - 2 * var(--outer-container-column));
   }
 
   .slide-nav {

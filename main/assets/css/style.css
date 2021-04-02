@@ -6818,6 +6818,9 @@ html:not(.js) .no-js\:is-hidden {
   @media (min-width: 48rem) {
     .container-outer {
       --outer-container-column: 11.25vw; } }
+  @media (min-width: 64rem) {
+    .container-outer {
+      --outer-container-column: 10.3125rem; } }
 
 :root {
   --font-primary: 'Spartan', sans-serif;
@@ -7059,7 +7062,8 @@ header {
 
 @media (min-width: 64rem) {
   .slide {
-    padding: 11.25rem  11.875rem; }
+    padding: 11.25rem  11.875rem;
+    width: calc(1440px - 2 * var(--outer-container-column)); }
   .slide-nav {
     position: absolute;
     border-bottom: 1px solid var(--color-black-lighter);
