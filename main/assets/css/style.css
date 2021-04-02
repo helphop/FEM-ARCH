@@ -6820,7 +6820,7 @@ html:not(.js) .no-js\:is-hidden {
       --outer-container-column: 11.25vw; } }
   @media (min-width: 64rem) {
     .container-outer {
-      --outer-container-column: 10.3125rem; } }
+      --outer-container-column: MIN(10.3125rem, 11.45vw); } }
 
 :root {
   --font-primary: 'Spartan', sans-serif;

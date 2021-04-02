@@ -16,7 +16,7 @@
   }
 
     @include breakpoint(md) {
-    --outer-container-column: 10.3125rem;
+    --outer-container-column: MIN(10.3125rem, 11.45vw);
   }
 }
 
