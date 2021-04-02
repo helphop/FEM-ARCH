@@ -6,20 +6,32 @@ header {
   position: relative;
 }
 
-  .slides {
-    overflow: hidden;
+.slides {
     display: grid;
     grid-auto-flow: column;
+    align-items: start;
+
     scroll-snap-type: x mandatory;
+    overflow-x: scroll;
     scroll-behavior: smooth;
   }
 
-
 .slide {
-  width: MIN(100vw, 69.375rem);
-  background: linear-gradient(alpha(var(--color-black), 0.4),alpha(var(--color-black), 0.4) ), var(--slide-bg) no-repeat;
-  background-size: cover;
+  scroll-snap-align: center;
+  width: 100vw;
   padding: 6.875rem var(--outer-container-column);
+  position: relative;
+  background: linear-gradient(alpha(var(--color-black), 0.4),alpha(var(--color-black), 0.4));
+
+  img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%; //make sure img is as wide as its parent
+    height: 100%; //make sure img is as tall as its parent
+    object-fit: cover;
+  }
 
   .text-component {
     --text-vspace-multiplier: 1;
@@ -29,22 +41,6 @@ header {
       margin-top: 2.8rem;
     }
   }
-}
-
-#slide1 {
-  --slide-bg: url(../images/home/mobile/image-hero-paramour.jpg);
-}
-
-#slide2 {
-  --slide-bg: url(../images/home/mobile/image-hero-seraph.jpg);
-}
-
-#slide3 {
-  --slide-bg: url(../images/home/mobile/image-hero-federal.jpg);
-}
-
-#slide4 {
-  --slide-bg: url(../images/home/mobile/image-hero-trinity.jpg);
 }
 
 .slide-nav {
@@ -59,51 +55,18 @@ header {
 
   .slide {
     padding: 11.25rem 3.625rem;
+    width: calc(100vw - 2 * var(--outer-container-column));
 
     .text-component {
       max-width: 28.75rem;
     }
   }
-
-  #slide1 {
-    --slide-bg: url(../images/home/tablet/image-hero-paramour.jpg);
-  }
-
-  #slide2 {
-    --slide-bg: url(../images/home/tablet/image-hero-seraph.jpg);
-  }
-
-  #slide3 {
-    --slide-bg: url(../images/home/tablet/image-hero-federal.jpg);
-  }
-
-  #slide4 {
-    --slide-bg: url(../images/home/tablet/image-hero-trinity.jpg);
-  }
-
 }
 
 
 @include breakpoint(md) {
-
   .slide {
     padding: 11.25rem  11.875rem;
-  }
-
-  #slide1 {
-    --slide-bg: url(../images/home/desktop/image-hero-paramour.jpg);
-  }
-
-  #slide2 {
-    --slide-bg: url(../images/home/desktop/image-hero-seraph.jpg);
-  }
-
-  #slide3 {
-    --slide-bg: url(../images/home/desktop/image-hero-federal.jpg);
-  }
-
-  #slide4 {
-    --slide-bg: url(../images/home/desktop/image-hero-trinity.jpg);
   }
 
   .slide-nav {
