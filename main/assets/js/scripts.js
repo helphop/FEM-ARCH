@@ -349,3 +349,10 @@ const navbarOpen = () => navbar.classList.contains('open') ? true : false;
 
 //check if key has been pressed
 const keyPressed = (event, key, label) => (event.key && event.key == key) || (event.key && event.key.toLowerCase() == label)
+
+const slideNav = document.querySelector('.slide-nav');
+
+slideNav.addEventListener('click', (event) => {
+  document.querySelector('.btn--number--current').classList.remove('btn--number--current');
+  event.target.classList.add('btn--number--current');
+})
