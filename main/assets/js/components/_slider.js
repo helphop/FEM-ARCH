@@ -1,12 +1,4 @@
 const slideNav = document.querySelector('.slide-nav');
-
-slideNav.addEventListener('click', (event) => {
-  document.querySelector('.btn--number--current').classList.remove('btn--number--current');
-  event.target.classList.add('btn--number--current');
-})
-
-
-//need start of scroll and end of scroll
 const slider = document.querySelector('.slider');
 const carousel = document.querySelector('.carousel');
 const numSlides = slider.childElementCount;
@@ -37,6 +29,13 @@ slider.style.cssText = `
                       transition: all 0.5s;
                       `;
 
+function removeCurrentClass() {
+  document.querySelector('.btn--number--current').classList.remove('btn--number--current');
+}
+
+function addCurrentClass(element) {
+  element.classList.add('btn--number--current');
+}
 
 function handleGesture() {
   //swiped to the left
@@ -73,6 +72,9 @@ function setCarouselScroll() {
     carousel.style.overflowX ='scroll'
     carousel.style.justifyItems = 'start';
     carousel.style.scrollBehavior = 'smooth';
+    let slide = slider.firstElementChild;
+
+    console.log(slide);
   } else {
     carousel.style.overflowX ='hidden'
   }
@@ -85,6 +87,11 @@ function debounce(func){
     timer = setTimeout(func,200,event);
   };
 }
+
+slideNav.addEventListener('click', (event) => {
+  removeCurrentClass();
+  addCurrentClass(event.target);
+})
 
 slider.addEventListener('touchstart', e => {
   touchstartX = e.changedTouches[0].screenX;
