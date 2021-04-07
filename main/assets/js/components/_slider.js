@@ -10,6 +10,7 @@ slideNav.addEventListener('click', (event) => {
 const slider = document.querySelector('.slider');
 const carousel = document.querySelector('.carousel');
 const numSlides = slider.childElementCount;
+const container = document.querySelector('.container-outer');
 
 let touchstartX = 0;
 let touchendX = 0;
@@ -22,8 +23,10 @@ carousel.style.cssText = `
                          display: grid;
                          grid-template: 1fr / 100%;
                          position: relative;
-                         justify-items = start;
-                         overflow: hidden;
+                         justify-items: start;
+                         overflow-x: scroll;
+                         scroll-behavior: smooth;
+                         scroll-snap-type: x mandatory;
                         `;
 
 slider.style.cssText = `
@@ -64,6 +67,24 @@ function handleGesture() {
   }
 }
 
+function setCarouselScroll() {
+  let containerWidth = container.offsetWidth;
+  if (containerWidth > 1024) {
+    carousel.style.overflowX ='scroll'
+    carousel.style.justifyItems = 'start';
+    carousel.style.scrollBehavior = 'smooth';
+  } else {
+    carousel.style.overflowX ='hidden'
+  }
+}
+
+function debounce(func){
+  var timer;
+  return function(event){
+    if(timer) clearTimeout(timer);
+    timer = setTimeout(func,200,event);
+  };
+}
 
 slider.addEventListener('touchstart', e => {
   touchstartX = e.changedTouches[0].screenX;
@@ -95,3 +116,5 @@ slider.addEventListener('transitionend', function() {
   })
 
 }, false);
+
+window.addEventListener("resize",debounce(setCarouselScroll));
