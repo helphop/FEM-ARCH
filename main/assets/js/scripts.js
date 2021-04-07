@@ -358,8 +358,8 @@ const container = document.querySelector('.container-outer');
 
 let touchstartX = 0;
 let touchendX = 0;
-let translateAmount = `${100/numSlides}%`;
-let direction = 'left'; //means it is moving to the left
+let translateAmount = `${100/numSlides}%`; //how far to move the slides
+let direction = 'left'; //set initial direction
 
 carousel.style.cssText = `
                          width:100%;
