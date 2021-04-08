@@ -356,7 +356,6 @@ const carousel = document.querySelector('.carousel');
 const carouselWidth = carousel.offsetWidth;
 const numSlides = slider.childElementCount;
 const container = document.querySelector('.container-outer');
-let slides = null;
 let touchstartX = 0;
 let touchendX = 0;
 let translateAmount = `${100/numSlides}%`; //how far to move the slides
@@ -373,7 +372,7 @@ carousel.style.cssText = `
                          overflow-x: scroll;
                          scroll-behavior: smooth;
                          scroll-snap-type: x mandatory;
-                        `;
+                         `;
 
 slider.style.cssText = `
                       height: 100%;
@@ -384,7 +383,7 @@ slider.style.cssText = `
                       `;
 
 function reOrderSlides() {
-  slides = [...slider.children];
+  const slides = [...slider.children];
   slides.sort((a,b) => a.id.charAt(a.id.length-1) - b.id.charAt(b.id.length-1))
   slides.forEach(slide => slider.appendChild(slide));
 }
@@ -394,9 +393,8 @@ function resetCarousel() {
     carousel.style.overflowX ='scroll'
     carousel.style.justifyItems = 'start';
     carousel.style.scrollBehavior = 'smooth';
-    setCurrentButton(getCurrentButton(currentSlide));
     reOrderSlides();
-    currentSlide = null;
+    setCurrentButton(getCurrentButton(currentSlide.id));
   } else {
     carousel.style.overflowX ='hidden'
   }
@@ -408,8 +406,8 @@ function setCurrentButton(button) {
     button.click();
 }
 
-function getCurrentButton(element) {
-  return document.querySelector(`a[href*="${element.id}"]`);
+function getCurrentButton(id) {
+  return document.querySelector(`a[href*="${id}"]`);
 }
 
 function handleGesture() {
@@ -455,6 +453,7 @@ function setCurrentSlide() {
   for (let i = 0; i < numSlides; i++) {
     if (isInViewport(slider.children[i])) {
       slide = slider.children[i];
+      break;
     }
   }
   currentSlide = slide;
@@ -489,7 +488,7 @@ slider.addEventListener('transitionend', function() {
   //reset the slider element to the starting position
   slider.style.transform = 'translate(0)';
 
-  //set the position of the slide in the viewport
+  //set the name of the slide in the viewport
   setCurrentSlide();
   //delay the setting of the transition
   setTimeout(function() {
@@ -500,3 +499,10 @@ slider.addEventListener('transitionend', function() {
 }, false);
 
 window.addEventListener("resize",debounce(resetCarousel));
+
+window.addEventListener('DOMContentLoaded', (event) => {
+  let slideId = window.location.hash.substr(1)
+  if (slideId.length > 0) {
+    setCurrentButton(getCurrentButton(slideId));
+  }
+});
