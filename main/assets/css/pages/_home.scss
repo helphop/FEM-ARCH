@@ -17,7 +17,6 @@ header {
 
 .slide {
   scroll-snap-align: center;
-  width: 100vw;
   padding: 6.875rem var(--outer-container-column);
   position: relative;
   background: linear-gradient(alpha(var(--color-black), 0.4),alpha(var(--color-black), 0.4));
@@ -54,8 +53,6 @@ header {
 
   .slide {
     padding: 11.25rem 3.625rem;
-    width: calc(100vw - 2 * var(--outer-container-column));
-
     .text-component {
       max-width: 28.75rem;
     }
@@ -66,7 +63,6 @@ header {
 @include breakpoint(md) {
   .slide {
     padding: 11.25rem  11.875rem;
-    width: calc(1440px - 2 * var(--outer-container-column));
   }
 
   .slide-nav {

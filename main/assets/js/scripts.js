@@ -353,6 +353,7 @@ const keyPressed = (event, key, label) => (event.key && event.key == key) || (ev
 const slideNav = document.querySelector('.slide-nav');
 const slider = document.querySelector('.slider');
 const carousel = document.querySelector('.carousel');
+const carouselWidth = carousel.offsetWidth;
 const numSlides = slider.childElementCount;
 const container = document.querySelector('.container-outer');
 
@@ -375,7 +376,7 @@ carousel.style.cssText = `
 
 slider.style.cssText = `
                       height: 100%;
-                      width: ${numSlides * 100}%;
+                      width: ${numSlides * carouselWidth}px;
                       display: grid;
                       grid-template-columns: repeat(${numSlides}, ${1/numSlides}fr);
                       transition: all 0.5s;
@@ -424,9 +425,10 @@ function setCarouselScroll() {
     carousel.style.overflowX ='scroll'
     carousel.style.justifyItems = 'start';
     carousel.style.scrollBehavior = 'smooth';
-    let slide = slider.firstElementChild;
-
-    console.log(slide);
+    let slideId = slideInViewport().id;
+    // let button = document.querySelector(`a[href*="${slideId}"]`);
+    // removeCurrentClass();
+    // addCurrentClass(button);
   } else {
     carousel.style.overflowX ='hidden'
   }
@@ -438,6 +440,31 @@ function debounce(func){
     if(timer) clearTimeout(timer);
     timer = setTimeout(func,200,event);
   };
+}
+
+function slideInViewport() {
+  let i = 0;
+  let slide = null;
+  for (i = 0; i < numSlides; i++) {
+    if (isInViewport(slider.children[i])) {
+      slide = slider.children[i];
+    }
+  }
+   return slide;
+}
+
+function isInViewport(element) {
+  console.log(element)
+    const rect = element.getBoundingClientRect();
+    console.log(rect.left);
+    console.log(rect.right)
+    console.log(carousel.offsetWidth);
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (carousel.innerHeight) &&
+        rect.right <= (carousel.innerWidth )
+    );
 }
 
 slideNav.addEventListener('click', (event) => {

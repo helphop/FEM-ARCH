@@ -7020,7 +7020,6 @@ header {
 
 .slide {
   scroll-snap-align: center;
-  width: 100vw;
   padding: 6.875rem var(--outer-container-column);
   position: relative;
   background: linear-gradient(hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.4), hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.4)); }
@@ -7046,15 +7045,13 @@ header {
   header {
     margin-top: initial; }
   .slide {
-    padding: 11.25rem 3.625rem;
-    width: calc(100vw - 2 * var(--outer-container-column)); }
+    padding: 11.25rem 3.625rem; }
     .slide .text-component {
       max-width: 28.75rem; } }
 
 @media (min-width: 64rem) {
   .slide {
-    padding: 11.25rem  11.875rem;
-    width: calc(1440px - 2 * var(--outer-container-column)); }
+    padding: 11.25rem  11.875rem; }
   .slide-nav {
     position: absolute;
     border-bottom: 1px solid var(--color-black-lighter);
