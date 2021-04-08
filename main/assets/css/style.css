@@ -1450,6 +1450,9 @@ html:not(.js) .no-js\:is-hidden {
 .order-3 {
   order: 3; }
 
+.order-4 {
+  order: 4; }
+
 [class*="aspect-ratio"] {
   --aspect-ratio: 16/9;
   position: relative;

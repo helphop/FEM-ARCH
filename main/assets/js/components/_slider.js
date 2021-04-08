@@ -4,11 +4,12 @@ const carousel = document.querySelector('.carousel');
 const carouselWidth = carousel.offsetWidth;
 const numSlides = slider.childElementCount;
 const container = document.querySelector('.container-outer');
-
+let slides = null;
 let touchstartX = 0;
 let touchendX = 0;
 let translateAmount = `${100/numSlides}%`; //how far to move the slides
 let direction = 'left'; //set initial direction
+let currentSlide = null;
 
 carousel.style.cssText = `
                          width:100%;
@@ -24,18 +25,39 @@ carousel.style.cssText = `
 
 slider.style.cssText = `
                       height: 100%;
-                      width: ${numSlides * carouselWidth}px;
+                      width: ${numSlides * 100}%;
                       display: grid;
                       grid-template-columns: repeat(${numSlides}, ${1/numSlides}fr);
                       transition: all 0.5s;
                       `;
 
-function removeCurrentClass() {
-  document.querySelector('.btn--number--current').classList.remove('btn--number--current');
+function reOrderSlides() {
+  slides = [...slider.children];
+  slides.sort((a,b) => a.id.charAt(a.id.length-1) - b.id.charAt(b.id.length-1))
+  slides.forEach(slide => slider.appendChild(slide));
 }
 
-function addCurrentClass(element) {
-  element.classList.add('btn--number--current');
+function resetCarousel() {
+  if (container.offsetWidth > 1024 && currentSlide) {
+    carousel.style.overflowX ='scroll'
+    carousel.style.justifyItems = 'start';
+    carousel.style.scrollBehavior = 'smooth';
+    setCurrentButton(getCurrentButton(currentSlide));
+    reOrderSlides();
+    currentSlide = null;
+  } else {
+    carousel.style.overflowX ='hidden'
+  }
+}
+
+function setCurrentButton(button) {
+    document.querySelector('.btn--number--current').classList.remove('btn--number--current');
+    button.classList.add('btn--number--current');
+    button.click();
+}
+
+function getCurrentButton(element) {
+  return document.querySelector(`a[href*="${element.id}"]`);
 }
 
 function handleGesture() {
@@ -67,20 +89,6 @@ function handleGesture() {
   }
 }
 
-function setCarouselScroll() {
-  let containerWidth = container.offsetWidth;
-  if (containerWidth > 1024) {
-    carousel.style.overflowX ='scroll'
-    carousel.style.justifyItems = 'start';
-    carousel.style.scrollBehavior = 'smooth';
-    let slideId = slideInViewport().id;
-    // let button = document.querySelector(`a[href*="${slideId}"]`);
-    // removeCurrentClass();
-    // addCurrentClass(button);
-  } else {
-    carousel.style.overflowX ='hidden'
-  }
-}
 
 function debounce(func){
   var timer;
@@ -90,34 +98,20 @@ function debounce(func){
   };
 }
 
-function slideInViewport() {
-  let i = 0;
+function setCurrentSlide() {
   let slide = null;
-  for (i = 0; i < numSlides; i++) {
+  for (let i = 0; i < numSlides; i++) {
     if (isInViewport(slider.children[i])) {
       slide = slider.children[i];
     }
   }
-   return slide;
+  currentSlide = slide;
 }
 
-function isInViewport(element) {
-  console.log(element)
-    const rect = element.getBoundingClientRect();
-    console.log(rect.left);
-    console.log(rect.right)
-    console.log(carousel.offsetWidth);
-    return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (carousel.innerHeight) &&
-        rect.right <= (carousel.innerWidth )
-    );
-}
+const isInViewport = (element) =>  (element.getBoundingClientRect().left === carousel.getBoundingClientRect().left);
 
 slideNav.addEventListener('click', (event) => {
-  removeCurrentClass();
-  addCurrentClass(event.target);
+  setCurrentButton(event.target);
 })
 
 slider.addEventListener('touchstart', e => {
@@ -143,6 +137,8 @@ slider.addEventListener('transitionend', function() {
   //reset the slider element to the starting position
   slider.style.transform = 'translate(0)';
 
+  //set the position of the slide in the viewport
+  setCurrentSlide();
   //delay the setting of the transition
   setTimeout(function() {
     //add back the animation of the slider
@@ -151,4 +147,4 @@ slider.addEventListener('transitionend', function() {
 
 }, false);
 
-window.addEventListener("resize",debounce(setCarouselScroll));
+window.addEventListener("resize",debounce(resetCarousel));
