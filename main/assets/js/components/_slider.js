@@ -51,15 +51,15 @@ function getButtonForSlide(id) {
 function handleGesture() {
   //swiped to the left
   if (touchendX < touchstartX) {
-    slideLeft();
+    slideleft();
   }
   //swiped to the right
   else {
-    slideRight();
+    slideright();
   }
 }
 
-function slideLeft() {
+function slideleft() {
   if (direction === 'right') {
     //must move the last slide to the start and shift the carousel to the end of the row.
     slider.prepend(slider.lastElementChild);
@@ -72,7 +72,7 @@ function slideLeft() {
   slider.style.transform = `translateX(-${translateAmount}%)`;
 }
 
-function slideRight() {
+function slideright() {
   //check if the previous slide was to the left
   if (direction === 'left') {
     slider.appendChild(slider.firstElementChild);
@@ -83,81 +83,77 @@ function slideRight() {
   slider.style.transform = `translateX(${translateAmount}%)`;
 }
 
-//slow down the execution of some function
-function debounce(func){
-  var timer;
-  return function(event){
-    if(timer) clearTimeout(timer);
-    timer = setTimeout(func,200,event);
-  };
-}
-
 function setCurrentSlide() {
   for (let i = 0; i < numSlides; i++) {
-    if (isInViewport(slider.children[i])) {
+    if (isInViewport(slider.children[i], carousel)) {
       currentSlide = slider.children[i];
       break;
     }
   }
 }
 
-//returns true if the slides left side location matches the carousel's left side location
-const isInViewport = (element) => (element.getBoundingClientRect().left === carousel.getBoundingClientRect().left);
-
-//Capitalizes the first letter of a string
-const capitalizeFirstLetter = (string) =>  string.charAt(0).toUpperCase() + string.slice(1);
 
 //EVENT LISTENERS-------------------------------------------------------------------
 
+//listen for slide button clicks
 slideNav.addEventListener('click', (event) => {
-  button = event.target.getAttribute('data-slide');
-  buttonId = parseInt(button.charAt(button.length - 1));
-  slideId = parseInt(currentSlide.id.charAt(currentSlide.id.length - 1));
-  slideAmount = slideId - buttonId;
+  button = event.target;
+  buttonId = lastChar(button.getAttribute('data-slide'));
+  slideId = lastChar(currentSlide.id);
+
+  //determines the direction to move the slider
+  slideAmount = parseInt(slideId) - parseInt(buttonId);
+
+  //determines the number of times the slider must move
   loopTimes = Math.abs(slideAmount)
 
   if (slideAmount < 0) {
-    slideLeft();
+    slideleft();
   } else if (slideAmount > 0){
-    slideRight();
+    slideright();
   }
-  setCurrentButton(event.target);
+
+  //change the color of the clicked button
+  setCurrentButton(button);
 })
 
-
+//listen for finger gesture start
 slider.addEventListener('touchstart', e => {
   touchstartX = e.changedTouches[0].screenX;
 });
 
+//listen for finger gesture end
 slider.addEventListener('touchend', e => {
   touchendX = e.changedTouches[0].screenX;
   handleGesture();
 });
 
+//listen for when the slide has finished moving
 slider.addEventListener('transitionend', function() {
 
+  //makes the slider seem infinite
   if (direction === 'right') {
-      //move the last element to the start
-      slider.prepend(slider.lastElementChild);
-    } else {
-      //move the first element to the end
-      slider.appendChild(slider.firstElementChild);
-    }
+    //move the last element to the start
+    slider.prepend(slider.lastElementChild);
+  } else {
+    //move the first element to the end
+    slider.appendChild(slider.firstElementChild);
+  }
 
-  //stops animating the transition back to 0
+  //stops animating when the transition is put back to 0
   slider.style.transition = 'none';
   //reset the slider element to the starting position
   slider.style.transform = 'translate(0)';
-  //set the name of the slide in the viewport
+  //set the slide that is now showing in the viewport
   setCurrentSlide();
 
-  //delay the setting of the transition
+  //delay the setting of the transition and calling the slide function when sliding more than 1 slide
   setTimeout(function() {
     //add back the animation of the slider
     slider.style.transition = 'all 0.5s';
 
     if (loopTimes > 1) {
-      eval(`slide${capitalizeFirstLetter(direction)}()`);
+      eval(`slide${direction}()`);
       loopTimes--;
     }
   })

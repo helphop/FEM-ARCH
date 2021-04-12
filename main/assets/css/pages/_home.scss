@@ -60,10 +60,10 @@ header {
     position: absolute;
     border-bottom: 1px solid var(--color-black-lighter);
     bottom: 0px;
-    left: -78px;
+    left: calc(-1 * var(--btn-num-icon-width));
     display: flex;
 
-     a:not(:last-child) {
+     button:not(:last-child) {
        border-right: 1px solid var(--color-black-lighter);
     }
   }

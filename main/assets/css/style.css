@@ -6888,7 +6888,9 @@ mark {
 :root {
   --btn-font-size: 1em;
   --btn-padding-x: 2rem;
-  --btn-padding-y: 1.5rem; }
+  --btn-padding-y: 1.5rem;
+  --btn-num-icon-width: 5rem;
+  --btn-num-icon-height: 5rem; }
 
 .btn--primary:after, :is(.btn--primary--dark, .btn--icon):after {
   content: '';
@@ -6931,8 +6933,8 @@ mark {
 
 .btn--number,
 .btn--icon {
-  width: 5rem;
-  height: 5rem; }
+  width: var(--btn-num-icon-width);
+  height: var(--btn-num-icon-height); }
 
 .btn--number {
   --btn-bg: var(--color-white);
@@ -7059,9 +7061,9 @@ header {
     position: absolute;
     border-bottom: 1px solid var(--color-black-lighter);
     bottom: 0px;
-    left: -78px;
+    left: calc(-1 * var(--btn-num-icon-width));
     display: flex; }
-    .slide-nav a:not(:last-child) {
+    .slide-nav button:not(:last-child) {
       border-right: 1px solid var(--color-black-lighter); } }
 
 /* -------------------------------- 
