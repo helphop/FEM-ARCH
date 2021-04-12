@@ -6,9 +6,9 @@ const numSlides = slider.childElementCount;
 const container = document.querySelector('.container-outer');
 let touchstartX = 0;
 let touchendX = 0;
-let translateAmount = `${100/numSlides}%`; //how far to move the slides
+let translateAmount = 100/numSlides; //how far to move the slides
 let direction = 'left'; //set initial direction
-let currentSlide = null;
+let currentSlide = document.getElementById('slide1');
 
 carousel.style.cssText = `
                          width:100%;
@@ -18,8 +18,6 @@ carousel.style.cssText = `
                          position: relative;
                          justify-items: start;
                          overflow: hidden;
-                         scroll-behavior: smooth;
-                         scroll-snap-type: x mandatory;
                          `;
 
 slider.style.cssText = `
@@ -28,7 +26,6 @@ slider.style.cssText = `
                       display: grid;
                       grid-template-columns: repeat(${numSlides}, ${1/numSlides}fr);
                       transition: all 0.5s;
-                      transform: translateX(100%);
                       `;
 
 function reOrderSlides() {
@@ -47,17 +44,24 @@ function resetCarousel() {
 function setCurrentButton(button) {
     document.querySelector('.btn--number--current').classList.remove('btn--number--current');
     button.classList.add('btn--number--current');
-    button.click();
 }
 
 function getCurrentButton(id) {
-  return document.querySelector(`a[href*="${id}"]`);
+  return document.querySelector(`[data-slide="${id}"]`);
 }
 
 function handleGesture() {
   //swiped to the left
   if (touchendX < touchstartX) {
-      //check if previous slide was to the right
+    slideLeft();
+  }
+  //swiped to the right
+  else if (touchendX > touchstartX) {
+    slideRight();
+  }
+}
+
+function slideLeft() {
     if (direction === 'right') {
       //must move the last slide to the start and shift the carousel to the end of the row.
       slider.prepend(slider.lastElementChild);
@@ -67,11 +71,10 @@ function handleGesture() {
     //set the direction we are now moving
     direction = 'left';
     //move the slider to the left
-    slider.style.transform = `translateX(-${translateAmount})`;
+    slider.style.transform = `translateX(-${translateAmount}%)`;
+}
 
-  }
-  //swiped to the right
-  else if (touchendX > touchstartX) {
+function slideRight() {
     //check if the previous slide was to the left
     if (direction === 'left') {
       slider.appendChild(slider.firstElementChild);
@@ -79,11 +82,10 @@ function handleGesture() {
       carousel.style.justifyItems = 'end';
     }
     direction = 'right';
-    slider.style.transform = `translateX(${translateAmount})`;
-  }
+    slider.style.transform = `translateX(${translateAmount}%)`;
 }
 
-
+//slow down the window resize listener
 function debounce(func){
   var timer;
   return function(event){
@@ -106,8 +108,19 @@ function setCurrentSlide() {
 const isInViewport = (element) =>  (element.getBoundingClientRect().left === carousel.getBoundingClientRect().left);
 
 slideNav.addEventListener('click', (event) => {
+  button = event.target.getAttribute('data-slide');
+  buttonId = parseInt(button.charAt(button.length - 1));
+  slideId = parseInt(currentSlide.id.charAt(currentSlide.id.length - 1));
+  slideAmount = slideId - buttonId;
+  console.log(slideAmount);
+  if (slideAmount < 0) {
+    slideLeft();
+  } else if (slideAmount > 0){
+    slideRight();
+  }
   setCurrentButton(event.target);
 })
+
 
 slider.addEventListener('touchstart', e => {
   touchstartX = e.changedTouches[0].screenX;
@@ -119,13 +132,14 @@ slider.addEventListener('touchend', e => {
 });
 
 slider.addEventListener('transitionend', function() {
+
   if (direction === 'right') {
-    //move the last element to the start
-    slider.prepend(slider.lastElementChild);
-  } else {
-     //move the first element to the end
-     slider.appendChild(slider.firstElementChild);
-  }
+      //move the last element to the start
+      slider.prepend(slider.lastElementChild);
+    } else {
+      //move the first element to the end
+      slider.appendChild(slider.firstElementChild);
+    }
 
   //stops animating the transition back to 0
   slider.style.transition = 'none';
@@ -145,8 +159,5 @@ slider.addEventListener('transitionend', function() {
 window.addEventListener("resize",debounce(resetCarousel));
 
 window.addEventListener('DOMContentLoaded', (event) => {
-  let slideId = window.location.hash.substr(1)
-  if (slideId.length > 0) {
-    setCurrentButton(getCurrentButton(slideId));
-  }
+  setCurrentButton(getCurrentButton(currentSlide.id));
 });
