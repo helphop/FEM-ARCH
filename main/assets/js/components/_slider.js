@@ -17,7 +17,6 @@ carousel.style.cssText = `
                          height: 100%;
                          display: grid;
                          grid-template: 1fr / 100%;
-                         position: relative;
                          justify-items: start;
                          overflow: hidden;
                          `;
@@ -92,6 +91,13 @@ function setCurrentSlide() {
   }
 }
 
+function loopSlides(direction) {
+    if (loopTimes > 1) {
+    eval(`slide${direction}()`);
+    loopTimes--;
+  }
+}
+
 
 //EVENT LISTENERS-------------------------------------------------------------------
 
@@ -148,14 +154,11 @@ slider.addEventListener('transitionend', function() {
   setCurrentSlide();
 
   //delay the setting of the transition and calling the slide function when sliding more than 1 slide
-  setTimeout(function() {
+  setTimeout(() => {
     //add back the animation of the slider
     slider.style.transition = 'all 0.5s';
-
-    if (loopTimes > 1) {
-      eval(`slide${direction}()`);
-      loopTimes--;
-    }
+    //loop moving the slider to get requested slide.  Works when buttons are clicked.
+    loopSlides(direction)
   })
 
 }, false);
