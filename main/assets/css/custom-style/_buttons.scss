@@ -6,6 +6,8 @@
   --btn-font-size: 1em;
   --btn-padding-x: 2rem;
   --btn-padding-y: 1.5rem;
+  --btn-num-icon-width: 5rem;
+  --btn-num-icon-height: 5rem;
 }
 
 // +++++++++++++++++++++++++
@@ -80,8 +82,8 @@
 
 .btn--number,
 .btn--icon {
-  width: 5rem; //set size of buttons so they don't change with content
-  height: 5rem;
+  width: var(--btn-num-icon-width); //set size of buttons so they don't change with content
+  height: var(--btn-num-icon-height);
 }
 
 
