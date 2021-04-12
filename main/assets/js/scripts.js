@@ -356,11 +356,13 @@ const carousel = document.querySelector('.carousel');
 const carouselWidth = carousel.offsetWidth;
 const numSlides = slider.childElementCount;
 const container = document.querySelector('.container-outer');
+let loopTimes = 0;
 let touchstartX = 0;
 let touchendX = 0;
 let translateAmount = 100/numSlides; //how far to move the slides
 let direction = 'left'; //set initial direction
 let currentSlide = document.getElementById('slide1');
+
 
 carousel.style.cssText = `
                          width:100%;
@@ -380,17 +382,12 @@ slider.style.cssText = `
                       transition: all 0.5s;
                       `;
 
-function reOrderSlides() {
-  const slides = [...slider.children];
-  slides.sort((a,b) => a.id.charAt(a.id.length-1) - b.id.charAt(b.id.length-1))
-  slides.forEach(slide => slider.appendChild(slide));
-}
 
+
+//set the current button to match the current slide
+//when resize from mobile screen size to desktop
 function resetCarousel() {
-  if (container.offsetWidth > 1024) {
-    reOrderSlides();
-    setCurrentButton(getCurrentButton(currentSlide.id));
-  }
+  if (container.offsetWidth > 1024) setCurrentButton(getCurrentButton(currentSlide.id));
 }
 
 function setCurrentButton(button) {
@@ -457,6 +454,10 @@ function setCurrentSlide() {
   currentSlide = slide;
 }
 
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
 const isInViewport = (element) =>  (element.getBoundingClientRect().left === carousel.getBoundingClientRect().left);
 
 slideNav.addEventListener('click', (event) => {
@@ -464,7 +465,8 @@ slideNav.addEventListener('click', (event) => {
   buttonId = parseInt(button.charAt(button.length - 1));
   slideId = parseInt(currentSlide.id.charAt(currentSlide.id.length - 1));
   slideAmount = slideId - buttonId;
-  console.log(slideAmount);
+  loopTimes = Math.abs(slideAmount)
+
   if (slideAmount < 0) {
     slideLeft();
   } else if (slideAmount > 0){
@@ -497,13 +499,17 @@ slider.addEventListener('transitionend', function() {
   slider.style.transition = 'none';
   //reset the slider element to the starting position
   slider.style.transform = 'translate(0)';
-
   //set the name of the slide in the viewport
   setCurrentSlide();
+
   //delay the setting of the transition
   setTimeout(function() {
     //add back the animation of the slider
     slider.style.transition = 'all 0.5s';
+    if (loopTimes > 1) {
+      eval(`slide${capitalizeFirstLetter(direction)}()`);
+      loopTimes--;
+    }
   })
 
 }, false);
@@ -513,3 +519,4 @@ window.addEventListener("resize",debounce(resetCarousel));
 window.addEventListener('DOMContentLoaded', (event) => {
   setCurrentButton(getCurrentButton(currentSlide.id));
 });
+
