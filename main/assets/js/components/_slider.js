@@ -9,7 +9,7 @@ let touchstartX = 0;
 let touchendX = 0;
 let translateAmount = 100/numSlides; //how far to move the slides
 let direction = 'left'; //set initial direction
-let currentSlide = document.getElementById('slide1');
+let currentSlide = document.getElementById('slide1'); //set initial slide
 
 
 carousel.style.cssText = `
@@ -31,6 +31,7 @@ slider.style.cssText = `
                       `;
 
 
+//FUNCTIONS -----------------------------------------------------------------------------------
 
 //set the current button to match the current slide
 //when resize from mobile screen size to desktop
@@ -59,30 +60,30 @@ function handleGesture() {
 }
 
 function slideLeft() {
-    if (direction === 'right') {
-      //must move the last slide to the start and shift the carousel to the end of the row.
-      slider.prepend(slider.lastElementChild);
-      //move the carousel to the start of the row
-      carousel.style.justifyItems = 'start';
-    }
-    //set the direction we are now moving
-    direction = 'left';
-    //move the slider to the left
-    slider.style.transform = `translateX(-${translateAmount}%)`;
+  if (direction === 'right') {
+    //must move the last slide to the start and shift the carousel to the end of the row.
+    slider.prepend(slider.lastElementChild);
+    //move the carousel to the start of the row
+    carousel.style.justifyItems = 'start';
+  }
+  //set the direction we are now moving
+  direction = 'left';
+  //move the slider to the left
+  slider.style.transform = `translateX(-${translateAmount}%)`;
 }
 
 function slideRight() {
-    //check if the previous slide was to the left
-    if (direction === 'left') {
-      slider.appendChild(slider.firstElementChild);
-      //move the carousel to the end of the row
-      carousel.style.justifyItems = 'end';
-    }
-    direction = 'right';
-    slider.style.transform = `translateX(${translateAmount}%)`;
+  //check if the previous slide was to the left
+  if (direction === 'left') {
+    slider.appendChild(slider.firstElementChild);
+    //move the carousel to the end of the row
+    carousel.style.justifyItems = 'end';
+  }
+  direction = 'right';
+  slider.style.transform = `translateX(${translateAmount}%)`;
 }
 
-//slow down the window resize listener
+//slow down the execution of some function
 function debounce(func){
   var timer;
   return function(event){
@@ -92,21 +93,21 @@ function debounce(func){
 }
 
 function setCurrentSlide() {
-  let slide = null;
   for (let i = 0; i < numSlides; i++) {
     if (isInViewport(slider.children[i])) {
-      slide = slider.children[i];
+      currentSlide = slider.children[i];
       break;
     }
   }
-  currentSlide = slide;
 }
 
-function capitalizeFirstLetter(string) {
-  return string.charAt(0).toUpperCase() + string.slice(1);
-}
+//returns true if the slides left side location matches the carousel's left side location
+const isInViewport = (element) => (element.getBoundingClientRect().left === carousel.getBoundingClientRect().left);
 
-const isInViewport = (element) =>  (element.getBoundingClientRect().left === carousel.getBoundingClientRect().left);
+//Capitalizes the first letter of a string
+const capitalizeFirstLetter = (string) =>  string.charAt(0).toUpperCase() + string.slice(1);
+
+//EVENT LISTENERS-------------------------------------------------------------------
 
 slideNav.addEventListener('click', (event) => {
   button = event.target.getAttribute('data-slide');
@@ -154,6 +155,7 @@ slider.addEventListener('transitionend', function() {
   setTimeout(function() {
     //add back the animation of the slider
     slider.style.transition = 'all 0.5s';
+
     if (loopTimes > 1) {
       eval(`slide${capitalizeFirstLetter(direction)}()`);
       loopTimes--;
@@ -163,8 +165,4 @@ slider.addEventListener('transitionend', function() {
 }, false);
 
 window.addEventListener("resize",debounce(resetCarousel));
-
-window.addEventListener('DOMContentLoaded', (event) => {
-  setCurrentButton(getButtonForSlide(currentSlide.id));
-});
 
