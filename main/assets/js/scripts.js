@@ -387,15 +387,15 @@ slider.style.cssText = `
 //set the current button to match the current slide
 //when resize from mobile screen size to desktop
 function resetCarousel() {
-  if (container.offsetWidth > 1024) setCurrentButton(getCurrentButton(currentSlide.id));
+  if (container.offsetWidth > 1024) setCurrentButton(getButtonForSlide(currentSlide.id));
 }
 
 function setCurrentButton(button) {
-    document.querySelector('.btn--number--current').classList.remove('btn--number--current');
-    button.classList.add('btn--number--current');
+  document.querySelector('.btn--number--current').classList.remove('btn--number--current');
+  button.classList.add('btn--number--current');
 }
 
-function getCurrentButton(id) {
+function getButtonForSlide(id) {
   return document.querySelector(`[data-slide="${id}"]`);
 }
 
@@ -405,7 +405,7 @@ function handleGesture() {
     slideLeft();
   }
   //swiped to the right
-  else if (touchendX > touchstartX) {
+  else {
     slideRight();
   }
 }
@@ -517,6 +517,6 @@ slider.addEventListener('transitionend', function() {
 window.addEventListener("resize",debounce(resetCarousel));
 
 window.addEventListener('DOMContentLoaded', (event) => {
-  setCurrentButton(getCurrentButton(currentSlide.id));
+  setCurrentButton(getButtonForSlide(currentSlide.id));
 });
 
