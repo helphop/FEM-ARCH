@@ -369,7 +369,7 @@ carousel.style.cssText = `
                          grid-template: 1fr / 100%;
                          position: relative;
                          justify-items: start;
-                         overflow-x: scroll;
+                         overflow: hidden;
                          scroll-behavior: smooth;
                          scroll-snap-type: x mandatory;
                          `;
@@ -380,6 +380,7 @@ slider.style.cssText = `
                       display: grid;
                       grid-template-columns: repeat(${numSlides}, ${1/numSlides}fr);
                       transition: all 0.5s;
+                      transform: translateX(100%);
                       `;
 
 function reOrderSlides() {
@@ -389,14 +390,9 @@ function reOrderSlides() {
 }
 
 function resetCarousel() {
-  if (container.offsetWidth > 1024 && currentSlide) {
-    carousel.style.overflowX ='scroll'
-    carousel.style.justifyItems = 'start';
-    carousel.style.scrollBehavior = 'smooth';
+  if (container.offsetWidth > 1024) {
     reOrderSlides();
     setCurrentButton(getCurrentButton(currentSlide.id));
-  } else {
-    carousel.style.overflowX ='hidden'
   }
 }
 
