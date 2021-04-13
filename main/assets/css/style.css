@@ -6811,8 +6811,8 @@ html:not(.js) .no-js\:is-hidden {
 
 .container-outer {
   --outer-container-column: 8.5vw;
-  --min: calc(375px - 2 * (var(--outer-container-column)));
-  max-width: 1440px;
+  --min: calc(23.4375rem - 2 * (var(--outer-container-column)));
+  max-width: 90rem;
   margin: 0 auto;
   display: grid;
   grid-template-columns: var(--outer-container-column) minmax(var(--min), 1110px) var(--outer-container-column); }
