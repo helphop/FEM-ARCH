@@ -1,0 +1,26 @@
+.vertical-content {
+  display: none;
+
+  @include breakpoint(sm) {
+    grid-column: 1 / 2;
+    grid-row: 1 / span 2;
+
+   display: grid;
+    justify-items: center;
+    grid-template-rows: min-content auto;
+    gap: 3rem;
+
+    &__line {
+      height: 104px;
+      width: 1px;
+      background: var(--color-black-light);
+    }
+
+    &__text {
+      writing-mode: vertical-lr;
+    align-self: start;
+    letter-spacing: 15px;
+    color: var(--color-black-light);
+  }
+  }
+}
