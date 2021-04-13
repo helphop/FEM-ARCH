@@ -6678,6 +6678,10 @@ html:not(.js) .no-js\:is-hidden {
   --color-black-h: 240;
   --color-black-s: 8%;
   --color-black-l: 12%;
+  --color-black-medium: hsl(240, 23%, 94%);
+  --color-black-medium-h: 240;
+  --color-black-medium-s: 23%;
+  --color-black-medium-l: 94%;
   --color-black-light: hsl(224, 17%, 82%);
   --color-black-light-h: 224;
   --color-black-light-s: 17%;
@@ -6863,6 +6867,15 @@ h1, h2, h3, h4 {
 
 .font-primary {
   font-family: var(--font-primary); }
+
+.display {
+  color: var(--color-black-medium);
+  font-size: 7.5rem;
+  letter-spacing: -3px; }
+  @media (min-width: 64rem) {
+    .display {
+      font-size: 12.5rem;
+      letter-spacing: -5px; } }
 
 mark {
   background-color: hsla(var(--color-accent-h), var(--color-accent-s), var(--color-accent-l), 0.2);
