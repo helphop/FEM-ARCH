@@ -9,7 +9,6 @@ header {
 }
 
 .slide {
-  scroll-snap-align: center;
   padding: 6.875rem var(--outer-container-column);
   position: relative;
   background: linear-gradient(alpha(var(--color-black), 0.4),alpha(var(--color-black), 0.4));

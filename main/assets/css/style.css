@@ -7045,7 +7045,6 @@ header {
   position: relative; }
 
 .slide {
-  scroll-snap-align: center;
   padding: 6.875rem var(--outer-container-column);
   position: relative;
   background: linear-gradient(hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.4), hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.4)); }
