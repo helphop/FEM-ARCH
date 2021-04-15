@@ -65,11 +65,15 @@ h1, h2, h3, h4 {
 // font family
 .font-primary { font-family: var(--font-primary); }
 
-// --------------------------------
+h1 {
+  font-size: 3rem;
+  letter-spacing: -2px;
 
-// (END) Global editor code
+  @include breakpoint(sm) {
+    font-size: 5rem;
+  }
+}
 
-// --------------------------------
 .display {
   color: var(--color-black-medium);
   font-size: 7.5rem;

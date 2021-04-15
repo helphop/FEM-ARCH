@@ -6868,6 +6868,13 @@ h1, h2, h3, h4 {
 .font-primary {
   font-family: var(--font-primary); }
 
+h1 {
+  font-size: 3rem;
+  letter-spacing: -2px; }
+  @media (min-width: 48rem) {
+    h1 {
+      font-size: 5rem; } }
+
 .display {
   color: var(--color-black-medium);
   font-size: 7.5rem;
@@ -7065,7 +7072,7 @@ header {
   .slide {
     padding: 11.25rem 3.625rem; }
     .slide .text-component {
-      max-width: 28.75rem; } }
+      max-width: 34rem; } }
 
 @media (min-width: 64rem) {
   .slide {
