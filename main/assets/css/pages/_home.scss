@@ -1,3 +1,8 @@
+:root {
+  --padding-x: 11.875rem;
+  --max-paragraph-width: 28rem;
+}
+
 // HEADER SLIDES
 
 header {
@@ -58,13 +63,13 @@ header {
 
 @include breakpoint(md) {
   .slide {
-    padding: var(--slide-padding-y)  11.875rem;
+    padding: var(--slide-padding-y)  var(--padding-x);
 
     h1 {
       max-width: 9ch;
     }
     p {
-      max-width: 28rem;
+      max-width: var(--max-paragraph-width);
     }
   }
 
@@ -78,5 +83,64 @@ header {
      button:not(:last-child) {
        border-right: 1px solid var(--color-black-lighter);
     }
+  }
+}
+
+main.home {
+  --section-spacer: 12.5rem;
+  margin-top: var(--section-spacer);
+  > * {
+    margin-bottom: var(--section-spacer);
+  }
+}
+
+// WELCOME SECTION
+
+.welcome {
+  position: relative;
+
+  h1 {
+    position: absolute;
+    top: -85px;
+  }
+
+  &__content {
+
+
+    .text-component {
+      --text-vspace-multiplier: 1.7;
+      padding-top: 5rem;
+    }
+
+    h2 {
+      margin-bottom: 3.5rem;
+    }
+
+    p {
+      color: var(--color-primary-light);
+    }
+  }
+
+  &__image {
+    display: none;
+  }
+
+  @include breakpoint(sm) {
+
+  }
+
+  @include breakpoint(md) {
+
+    &__content {
+      padding-left: var(--padding-x);
+      display: grid;
+      grid-template-columns: var(--max-paragraph-width) 350px;
+      justify-content:  space-between;
+    }
+
+    &__image {
+      display: block;
+    }
+
   }
 }
