@@ -7073,13 +7073,14 @@ header {
   header {
     margin-top: initial; }
   .slide {
-    padding: 11.25rem 3.625rem; }
+    --slide-padding-y: 11.25rem;
+    padding: var(--slide-padding-y) 3.3rem; }
     .slide .slide__content {
       height: 22.5625rem; } }
 
 @media (min-width: 64rem) {
   .slide {
-    padding: 11.25rem  11.875rem; }
+    padding: var(--slide-padding-y) 11.875rem; }
     .slide h1 {
       max-width: 9ch; }
     .slide p {

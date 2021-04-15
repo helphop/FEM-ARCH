@@ -45,7 +45,8 @@ header {
   }
 
   .slide {
-    padding: 11.25rem 3.625rem;
+    --slide-padding-y: 11.25rem;
+    padding: var(--slide-padding-y) 3.3rem;
 
     .slide__content {
       height: 22.5625rem; //height is the same for tablet and desktop
@@ -56,7 +57,8 @@ header {
 
 @include breakpoint(md) {
   .slide {
-    padding: 11.25rem  11.875rem;
+    padding: var(--slide-padding-y)  11.875rem;
+
     h1 {
       max-width: 9ch;
     }
