@@ -22,12 +22,14 @@ header {
     object-fit: cover;
   }
 
-  .text-component {
-    --text-vspace-multiplier: 1;
-    max-width: 19rem;
+  &__content {
+    height: 21.25rem;
+    display: grid; //use grid so the spacing for slides with more text matches the design
+    justify-items: start;
+    color: var(--color-white);
 
     > a {
-      margin-top: 2.8rem;
+      align-self: end;
     }
   }
 }
@@ -44,8 +46,9 @@ header {
 
   .slide {
     padding: 11.25rem 3.625rem;
-    .text-component {
-      max-width: 34rem;
+
+    .slide__content {
+      height: 22.5625rem; //height is the same for tablet and desktop
     }
   }
 }
@@ -54,11 +57,17 @@ header {
 @include breakpoint(md) {
   .slide {
     padding: 11.25rem  11.875rem;
+    h1 {
+      max-width: 9ch;
+    }
+    p {
+      max-width: 28rem;
+    }
   }
 
   .slide-nav {
     position: absolute;
-    border-bottom: 1px solid var(--color-black-lighter);
+     border-bottom: 1px solid var(--color-black-lighter);
     bottom: 0px;
     left: calc(-1 * var(--btn-num-icon-width));
     display: flex;

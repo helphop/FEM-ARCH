@@ -6858,7 +6858,8 @@ html:not(.js) .no-js\:is-hidden {
 
 body {
   font-family: var(--font-primary);
-  font-weight: 500; }
+  font-weight: 500;
+  line-height: var(--body-line-height); }
 
 h1, h2, h3, h4 {
   font-family: var(--font-primary);
@@ -7057,11 +7058,13 @@ header {
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover; }
-  .slide .text-component {
-    --text-vspace-multiplier: 1;
-    max-width: 19rem; }
-    .slide .text-component > a {
-      margin-top: 2.8rem; }
+  .slide__content {
+    height: 21.25rem;
+    display: grid;
+    justify-items: start;
+    color: var(--color-white); }
+    .slide__content > a {
+      align-self: end; }
 
 .slide-nav {
   display: none; }
@@ -7071,12 +7074,16 @@ header {
     margin-top: initial; }
   .slide {
     padding: 11.25rem 3.625rem; }
-    .slide .text-component {
-      max-width: 34rem; } }
+    .slide .slide__content {
+      height: 22.5625rem; } }
 
 @media (min-width: 64rem) {
   .slide {
     padding: 11.25rem  11.875rem; }
+    .slide h1 {
+      max-width: 9ch; }
+    .slide p {
+      max-width: 28rem; }
   .slide-nav {
     position: absolute;
     border-bottom: 1px solid var(--color-black-lighter);
