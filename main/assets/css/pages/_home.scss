@@ -86,13 +86,31 @@ header {
   }
 }
 
+
+// MAIN STYLES
+
 main.home {
   --section-spacer: 12.5rem;
-  margin-top: var(--section-spacer);
+
+  > :first-child {
+    margin-top: 8.75rem;
+  }
+
   > * {
+    margin-bottom: 6rem;
+  }
+
+  @include breakpoint(sm) {
+    > :first-child {
+     margin-top: var(--section-spacer);
+    }
+
+    > * {
     margin-bottom: var(--section-spacer);
+    }
   }
 }
+
 
 // WELCOME SECTION
 
@@ -100,50 +118,48 @@ main.home {
   position: relative;
 
   h1 {
+    display: none;
+  }
+
+  .horizontal-line {
     position: absolute;
-    top: -85px;
+    height: 1px;
+    width: 65px;
+    background-color: var(--color-black-light);
+    top: -68px;
+    left: 0;
   }
 
-  &__content {
-
-
-    .text-component {
-      --text-vspace-multiplier: 1.7;
-      padding-top: 5rem;
-    }
-
-    h2 {
-      margin-bottom: 3.5rem;
-    }
-
-    p {
-      color: var(--color-primary-light);
-    }
+  .text-component {
+    --text-vspace-multiplier: 2.5;
   }
 
-  &__image {
-    // display: none;
+  .container {
+    --component-padding: 0; //controls the width of the container
+  }
+
+  p {
+    color: var(--color-primary-light);
   }
 
   @include breakpoint(sm) {
+    h1 {
+      display: block;
+      position: absolute;
+      top: -85px;
+    }
 
+    .text-component {
+      padding-top: 3rem;
+    }
   }
 
   @include breakpoint(md) {
+    background: url(../images/home/desktop/image-welcome.jpg) no-repeat;
+    background-position: right center;
 
-    &__content {
-      padding-left: var(--padding-x);
-      display: grid;
-      grid-template-columns: minmax(min-content, var(--max-paragraph-width)) 1fr;
+    .text-component {
+      padding-top: 72px;
     }
-
-
-    &__image {
-      // display: block;
-      justify-self: end;
-      background: url(../images/home/desktop/image-welcome.jpg) no-repeat;
-      width: 350px;
-    }
-
   }
 }

@@ -20,3 +20,17 @@
 }
 
 
+
+.container {
+  h1,
+  h2 {
+    max-width: 9ch;
+  }
+
+  @include breakpoint(md) {
+    --component-padding: 11.875rem  !important;
+    p {
+      max-width: 28rem;
+    }
+  }
+}

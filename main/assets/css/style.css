@@ -6829,11 +6829,21 @@ html:not(.js) .no-js\:is-hidden {
     .container-outer {
       --outer-container-column: MIN(10.3125rem, 11.45vw); } }
 
+.container h1,
+.container h2 {
+  max-width: 9ch; }
+
+@media (min-width: 64rem) {
+  .container {
+    --component-padding: 11.875rem  !important; }
+    .container p {
+      max-width: 28rem; } }
+
 :root {
   --font-primary: 'Spartan', sans-serif;
   --text-base-size: 0.9375em;
   --text-scale-ratio: 1.414;
-  --body-line-height: 1.6;
+  --body-line-height: 1.66667;
   --heading-line-height: 1;
   --font-primary-capital-letter: 1;
   --text-unit: 1em; }
@@ -7098,33 +7108,47 @@ header {
       border-right: 1px solid var(--color-black-lighter); } }
 
 main.home {
-  --section-spacer: 12.5rem;
-  margin-top: var(--section-spacer); }
+  --section-spacer: 12.5rem; }
+  main.home > :first-child {
+    margin-top: 8.75rem; }
   main.home > * {
-    margin-bottom: var(--section-spacer); }
+    margin-bottom: 6rem; }
+  @media (min-width: 48rem) {
+    main.home > :first-child {
+      margin-top: var(--section-spacer); }
+    main.home > * {
+      margin-bottom: var(--section-spacer); } }
 
 .welcome {
   position: relative; }
   .welcome h1 {
+    display: none; }
+  .welcome .horizontal-line {
     position: absolute;
-    top: -85px; }
-  .welcome__content .text-component {
-    --text-vspace-multiplier: 1.7;
-    padding-top: 5rem; }
-  .welcome__content h2 {
-    margin-bottom: 3.5rem; }
-  .welcome__content p {
+    height: 1px;
+    width: 65px;
+    background-color: var(--color-black-light);
+    top: -68px;
+    left: 0; }
+  .welcome .text-component {
+    --text-vspace-multiplier: 2.5; }
+  .welcome .container {
+    --component-padding: 0; }
+  .welcome p {
     color: var(--color-primary-light); }
+  @media (min-width: 48rem) {
+    .welcome h1 {
+      display: block;
+      position: absolute;
+      top: -85px; }
+    .welcome .text-component {
+      padding-top: 3rem; } }
   @media (min-width: 64rem) {
-    .welcome__content {
-      padding-left: var(--padding-x);
-      display: grid;
-      grid-template-columns: minmax(-webkit-min-content, var(--max-paragraph-width)) 1fr;
-      grid-template-columns: minmax(min-content, var(--max-paragraph-width)) 1fr; }
-    .welcome__image {
-      justify-self: end;
+    .welcome {
       background: url(../images/home/desktop/image-welcome.jpg) no-repeat;
-      width: 350px; } }
+      background-position: right center; }
+      .welcome .text-component {
+        padding-top: 72px; } }
 
 /* -------------------------------- 
 
