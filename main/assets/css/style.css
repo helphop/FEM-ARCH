@@ -6831,9 +6831,7 @@ html:not(.js) .no-js\:is-hidden {
 
 .container {
   --component-padding: var(--outer-container-column); }
-  .container h1,
-  .container h2,
-  .container h3 {
+  .container :is(h1, h2, h3) {
     max-width: 9ch; }
   @media (min-width: 48rem) {
     .container {
@@ -7162,23 +7160,18 @@ main.home {
 
 .teams {
   --bg-image: url(../images/home/mobile/image-small-team.jpg);
-  background: var(--bg-image) no-repeat;
+  background-image: linear-gradient(hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.527), hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.5)), var(--bg-image);
   background-size: cover;
-  color: var(--color-white); }
-  .teams__content {
-    padding: 11.25rem 0; }
-  .teams .text-component {
-    --text-vspace-multiplier: 5; }
+  background-repeat: no-repeat;
+  color: var(--color-white);
+  padding: 11.25rem 0; }
   @media (min-width: 48rem) {
     .teams {
-      --bg-image: url(../images/home/tablet/image-small-team.jpg); }
-      .teams__content {
-        padding: 10.5rem 0; } }
+      --bg-image: url(../images/home/tablet/image-small-team.jpg);
+      padding: 10.5rem 0; } }
   @media (min-width: 64rem) {
     .teams {
-      --bg-image: url(../images/home/desktop/image-small-team.jpg); }
-      .teams .text-component {
-        --text-vspace-multiplier: 3; } }
+      --bg-image: url(../images/home/desktop/image-small-team.jpg); } }
 
 /* -------------------------------- 
 

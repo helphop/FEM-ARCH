@@ -168,6 +168,7 @@ main.home {
 
     .text-component {
       padding-top: 4.7rem;
+
       h2 {
         --text-vspace-multiplier: 2.8;
         z-index: var(--zindex-popover); //position above H1;
@@ -182,36 +183,19 @@ main.home {
 
 .teams {
   --bg-image: url(../images/home/mobile/image-small-team.jpg);
-  background: var(--bg-image) no-repeat;
+  background-image: linear-gradient(alpha(var(--color-black), 0.527),alpha(var(--color-black), 0.5)),var(--bg-image);
   background-size: cover;
+  background-repeat: no-repeat;
   color: var(--color-white);
-
-  &__content {
-    padding: 11.25rem 0;
-  }
-
-  .text-component {
-    --text-vspace-multiplier: 5;
-  }
-
+  padding: 11.25rem 0;
 
 
   @include breakpoint(sm) {
     --bg-image: url(../images/home/tablet/image-small-team.jpg);
-
-    &__content {
-      padding: 10.5rem 0;
-    }
-
+    padding: 10.5rem 0;
   }
 
   @include breakpoint(md) {
     --bg-image: url(../images/home/desktop/image-small-team.jpg);
-
-  .text-component {
-    --text-vspace-multiplier: 3;
   }
-
-  }
-
 }
