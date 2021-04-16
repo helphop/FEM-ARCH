@@ -7137,24 +7137,23 @@ main.home {
   .welcome p {
     color: var(--color-primary-light); }
   @media (min-width: 48rem) {
-    .welcome h1 {
-      display: block;
-      position: absolute;
-      top: -5.375rem; }
-    .welcome .text-component {
+    .welcome {
       padding-top: 3rem; }
+      .welcome h1 {
+        display: block;
+        position: absolute;
+        top: -5.375rem; }
       .welcome .text-component h2 {
         --text-vspace-multiplier: 4.6; } }
   @media (min-width: 64rem) {
     .welcome {
       background: url(../images/home/desktop/image-welcome.jpg) no-repeat;
-      background-position: right center; }
-      .welcome .text-component {
-        padding-top: 4.7rem; }
-        .welcome .text-component h2 {
-          --text-vspace-multiplier: 2.8;
-          z-index: var(--zindex-popover);
-          position: relative; } }
+      background-position: right center;
+      padding-top: 4.7rem; }
+      .welcome .text-component h2 {
+        --text-vspace-multiplier: 2.8;
+        z-index: var(--zindex-popover);
+        position: relative; } }
 
 .teams {
   --bg-image: url(../images/home/mobile/image-small-team.jpg);

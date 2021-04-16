@@ -145,6 +145,7 @@ main.home {
   }
 
   @include breakpoint(sm) {
+    padding-top: 3rem;
     h1 {
       display: block;
       position: absolute;
@@ -152,7 +153,6 @@ main.home {
     }
 
     .text-component {
-      padding-top: 3rem;
       h2 {
         --text-vspace-multiplier: 4.6;
       }
@@ -162,9 +162,8 @@ main.home {
   @include breakpoint(md) {
     background: url(../images/home/desktop/image-welcome.jpg) no-repeat;
     background-position: right center;
-
+    padding-top: 4.7rem;
     .text-component {
-      padding-top: 4.7rem;
 
       h2 {
         --text-vspace-multiplier: 2.8;
