@@ -6834,6 +6834,10 @@ html:not(.js) .no-js\:is-hidden {
 .container h3 {
   max-width: 9ch; }
 
+@media (min-width: 48rem) {
+  .container {
+    --component-padding: 3.3rem; } }
+
 @media (min-width: 64rem) {
   .container {
     --component-padding: 11.875rem  !important; }
@@ -7155,6 +7159,24 @@ main.home {
           --text-vspace-multiplier: 2.8;
           z-index: var(--zindex-popover);
           position: relative; } }
+
+.teams {
+  --bg-image: url(../images/home/mobile/image-small-team.jpg);
+  background: var(--bg-image) no-repeat;
+  background-size: cover;
+  color: var(--color-white); }
+  .teams__content {
+    padding: 11.25rem 0; }
+  @media (min-width: 48rem) {
+    .teams {
+      --bg-image: url(../images/home/tablet/image-small-team.jpg); }
+      .teams__content {
+        padding: 10.5rem 0; }
+      .teams .text-component {
+        --text-vspace-multiplier: 3; } }
+  @media (min-width: 64rem) {
+    .teams {
+      --bg-image: url(../images/home/desktop/image-small-team.jpg); } }
 
 /* -------------------------------- 
 

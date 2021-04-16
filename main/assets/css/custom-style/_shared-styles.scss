@@ -28,6 +28,10 @@
     max-width: 9ch;
   }
 
+  @include breakpoint(sm) {
+    --component-padding: 3.3rem;
+  }
+
   @include breakpoint(md) {
     --component-padding: 11.875rem  !important;
 
