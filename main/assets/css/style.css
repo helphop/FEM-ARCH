@@ -7056,9 +7056,7 @@ mark {
   --max-paragraph-width: 28rem; }
 
 header {
-  margin-top: var(--nav-bar-height); }
-
-.hero {
+  margin-top: var(--nav-bar-height);
   position: relative; }
 
 .slide {
