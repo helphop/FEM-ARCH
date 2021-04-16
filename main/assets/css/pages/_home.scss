@@ -14,7 +14,7 @@ header {
 }
 
 .slide {
-  padding: 6.875rem var(--outer-container-column);
+  padding: 6.875rem 0;
   position: relative;
   background: linear-gradient(alpha(var(--color-black), 0.4),alpha(var(--color-black), 0.4));
 
@@ -26,6 +26,10 @@ header {
     width: 100%; //make sure img is as wide as its parent
     height: 100%; //make sure img is as tall as its parent
     object-fit: cover;
+  }
+
+  .container {
+    --component-padding: var(--outer-container-column);
   }
 
   &__content {
@@ -51,8 +55,11 @@ header {
   }
 
   .slide {
-    --slide-padding-y: 11.25rem;
-    padding: var(--slide-padding-y) 3.3rem;
+    padding: 11.25rem 0;
+
+    .container {
+      --component-padding: 3.3rem;
+    }
 
     .slide__content {
       height: 22.5625rem; //keep height the same for tablet and desktop
@@ -62,16 +69,6 @@ header {
 
 
 @include breakpoint(md) {
-  .slide {
-    padding: var(--slide-padding-y)  var(--padding-x);
-
-    h1 {
-      max-width: 9ch;
-    }
-    p {
-      max-width: var(--max-paragraph-width);
-    }
-  }
 
   .slide-nav {
     position: absolute;

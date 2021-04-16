@@ -6837,7 +6837,7 @@ html:not(.js) .no-js\:is-hidden {
   .container {
     --component-padding: 11.875rem  !important; }
     .container p {
-      max-width: 28rem; } }
+      max-width: 27rem; } }
 
 :root {
   --font-primary: 'Spartan', sans-serif;
@@ -7059,7 +7059,7 @@ header {
   position: relative; }
 
 .slide {
-  padding: 6.875rem var(--outer-container-column);
+  padding: 6.875rem 0;
   position: relative;
   background: linear-gradient(hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.4), hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.4)); }
   .slide img {
@@ -7071,6 +7071,8 @@ header {
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover; }
+  .slide .container {
+    --component-padding: var(--outer-container-column); }
   .slide__content {
     height: 21.25rem;
     display: grid;
@@ -7086,18 +7088,13 @@ header {
   header {
     margin-top: initial; }
   .slide {
-    --slide-padding-y: 11.25rem;
-    padding: var(--slide-padding-y) 3.3rem; }
+    padding: 11.25rem 0; }
+    .slide .container {
+      --component-padding: 3.3rem; }
     .slide .slide__content {
       height: 22.5625rem; } }
 
 @media (min-width: 64rem) {
-  .slide {
-    padding: var(--slide-padding-y) var(--padding-x); }
-    .slide h1 {
-      max-width: 9ch; }
-    .slide p {
-      max-width: var(--max-paragraph-width); }
   .slide-nav {
     position: absolute;
     border-bottom: 1px solid var(--color-black-lighter);
