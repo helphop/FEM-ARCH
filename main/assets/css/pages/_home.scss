@@ -131,7 +131,10 @@ main.home {
   }
 
   .text-component {
-    --text-vspace-multiplier: 2.5;
+    --text-vspace-multiplier: 1.5;
+    h2 {
+      --text-vspace-multiplier: 2.8;
+    }
   }
 
   .container {
@@ -151,6 +154,9 @@ main.home {
 
     .text-component {
       padding-top: 3rem;
+      h2 {
+        --text-vspace-multiplier: 4.6;
+      }
     }
   }
 
@@ -159,7 +165,12 @@ main.home {
     background-position: right center;
 
     .text-component {
-      padding-top: 4.5rem;
+      padding-top: 4.7rem;
+      h2 {
+        --text-vspace-multiplier: 2.8;
+        z-index: var(--zindex-popover); //position above H1;
+        position: relative;
+      }
     }
   }
 }

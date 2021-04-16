@@ -6837,7 +6837,7 @@ html:not(.js) .no-js\:is-hidden {
   .container {
     --component-padding: 11.875rem  !important; }
     .container p {
-      max-width: 27rem; } }
+      max-width: 28rem; } }
 
 :root {
   --font-primary: 'Spartan', sans-serif;
@@ -7128,7 +7128,9 @@ main.home {
     top: -4.25rem;
     left: 0; }
   .welcome .text-component {
-    --text-vspace-multiplier: 2.5; }
+    --text-vspace-multiplier: 1.5; }
+    .welcome .text-component h2 {
+      --text-vspace-multiplier: 2.8; }
   .welcome .container {
     --component-padding: 0; }
   .welcome p {
@@ -7139,13 +7141,19 @@ main.home {
       position: absolute;
       top: -5.375rem; }
     .welcome .text-component {
-      padding-top: 3rem; } }
+      padding-top: 3rem; }
+      .welcome .text-component h2 {
+        --text-vspace-multiplier: 4.6; } }
   @media (min-width: 64rem) {
     .welcome {
       background: url(../images/home/desktop/image-welcome.jpg) no-repeat;
       background-position: right center; }
       .welcome .text-component {
-        padding-top: 4.5rem; } }
+        padding-top: 4.7rem; }
+        .welcome .text-component h2 {
+          --text-vspace-multiplier: 2.8;
+          z-index: var(--zindex-popover);
+          position: relative; } }
 
 /* -------------------------------- 
 
