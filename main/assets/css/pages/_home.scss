@@ -122,7 +122,7 @@ main.home {
   }
 
   &__image {
-    display: none;
+    // display: none;
   }
 
   @include breakpoint(sm) {
@@ -134,12 +134,15 @@ main.home {
     &__content {
       padding-left: var(--padding-x);
       display: grid;
-      grid-template-columns: var(--max-paragraph-width) 350px;
-      justify-content:  space-between;
+      grid-template-columns: minmax(min-content, var(--max-paragraph-width)) 1fr;
     }
 
+
     &__image {
-      display: block;
+      // display: block;
+      justify-self: end;
+      background: url(../images/home/desktop/image-welcome.jpg) no-repeat;
+      width: 350px;
     }
 
   }

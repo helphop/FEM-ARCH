@@ -7115,16 +7115,16 @@ main.home {
     margin-bottom: 3.5rem; }
   .welcome__content p {
     color: var(--color-primary-light); }
-  .welcome__image {
-    display: none; }
   @media (min-width: 64rem) {
     .welcome__content {
       padding-left: var(--padding-x);
       display: grid;
-      grid-template-columns: var(--max-paragraph-width) 350px;
-      justify-content: space-between; }
+      grid-template-columns: minmax(-webkit-min-content, var(--max-paragraph-width)) 1fr;
+      grid-template-columns: minmax(min-content, var(--max-paragraph-width)) 1fr; }
     .welcome__image {
-      display: block; } }
+      justify-self: end;
+      background: url(../images/home/desktop/image-welcome.jpg) no-repeat;
+      width: 350px; } }
 
 /* -------------------------------- 
 
