@@ -29,8 +29,6 @@
 
   @include breakpoint(md) {
     --component-padding: 11.875rem  !important;
-
-
     p {
       max-width: 27rem;
     }
