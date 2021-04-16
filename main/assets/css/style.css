@@ -6830,7 +6830,8 @@ html:not(.js) .no-js\:is-hidden {
       --outer-container-column: MIN(10.3125rem, 11.45vw); } }
 
 .container h1,
-.container h2 {
+.container h2,
+.container h3 {
   max-width: 9ch; }
 
 @media (min-width: 64rem) {
