@@ -6829,20 +6829,18 @@ html:not(.js) .no-js\:is-hidden {
     .container-outer {
       --outer-container-column: MIN(10.3125rem, 11.45vw); } }
 
-.container h1,
-.container h2,
-.container h3 {
-  max-width: 9ch; }
-
-@media (min-width: 48rem) {
-  .container {
-    --component-padding: 3.3rem; } }
-
-@media (min-width: 64rem) {
-  .container {
-    --component-padding: 11.875rem  !important; }
-    .container p {
-      max-width: 28rem; } }
+.container {
+  --component-padding: var(--outer-container-column); }
+  .container :is(h1, h2, h3) {
+    max-width: 9ch; }
+  @media (min-width: 48rem) {
+    .container {
+      --component-padding: 3.3rem; } }
+  @media (min-width: 64rem) {
+    .container {
+      --component-padding: 11.875rem  !important; }
+      .container p {
+        max-width: 28rem; } }
 
 :root {
   --font-primary: 'Spartan', sans-serif;
@@ -7058,9 +7056,7 @@ mark {
   --max-paragraph-width: 28rem; }
 
 header {
-  margin-top: var(--nav-bar-height); }
-
-.hero {
+  margin-top: var(--nav-bar-height);
   position: relative; }
 
 .slide {
@@ -7111,14 +7107,14 @@ header {
 
 main.home {
   --section-spacer: 12.5rem; }
-  main.home > :first-child {
+  main.home .container-outer > :first-child {
     margin-top: 8.75rem; }
-  main.home > * {
+  main.home .container-outer > * {
     margin-bottom: 6rem; }
   @media (min-width: 48rem) {
-    main.home > :first-child {
+    main.home .container-outer > :first-child {
       margin-top: var(--section-spacer); }
-    main.home > * {
+    main.home .container-outer > * {
       margin-bottom: var(--section-spacer); } }
 
 .welcome {
@@ -7141,39 +7137,35 @@ main.home {
   .welcome p {
     color: var(--color-primary-light); }
   @media (min-width: 48rem) {
-    .welcome h1 {
-      display: block;
-      position: absolute;
-      top: -5.375rem; }
-    .welcome .text-component {
+    .welcome {
       padding-top: 3rem; }
+      .welcome h1 {
+        display: block;
+        position: absolute;
+        top: -5.375rem; }
       .welcome .text-component h2 {
         --text-vspace-multiplier: 4.6; } }
   @media (min-width: 64rem) {
     .welcome {
       background: url(../images/home/desktop/image-welcome.jpg) no-repeat;
-      background-position: right center; }
-      .welcome .text-component {
-        padding-top: 4.7rem; }
-        .welcome .text-component h2 {
-          --text-vspace-multiplier: 2.8;
-          z-index: var(--zindex-popover);
-          position: relative; } }
+      background-position: right center;
+      padding-top: 4.7rem; }
+      .welcome .text-component h2 {
+        --text-vspace-multiplier: 2.8;
+        z-index: var(--zindex-popover);
+        position: relative; } }
 
 .teams {
   --bg-image: url(../images/home/mobile/image-small-team.jpg);
-  background: var(--bg-image) no-repeat;
+  background-image: linear-gradient(hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.527), hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.5)), var(--bg-image);
   background-size: cover;
-  color: var(--color-white); }
-  .teams__content {
-    padding: 11.25rem 0; }
+  background-repeat: no-repeat;
+  color: var(--color-white);
+  padding: 11.25rem 0; }
   @media (min-width: 48rem) {
     .teams {
-      --bg-image: url(../images/home/tablet/image-small-team.jpg); }
-      .teams__content {
-        padding: 10.5rem 0; }
-      .teams .text-component {
-        --text-vspace-multiplier: 3; } }
+      --bg-image: url(../images/home/tablet/image-small-team.jpg);
+      padding: 10.5rem 0; } }
   @media (min-width: 64rem) {
     .teams {
       --bg-image: url(../images/home/desktop/image-small-team.jpg); } }
