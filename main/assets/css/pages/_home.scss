@@ -92,21 +92,23 @@ header {
 main.home {
   --section-spacer: 12.5rem;
 
-  > :first-child {
-    margin-top: 8.75rem;
-  }
-
-  > * {
-    margin-bottom: 6rem;
-  }
-
-  @include breakpoint(sm) {
-    > :first-child {
-     margin-top: var(--section-spacer);
+  .container-outer {
+      > :first-child {
+      margin-top: 8.75rem;
     }
 
     > * {
-    margin-bottom: var(--section-spacer);
+      margin-bottom: 6rem;
+    }
+
+    @include breakpoint(sm) {
+      > :first-child {
+      margin-top: var(--section-spacer);
+      }
+
+      > * {
+      margin-bottom: var(--section-spacer);
+      }
     }
   }
 }
@@ -188,6 +190,11 @@ main.home {
     padding: 11.25rem 0;
   }
 
+  .text-component {
+    --text-vspace-multiplier: 5;
+  }
+
+
 
   @include breakpoint(sm) {
     --bg-image: url(../images/home/tablet/image-small-team.jpg);
@@ -196,13 +203,15 @@ main.home {
       padding: 10.5rem 0;
     }
 
-   .text-component {
-      --text-vspace-multiplier: 3;
-    }
   }
 
   @include breakpoint(md) {
     --bg-image: url(../images/home/desktop/image-small-team.jpg);
+
+  .text-component {
+    --text-vspace-multiplier: 3;
+  }
+
   }
 
 }

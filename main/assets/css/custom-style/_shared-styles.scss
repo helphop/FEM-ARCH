@@ -14,7 +14,7 @@
     --outer-container-column: 11.25vw;
   }
 
-    @include breakpoint(md) {
+  @include breakpoint(md) {
     --outer-container-column: MIN(10.3125rem, 11.45vw);
   }
 }
@@ -27,6 +27,8 @@
   h3 {
     max-width: 9ch;
   }
+
+  --component-padding: var(--outer-container-column);
 
   @include breakpoint(sm) {
     --component-padding: 3.3rem;
