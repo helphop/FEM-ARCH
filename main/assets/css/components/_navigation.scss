@@ -4,9 +4,11 @@
 
 .nav-bar {
   height: var(--nav-bar-height);
+  background: var(--color-white);
   position: fixed;
-  width: calc(100% - 2 * var(--outer-container-column)) ;
-  left: var(--outer-container-column);
+  width: 100%;
+  left: 0;
+  padding: 0 var(--outer-container-column);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -21,16 +23,17 @@
     top: var(--nav-bar-height);
     opacity: 0;
     visibility: hidden;
+    z-index: 0;
   }
 
 }
 
 .nav {
   background: var(--color-black-lighter);
-  padding: 48px;
+  padding: 3rem;
   position: absolute;
-  right: calc(-1.2 * var(--outer-container-column));
-  left: 0;
+  right: 0;
+  left: var(--outer-container-column);
   top: var(--nav-bar-height);
   transform: translateX(100%);
   display: grid;
@@ -40,8 +43,8 @@
 }
 
 .nav-icon {
-  width: 24px;
-  height: 17px;
+  width: 1.5rem;
+  height: 1.0625rem;
   background: url(../images/icons/icon-hamburger.svg) no-repeat;
    @include rotate-fade(rotate1, 1);
 }
@@ -79,8 +82,8 @@
   }
 
   .nav-bar {
-    width: 100%;
     justify-content: start;
+    padding: 0;
 
     &__logo {
       height: 40px;
