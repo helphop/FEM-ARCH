@@ -7047,9 +7047,11 @@ mark {
 .full-width {
   grid-column: 1 / span 3; }
 
-@media (min-width: 48rem) {
-  .col1\@sm {
-    grid-column: 2 / span 1; } }
+.col1\@sm {
+  grid-column: 1 / span 3; }
+  @media (min-width: 48rem) {
+    .col1\@sm {
+      grid-column: 2 / span 1; } }
 
 :root {
   --padding-x: 11.875rem;

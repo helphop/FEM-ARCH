@@ -1,6 +1,6 @@
 .container-outer {
   --outer-container-column: 8.5vw;
-  --min: calc(23.4375rem - 2 * (var(--outer-container-column))); //375px - 2 x outer-column-width
+  --min: calc(23.4375rem - 2 * (var(--outer-container-column))); //375px - 2 x outer-column-width = min width of content column
   max-width: 90rem; //1440px
   margin: 0 auto;
   display: grid;

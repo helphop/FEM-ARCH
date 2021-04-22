@@ -17,6 +17,9 @@
 }
 
 .col1\@sm {
+
+  grid-column: 1 / span 3;
+
   @include breakpoint(sm) {
     grid-column: 2 / span 1;
   }
