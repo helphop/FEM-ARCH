@@ -7116,8 +7116,6 @@ main.home {
 
 .welcome {
   position: relative; }
-  .welcome h1 {
-    display: none; }
   .welcome .horizontal-line {
     position: absolute;
     height: 1px;
