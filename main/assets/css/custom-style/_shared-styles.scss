@@ -1,10 +1,10 @@
 .container-outer {
   --outer-container-column: 8.5vw;
-  --min: calc(23.4375rem - 2 * (var(--outer-container-column)));
-  max-width: 90rem;
+  --min: calc(23.4375rem - 2 * (var(--outer-container-column))); //375px - 2 x outer-column-width
+  max-width: 90rem; //1440px
   margin: 0 auto;
   display: grid;
-  grid-template-columns: var(--outer-container-column) minmax(var(--min), 1110px) var(--outer-container-column);
+  grid-template-columns: var(--outer-container-column) minmax(var(--min), 69.375rem) var(--outer-container-column);
 
   > * {
     grid-column: 2; //put every child element in the second column

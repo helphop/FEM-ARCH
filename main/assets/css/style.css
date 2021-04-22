@@ -6819,7 +6819,7 @@ html:not(.js) .no-js\:is-hidden {
   max-width: 90rem;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: var(--outer-container-column) minmax(var(--min), 1110px) var(--outer-container-column); }
+  grid-template-columns: var(--outer-container-column) minmax(var(--min), 69.375rem) var(--outer-container-column); }
   .container-outer > * {
     grid-column: 2; }
   @media (min-width: 48rem) {
