@@ -6889,12 +6889,12 @@ h1 {
     h1 {
       font-size: 5rem; } }
 
-.display {
+.huge {
   color: var(--color-black-medium);
   font-size: 7.5rem;
   letter-spacing: -3px; }
   @media (min-width: 64rem) {
-    .display {
+    .huge {
       font-size: 12.5rem;
       letter-spacing: -5px; } }
 
