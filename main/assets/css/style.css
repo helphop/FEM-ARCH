@@ -7053,10 +7053,6 @@ mark {
     .col1\@sm {
       grid-column: 2 / span 1; } }
 
-:root {
-  --padding-x: 11.875rem;
-  --max-paragraph-width: 28rem; }
-
 header {
   margin-top: var(--nav-bar-height);
   position: relative; }
