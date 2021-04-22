@@ -44,10 +44,6 @@ header {
   }
 }
 
-.slide-nav {
-  display: none; //hide the slide nav on mobile devices
-}
-
 @include breakpoint(sm) {
 
   header {

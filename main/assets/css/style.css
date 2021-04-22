@@ -7082,9 +7082,6 @@ header {
     .slide__content > a {
       align-self: end; }
 
-.slide-nav {
-  display: none; }
-
 @media (min-width: 48rem) {
   header {
     margin-top: initial; }
