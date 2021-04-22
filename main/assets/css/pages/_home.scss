@@ -163,8 +163,8 @@ main.home {
     background: url(../images/home/desktop/image-welcome.jpg) no-repeat;
     background-position: right center;
     padding-top: 4.7rem;
-    .text-component {
 
+    .text-component {
       h2 {
         --text-vspace-multiplier: 2.8;
         z-index: var(--zindex-popover); //position above H1;
