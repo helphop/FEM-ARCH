@@ -6824,7 +6824,7 @@ html:not(.js) .no-js\:is-hidden {
     grid-column: 2; }
   @media (min-width: 48rem) {
     .container-outer {
-      --outer-container-column: 11.25vw; } }
+      --outer-container-column: 11.45vw; } }
   @media (min-width: 64rem) {
     .container-outer {
       --outer-container-column: MIN(10.3125rem, 11.45vw); } }
