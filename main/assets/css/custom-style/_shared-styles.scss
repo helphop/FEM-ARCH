@@ -7,7 +7,7 @@
   grid-template-columns: [main-start] var(--outer-container-column) [content-start] minmax(var(--min), 69.375rem) [content-end] var(--outer-container-column) [main-end];
 
   > * {
-    grid-column-start: content-start; //put every child element in the second column
+    grid-column-start: content-start;
   }
 
   @include breakpoint(sm) {
@@ -19,6 +19,10 @@
   }
 }
 
+.vertical-content {
+  grid-column-start: main-start;
+  grid-row: span 2;
+}
 
 
 .container {

@@ -6830,6 +6830,10 @@ html:not(.js) .no-js\:is-hidden {
     .container-outer {
       --outer-container-column: MIN(10.3125rem, 11.45vw); } }
 
+.vertical-content {
+  grid-column-start: main-start;
+  grid-row: span 2; }
+
 .container {
   --component-padding: var(--outer-container-column); }
   .container :is(h1, h2, h3) {
@@ -7361,8 +7365,6 @@ Usage: codyhouse.co/license
 
 @media (min-width: 48rem) {
   .vertical-content {
-    grid-column: 1;
-    grid-row: span 2;
     display: grid;
     justify-items: center;
     grid-template-rows: -webkit-min-content auto;
