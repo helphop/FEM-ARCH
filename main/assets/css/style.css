@@ -6820,9 +6820,9 @@ html:not(.js) .no-js\:is-hidden {
   max-width: 90rem;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: var(--outer-container-column) minmax(var(--min), 69.375rem) var(--outer-container-column); }
+  grid-template-columns: [main-start] var(--outer-container-column) [content-start] minmax(var(--min), 69.375rem) [content-end] var(--outer-container-column) [main-end]; }
   .container-outer > * {
-    grid-column: 2; }
+    grid-column-start: content-start; }
   @media (min-width: 48rem) {
     .container-outer {
       --outer-container-column: 11.45vw; } }
@@ -7046,13 +7046,13 @@ mark {
   transition: all 0.2s; }
 
 .full-width {
-  grid-column: 1 / span 3; }
+  grid-column-start: main-start;
+  grid-column-end: main-end; }
 
-.col1\@sm {
-  grid-column: 1 / span 3; }
-  @media (min-width: 48rem) {
-    .col1\@sm {
-      grid-column: 2 / span 1; } }
+@media (min-width: 48rem) {
+  .col-content\@sm {
+    grid-column-start: content-start;
+    grid-column-end: content-end; } }
 
 .container-width\@md {
   width: 100%; }

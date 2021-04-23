@@ -4,10 +4,10 @@
   max-width: 90rem; //1440px
   margin: 0 auto;
   display: grid;
-  grid-template-columns: var(--outer-container-column) minmax(var(--min), 69.375rem) var(--outer-container-column);
+  grid-template-columns: [main-start] var(--outer-container-column) [content-start] minmax(var(--min), 69.375rem) [content-end] var(--outer-container-column) [main-end];
 
   > * {
-    grid-column: 2; //put every child element in the second column
+    grid-column-start: content-start; //put every child element in the second column
   }
 
   @include breakpoint(sm) {
