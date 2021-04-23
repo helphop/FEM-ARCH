@@ -7175,25 +7175,29 @@ main.home {
       --bg-image: url(../images/home/desktop/image-small-team.jpg); } }
 
 .featured {
+  --col-gap: 1.5rem;
   display: grid;
-  grid-template-columns: 1fr; }
+  grid-template-columns: 1fr;
+  gap: var(--col-gap); }
   @media (min-width: 48rem) {
     .featured {
       grid-template-columns: 1fr auto;
-      grid-template-rows: auto 1fr;
       grid-template-areas: "title button" "cards cards";
-      align-items: start; }
+      align-items: center; }
       .featured .btn {
-        grid-area: button; }
-      .featured h2 {
-        grid-area: title; } }
+        grid-area: button; } }
   .featured .project-cards {
-    grid-area: cards;
+    margin-top: var(--space-xl);
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1.5rem; }
+    gap: var(--col-gap); }
+    @media (min-width: 48rem) {
+      .featured .project-cards {
+        margin-top: var(--space-xxxxl);
+        grid-area: cards; } }
     @media (min-width: 64rem) {
       .featured .project-cards {
+        margin-top: var(--space-lg);
         grid-template-columns: repeat(3, 1fr);
         gap: 1.875rem; } }
 
