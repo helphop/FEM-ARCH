@@ -75,13 +75,13 @@ h1 {
   }
 }
 
-.huge {
+.text--huge {
   color: var(--color-black-medium);
   font-size: 7.5rem;
   letter-spacing: -3px;
 
   @include breakpoint(md) {
-    font-size: 12.5rem;
+    font-size: MIN(16vw,12.5rem);
     letter-spacing: -5px;
   }
 }
