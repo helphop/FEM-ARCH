@@ -3,6 +3,11 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 24px;
+
+  @include breakpoint(md) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
 }
 
 // PROJECT CARD
@@ -16,16 +21,6 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
-
-  .large-number {
-    position: absolute;
-    font-size: 200px;
-    font-weight: 700;
-    opacity: 0.5;
-    right: 18px;
-    top: 24px;
-    @include lhCrop(var(--body-line-height), 1.05);
   }
 
   .text-component {
@@ -42,6 +37,22 @@
   @include breakpoint(sm) {
     .text-component {
       --text-offset: 40px;
+    }
+
+    .large-number {
+      position: absolute;
+      font-size: 200px;
+      font-weight: 700;
+      opacity: 0.5;
+      right: 18px;
+      top: 24px;
+      @include lhCrop(var(--body-line-height), 1.05);
+    }
+  }
+
+  @include breakpoint(md) {
+    .large-number {
+      right: -20px;
     }
   }
 }

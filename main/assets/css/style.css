@@ -7386,6 +7386,10 @@ Usage: codyhouse.co/license
   display: grid;
   grid-template-columns: 1fr;
   gap: 24px; }
+  @media (min-width: 64rem) {
+    .project-cards {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px; } }
 
 .project-card {
   position: relative;
@@ -7396,19 +7400,6 @@ Usage: codyhouse.co/license
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover; }
-  .project-card .large-number {
-    position: absolute;
-    font-size: 200px;
-    font-weight: 700;
-    opacity: 0.5;
-    right: 18px;
-    top: 24px; }
-    .project-card .large-number::before {
-      content: '';
-      display: block;
-      height: 0;
-      width: 0;
-      margin-top: calc((1.05 - var(--body-line-height)) * 0.5em); }
   .project-card .text-component {
     position: absolute;
     --text-offset: 24px;
@@ -7418,7 +7409,23 @@ Usage: codyhouse.co/license
     color: inherit; }
   @media (min-width: 48rem) {
     .project-card .text-component {
-      --text-offset: 40px; } }
+      --text-offset: 40px; }
+    .project-card .large-number {
+      position: absolute;
+      font-size: 200px;
+      font-weight: 700;
+      opacity: 0.5;
+      right: 18px;
+      top: 24px; }
+      .project-card .large-number::before {
+        content: '';
+        display: block;
+        height: 0;
+        width: 0;
+        margin-top: calc((1.05 - var(--body-line-height)) * 0.5em); } }
+  @media (min-width: 64rem) {
+    .project-card .large-number {
+      right: -20px; } }
 
 @media (min-width: 48rem) {
   .vertical-content {
