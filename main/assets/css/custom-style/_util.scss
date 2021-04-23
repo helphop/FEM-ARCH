@@ -12,15 +12,25 @@
   transition: all 0.2s;
 }
 
+//change name to span-all-cols
 .full-width {
   grid-column: 1 / span 3;
 }
 
+//change to col2@sm
 .col1\@sm {
 
   grid-column: 1 / span 3;
 
   @include breakpoint(sm) {
     grid-column: 2 / span 1;
+  }
+}
+
+.container-width\@md {
+  width: 100%;
+
+  @include breakpoint(md) {
+    width: var(--container-width);
   }
 }

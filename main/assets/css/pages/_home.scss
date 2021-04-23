@@ -123,10 +123,6 @@ main.home {
     }
   }
 
-  .container {
-    --component-padding: 0; //controls the width of the container
-  }
-
   p {
     color: var(--color-primary-light);
   }
@@ -134,7 +130,6 @@ main.home {
   @include breakpoint(sm) {
     padding-top: 3rem;
     h1 {
-      display: block;
       position: absolute;
       top: -5.375rem;
     }

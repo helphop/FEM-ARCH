@@ -6,7 +6,8 @@
   // --------------------------------
 
   .container {
-    width: calc(100% - 2*var(--component-padding));
+    --container-width: calc(100% - 2*var(--component-padding));
+    width: var(--container-width);
     margin-left: auto;
     margin-right: auto;
   }
@@ -64,7 +65,7 @@
     .grid {
       margin-bottom: calc(-1 * var(--gap-y));
       margin-left: calc(-1 * var(--gap-x));
-    
+
       > * {
         margin-bottom: var(--gap-y);
         margin-left: var(--offset);
@@ -74,7 +75,7 @@
     .flex[class*="gap-"], .inline-flex[class*="gap-"] {
       margin-bottom: calc(-1 * var(--gap-y, 0));
       margin-left: calc(-1 * var(--gap-x, 0));
-    
+
       > * {
         margin-bottom: var(--gap-y, 0);
         margin-left: var(--gap-x, 0);
@@ -92,7 +93,7 @@
     .gap-xxl, .grid-gap-xxl, .flex-gap-xxl       { --gap-x: var(--space-xxl);   --gap-y: var(--space-xxl); }
     .gap-xxxl, .grid-gap-xxxl, .flex-gap-xxxl    { --gap-x: var(--space-xxxl);  --gap-y: var(--space-xxxl); }
     .gap-xxxxl, .grid-gap-xxxxl, .flex-gap-xxxxl { --gap-x: var(--space-xxxxl); --gap-y: var(--space-xxxxl); }
-    
+
     .gap-x-xxxxs { --gap-x: var(--space-xxxxs); }
     .gap-x-xxxs  { --gap-x: var(--space-xxxs); }
     .gap-x-xxs   { --gap-x: var(--space-xxs); }
@@ -146,20 +147,20 @@
       .col\@#{$breakpoint} { // auto-sized column
         @include autoSizedColumn;
       }
-    
+
       @for $i from 1 through $grid-columns {
         .col-#{$i}\@#{$breakpoint} {
           flex-basis: calc( #{round-width($i)} - 0.01px - var(--gap-x, 0.75em));
           max-width: calc( #{round-width($i)} - 0.01px - var(--gap-x, 0.75em));
         }
       }
-    
+
       .col-content\@#{$breakpoint} {
         flex-grow: 0;
         flex-basis: initial;
         max-width: initial;
       }
-    
+
       @for $i from 1 through $grid-columns - 1 {
         .offset-#{$i}\@#{$breakpoint} {
           --offset: calc(#{round-width($i)} + var(--gap-x, 0.75em));
@@ -169,7 +170,7 @@
       .offset-0\@#{$breakpoint} {
         --offset: var(--gap-x);
       }
-    
+
       @supports (--css: variables) {
         .gap-xxxxs\@#{$breakpoint} { --gap-x: var(--space-xxxxs); --gap-y: var(--space-xxxxs); }
         .gap-xxxs\@#{$breakpoint}  { --gap-x: var(--space-xxxs);  --gap-y: var(--space-xxxs); }
