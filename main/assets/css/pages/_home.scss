@@ -199,8 +199,17 @@ main.home {
       grid-area: title;
     }
 
-    .project-cards {
-      grid-area: cards;
+  }
+
+  .project-cards {
+    grid-area: cards;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+
+    @include breakpoint(md) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.875rem;
     }
   }
 }
