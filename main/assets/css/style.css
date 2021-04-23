@@ -98,7 +98,8 @@ img, video, svg {
   --component-padding: var(--space-md); }
 
 .container {
-  width: calc(100% - 2*var(--component-padding));
+  --container-width: calc(100% - 2*var(--component-padding));
+  width: var(--container-width);
   margin-left: auto;
   margin-right: auto; }
 
