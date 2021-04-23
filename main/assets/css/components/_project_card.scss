@@ -1,15 +1,4 @@
 
-.project-cards {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
-
-  @include breakpoint(md) {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-  }
-}
-
 // PROJECT CARD
 
 .project-card {
@@ -25,7 +14,7 @@
 
   .text-component {
     position: absolute;
-    --text-offset: 24px;
+    --text-offset: 1.5rem;
     left: var(--text-offset);
     bottom: var(--text-offset);
   }
@@ -36,23 +25,24 @@
 
   @include breakpoint(sm) {
     .text-component {
-      --text-offset: 40px;
+      --text-offset: 2.5rem;
     }
 
     .large-number {
       position: absolute;
-      font-size: 200px;
+      font-size: 12.5rem;
       font-weight: 700;
       opacity: 0.5;
-      right: 18px;
-      top: 24px;
+      right: 1.125rem;
+      top: 1.5rem;
       @include lhCrop(var(--body-line-height), 1.05);
     }
   }
 
   @include breakpoint(md) {
     .large-number {
-      right: -20px;
+      right: -1.25rem;
+      top: 2.5rem;
     }
   }
 }

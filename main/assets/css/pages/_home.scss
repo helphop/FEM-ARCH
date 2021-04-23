@@ -181,26 +181,37 @@ main.home {
 // FEATURED SECTION
 
 .featured {
+  --col-gap: 1.5rem;
   display: grid;
   grid-template-columns: 1fr;
+  gap: var(--col-gap);
 
   @include breakpoint(sm) {
     grid-template-columns: 1fr auto;
-    grid-template-rows: auto 1fr;
     grid-template-areas: "title button"
                          "cards cards";
-    align-items: start;
+    align-items: center;
 
     .btn {
       grid-area: button;
     }
+  }
 
-    h2 {
-      grid-area: title;
+  .project-cards {
+    margin-top: var(--space-xl);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--col-gap);
+
+    @include breakpoint(sm) {
+      margin-top: var(--space-xxxxl);
+       grid-area: cards;
     }
 
-    .project-cards {
-      grid-area: cards;
+    @include breakpoint(md) {
+      margin-top: var(--space-lg);
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.875rem;
     }
   }
 }

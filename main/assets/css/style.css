@@ -7175,20 +7175,31 @@ main.home {
       --bg-image: url(../images/home/desktop/image-small-team.jpg); } }
 
 .featured {
+  --col-gap: 1.5rem;
   display: grid;
-  grid-template-columns: 1fr; }
+  grid-template-columns: 1fr;
+  gap: var(--col-gap); }
   @media (min-width: 48rem) {
     .featured {
       grid-template-columns: 1fr auto;
-      grid-template-rows: auto 1fr;
       grid-template-areas: "title button" "cards cards";
-      align-items: start; }
+      align-items: center; }
       .featured .btn {
-        grid-area: button; }
-      .featured h2 {
-        grid-area: title; }
+        grid-area: button; } }
+  .featured .project-cards {
+    margin-top: var(--space-xl);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--col-gap); }
+    @media (min-width: 48rem) {
       .featured .project-cards {
+        margin-top: var(--space-xxxxl);
         grid-area: cards; } }
+    @media (min-width: 64rem) {
+      .featured .project-cards {
+        margin-top: var(--space-lg);
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.875rem; } }
 
 /* -------------------------------- 
 
@@ -7382,15 +7393,6 @@ Usage: codyhouse.co/license
     opacity: 1;
     transform: translateX(0%); } }
 
-.project-cards {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px; }
-  @media (min-width: 64rem) {
-    .project-cards {
-      grid-template-columns: repeat(3, 1fr);
-      gap: 30px; } }
-
 .project-card {
   position: relative;
   color: var(--color-white); }
@@ -7402,21 +7404,21 @@ Usage: codyhouse.co/license
        object-fit: cover; }
   .project-card .text-component {
     position: absolute;
-    --text-offset: 24px;
+    --text-offset: 1.5rem;
     left: var(--text-offset);
     bottom: var(--text-offset); }
   .project-card a {
     color: inherit; }
   @media (min-width: 48rem) {
     .project-card .text-component {
-      --text-offset: 40px; }
+      --text-offset: 2.5rem; }
     .project-card .large-number {
       position: absolute;
-      font-size: 200px;
+      font-size: 12.5rem;
       font-weight: 700;
       opacity: 0.5;
-      right: 18px;
-      top: 24px; }
+      right: 1.125rem;
+      top: 1.5rem; }
       .project-card .large-number::before {
         content: '';
         display: block;
@@ -7425,7 +7427,8 @@ Usage: codyhouse.co/license
         margin-top: calc((1.05 - var(--body-line-height)) * 0.5em); } }
   @media (min-width: 64rem) {
     .project-card .large-number {
-      right: -20px; } }
+      right: -1.25rem;
+      top: 2.5rem; } }
 
 @media (min-width: 48rem) {
   .vertical-content {
