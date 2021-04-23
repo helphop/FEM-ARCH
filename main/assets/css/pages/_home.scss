@@ -177,3 +177,10 @@ main.home {
     --bg-image: url(../images/home/desktop/image-small-team.jpg);
   }
 }
+
+// FEATURED SECTION
+
+.featured {
+  display: grid;
+  grid-template-columns: 1fr;
+}
