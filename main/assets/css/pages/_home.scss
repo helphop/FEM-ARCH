@@ -183,4 +183,24 @@ main.home {
 .featured {
   display: grid;
   grid-template-columns: 1fr;
+
+  @include breakpoint(sm) {
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: "title button"
+                         "cards cards";
+    align-items: start;
+
+    .btn {
+      grid-area: button;
+    }
+
+    h2 {
+      grid-area: title;
+    }
+
+    .project-cards {
+      grid-area: cards;
+    }
+  }
 }

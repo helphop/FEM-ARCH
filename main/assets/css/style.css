@@ -6886,11 +6886,11 @@ h1, h2, h3, h4 {
 .font-primary {
   font-family: var(--font-primary); }
 
-h1 {
+h1, .h1 {
   font-size: 3rem;
   letter-spacing: -2px; }
   @media (min-width: 48rem) {
-    h1 {
+    h1, .h1 {
       font-size: 5rem; } }
 
 h3 {
@@ -7177,6 +7177,18 @@ main.home {
 .featured {
   display: grid;
   grid-template-columns: 1fr; }
+  @media (min-width: 48rem) {
+    .featured {
+      grid-template-columns: 1fr auto;
+      grid-template-rows: auto 1fr;
+      grid-template-areas: "title button" "cards cards";
+      align-items: start; }
+      .featured .btn {
+        grid-area: button; }
+      .featured h2 {
+        grid-area: title; }
+      .featured .project-cards {
+        grid-area: cards; } }
 
 /* -------------------------------- 
 
@@ -7379,13 +7391,34 @@ Usage: codyhouse.co/license
   position: relative;
   color: var(--color-white); }
   .project-card__img {
-    filter: brightness(75%); }
+    filter: brightness(75%);
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover; }
+  .project-card .large-number {
+    position: absolute;
+    font-size: 200px;
+    font-weight: 700;
+    opacity: 0.5;
+    right: 18px;
+    top: 24px; }
+    .project-card .large-number::before {
+      content: '';
+      display: block;
+      height: 0;
+      width: 0;
+      margin-top: calc((1.05 - var(--body-line-height)) * 0.5em); }
   .project-card .text-component {
     position: absolute;
-    left: 24px;
-    bottom: 24px; }
+    --text-offset: 24px;
+    left: var(--text-offset);
+    bottom: var(--text-offset); }
   .project-card a {
     color: inherit; }
+  @media (min-width: 48rem) {
+    .project-card .text-component {
+      --text-offset: 40px; } }
 
 @media (min-width: 48rem) {
   .vertical-content {

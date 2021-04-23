@@ -66,7 +66,7 @@ h1, h2, h3, h4 {
 // font family
 .font-primary { font-family: var(--font-primary); }
 
-h1 {
+h1, .h1 {
   font-size: 3rem;
   letter-spacing: -2px;
 

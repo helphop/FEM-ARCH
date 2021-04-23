@@ -5,22 +5,43 @@
   gap: 24px;
 }
 
-.project-card {
+// PROJECT CARD
 
+.project-card {
   position: relative;
   color: var(--color-white);
 
   &__img {
     filter: brightness(75%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .large-number {
+    position: absolute;
+    font-size: 200px;
+    font-weight: 700;
+    opacity: 0.5;
+    right: 18px;
+    top: 24px;
+    @include lhCrop(var(--body-line-height), 1.05);
   }
 
   .text-component {
     position: absolute;
-    left: 24px;
-    bottom: 24px;
+    --text-offset: 24px;
+    left: var(--text-offset);
+    bottom: var(--text-offset);
   }
 
   a {
     color: inherit;
+  }
+
+  @include breakpoint(sm) {
+    .text-component {
+      --text-offset: 40px;
+    }
   }
 }
