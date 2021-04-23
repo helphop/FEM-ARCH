@@ -6816,11 +6816,10 @@ html:not(.js) .no-js\:is-hidden {
 
 .container-outer {
   --outer-container-column: 8.5vw;
-  --min: calc(23.4375rem - 2 * (var(--outer-container-column)));
   max-width: 90rem;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: [main-start] var(--outer-container-column) [content-start] minmax(var(--min), 69.375rem) [content-end] var(--outer-container-column) [main-end]; }
+  grid-template-columns: [main-start] var(--outer-container-column) [content-start] minmax(19.4385rem, 69.375rem) [content-end] var(--outer-container-column) [main-end]; }
   .container-outer > * {
     grid-column-start: content-start; }
   @media (min-width: 48rem) {
