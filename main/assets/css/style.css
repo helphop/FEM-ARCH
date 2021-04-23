@@ -6893,6 +6893,9 @@ h1 {
     h1 {
       font-size: 5rem; } }
 
+h3 {
+  font-size: 1.125rem; }
+
 .text--huge {
   color: var(--color-black-medium);
   font-size: 7.5rem;
@@ -6932,7 +6935,7 @@ mark {
 
 .btn--primary:after, :is(.btn--primary--dark, .btn--icon):after {
   content: '';
-  width: 1.5rem;
+  width: 1.7rem;
   height: 1.125rem;
   background: url(../images/icons/icon-arrow.svg) no-repeat; }
 
@@ -6964,7 +6967,8 @@ mark {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transition: all 0.2s ease;
-  will-change: transform; }
+  will-change: transform;
+  justify-content: center; }
 
 .btn--primary:hover {
   text-decoration: underline; }
@@ -7170,6 +7174,10 @@ main.home {
     .teams {
       --bg-image: url(../images/home/desktop/image-small-team.jpg); } }
 
+.featured {
+  display: grid;
+  grid-template-columns: 1fr; }
+
 /* -------------------------------- 
 
 File#: _1_list
@@ -7361,6 +7369,23 @@ Usage: codyhouse.co/license
     visibility: visible;
     opacity: 1;
     transform: translateX(0%); } }
+
+.project-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px; }
+
+.project-card {
+  position: relative;
+  color: var(--color-white); }
+  .project-card__img {
+    filter: brightness(75%); }
+  .project-card .text-component {
+    position: absolute;
+    left: 24px;
+    bottom: 24px; }
+  .project-card a {
+    color: inherit; }
 
 @media (min-width: 48rem) {
   .vertical-content {

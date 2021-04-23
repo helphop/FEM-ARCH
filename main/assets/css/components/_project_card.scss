@@ -1,0 +1,26 @@
+
+.project-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.project-card {
+
+  position: relative;
+  color: var(--color-white);
+
+  &__img {
+    filter: brightness(75%);
+  }
+
+  .text-component {
+    position: absolute;
+    left: 24px;
+    bottom: 24px;
+  }
+
+  a {
+    color: inherit;
+  }
+}

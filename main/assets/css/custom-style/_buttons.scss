@@ -18,7 +18,7 @@
 %arrow-icon {
   &:after {
    content: '';
-  width: 1.5rem;
+  width: 1.7rem;
   height: 1.125rem;
   background: url(../images/icons/icon-arrow.svg) no-repeat;
   }
@@ -28,6 +28,7 @@
 %btn-dark {
   --btn-bg: var(--color-primary);
   --btn-fg: var(--color-white);
+
 
   &:after {
     filter: invert(100%);
@@ -62,6 +63,7 @@
   @include fontSmooth;
   transition: all 0.2s ease;
   will-change: transform;
+  justify-content: center;
 }
 
 //white button with text and arrow icon
