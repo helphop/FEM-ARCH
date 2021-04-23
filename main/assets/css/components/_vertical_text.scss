@@ -1,8 +1,6 @@
 .vertical-content {
 
   @include breakpoint(sm) {
-    grid-column: 1;
-    grid-row: span 2;
 
    display: grid;
     justify-items: center;
@@ -20,6 +18,7 @@
     align-self: start;
     letter-spacing: 15px;
     color: var(--color-black-light);
-  }
+    }
+
   }
 }
