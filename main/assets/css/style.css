@@ -6839,7 +6839,7 @@ html:not(.js) .no-js\:is-hidden {
       --component-padding: 3.3rem; } }
   @media (min-width: 64rem) {
     .container {
-      --component-padding: 11.875rem  !important; }
+      --component-padding: 11.875rem; }
       .container p {
         max-width: 28rem; } }
 
@@ -7054,6 +7054,12 @@ mark {
     .col1\@sm {
       grid-column: 2 / span 1; } }
 
+.container-width\@md {
+  width: 100%; }
+  @media (min-width: 64rem) {
+    .container-width\@md {
+      width: var(--container-width); } }
+
 header {
   margin-top: var(--nav-bar-height);
   position: relative; }
@@ -7126,15 +7132,12 @@ main.home {
     --text-vspace-multiplier: 1.5; }
     .welcome .text-component h2 {
       --text-vspace-multiplier: 2.8; }
-  .welcome .container {
-    --component-padding: 0; }
   .welcome p {
     color: var(--color-primary-light); }
   @media (min-width: 48rem) {
     .welcome {
       padding-top: 3rem; }
       .welcome h1 {
-        display: block;
         position: absolute;
         top: -5.375rem; }
       .welcome .text-component h2 {
