@@ -23,10 +23,6 @@ header {
     object-fit: cover;
   }
 
-  .container {
-    --component-padding: var(--outer-container-column);
-  }
-
   &__content {
     height: 21.25rem;
     display: grid; //use grid so the spacing for slide content with more text matches the design
@@ -47,10 +43,6 @@ header {
 
   .slide {
     padding: 11.25rem 0;
-
-    .container {
-      --component-padding: 3.3rem;
-    }
 
     .slide__content {
       height: 22.5625rem; //keep height the same for tablet and desktop
