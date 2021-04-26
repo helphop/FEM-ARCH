@@ -7378,6 +7378,8 @@ Usage: codyhouse.co/license
 @media (min-width: 48rem) {
   :root {
     --nav-bar-height: 9.5rem; }
+  .navigation {
+    position: static; }
   .nav-bar,
   .nav {
     position: static; }
