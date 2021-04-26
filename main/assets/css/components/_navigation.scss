@@ -6,27 +6,21 @@
   background-color: var(--color-white);
   position: fixed;
   width: 100%;
-  z-index: var(--zindex-popover);
+  z-index: var(--zindex-fixed-element);
 
   .overlay {
-    margin-top: var(--nav-bar-height);
+    top: var(--nav-bar-height);
     opacity: 0;
     visibility: hidden;
-    z-index: var(--zindex-popover);
+    z-index: -1;
   }
 }
 
 .nav-bar {
   height: var(--nav-bar-height);
-  background: var(--color-white);
-  // position: fixed;
-  // width: 100%;
-  // left: 0;
-  // padding: 0 var(--outer-container-column);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: var(--zindex-fixed-element);
 
   &__logo {
     margin-right: 5.875rem;
@@ -84,18 +78,13 @@
     --nav-bar-height: 9.5rem;
   }
 
-  .navigation {
-    position: static;
-  }
-
-  .nav-bar,
+  .navigation,
   .nav {
-    position: static;
+    position: initial;
   }
 
   .nav-bar {
     justify-content: start;
-    padding: 0;
 
     &__logo {
       height: 40px;
