@@ -23,7 +23,7 @@
     top: var(--nav-bar-height);
     opacity: 0;
     visibility: hidden;
-    z-index: 0;
+    z-index: var(--zindex-popover);
   }
 
 }

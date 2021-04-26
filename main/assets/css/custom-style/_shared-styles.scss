@@ -36,7 +36,9 @@
   }
 
   @include breakpoint(md) {
-    --component-padding: 11.875rem;
+    //another way to set the component so that it can be overwritten
+    --container-padding: 11.875rem;
+    --component-padding: var(--container-padding);
 
     p {
       max-width: 28rem;

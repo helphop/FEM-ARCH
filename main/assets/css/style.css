@@ -6842,7 +6842,8 @@ html:not(.js) .no-js\:is-hidden {
       --component-padding: 3.3rem; } }
   @media (min-width: 64rem) {
     .container {
-      --component-padding: 11.875rem; }
+      --container-padding: 11.875rem;
+      --component-padding: var(--container-padding); }
       .container p {
         max-width: 28rem; } }
 
@@ -7061,11 +7062,9 @@ mark {
     grid-column-start: content-start;
     grid-column-end: content-end; } }
 
-.container-width\@md {
-  width: 100%; }
-  @media (min-width: 64rem) {
-    .container-width\@md {
-      width: var(--container-width); } }
+@media (min-width: 64rem) {
+  .container-width\@md {
+    width: var(--container-width); } }
 
 header {
   margin-top: var(--nav-bar-height);
@@ -7084,8 +7083,6 @@ header {
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover; }
-  .slide .container {
-    --component-padding: var(--outer-container-column); }
   .slide__content {
     height: 21.25rem;
     display: grid;
@@ -7099,8 +7096,6 @@ header {
     margin-top: initial; }
   .slide {
     padding: 11.25rem 0; }
-    .slide .container {
-      --component-padding: 3.3rem; }
     .slide .slide__content {
       height: 22.5625rem; } }
 
@@ -7281,6 +7276,9 @@ Usage: codyhouse.co/license
 .list--border ul, .list--border ol {
   border-top: 1px solid hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), 0.15); }
 
+.footer {
+  text-align: center; }
+
 :root {
   --nav-bar-height: 6rem; }
 
@@ -7302,7 +7300,7 @@ Usage: codyhouse.co/license
     top: var(--nav-bar-height);
     opacity: 0;
     visibility: hidden;
-    z-index: 0; }
+    z-index: var(--zindex-popover); }
 
 .nav {
   background: var(--color-black-lighter);

@@ -26,7 +26,6 @@
 }
 
 .container-width\@md {
-  width: 100%;
 
   @include breakpoint(md) {
     width: var(--container-width);
