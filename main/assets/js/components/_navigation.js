@@ -7,9 +7,9 @@ navIcon.addEventListener('click', () => toggleNavigation())
 // listen for key events
 window.addEventListener('keyup', function(event){
   // listen for esc key
-  if( keyPressed(event, 27, 'escape') && navbarOpen()) {
+  if( keyPressed(event, 27, 'escape') && navigationOpen()) {
     toggleNavigation();
-  } else if (keyPressed(event, 36, 'enter') && !navbarOpen()) {
+  } else if (keyPressed(event, 36, 'enter') && !navigationOpen()) {
     toggleNavigation();
   }
 });
