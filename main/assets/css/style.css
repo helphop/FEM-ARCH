@@ -7062,11 +7062,9 @@ mark {
     grid-column-start: content-start;
     grid-column-end: content-end; } }
 
-.container-width\@md {
-  width: 100%; }
-  @media (min-width: 64rem) {
-    .container-width\@md {
-      width: var(--container-width); } }
+@media (min-width: 64rem) {
+  .container-width\@md {
+    width: var(--container-width); } }
 
 header {
   margin-top: var(--nav-bar-height);
