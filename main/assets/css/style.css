@@ -7285,15 +7285,17 @@ Usage: codyhouse.co/license
 .navigation {
   background-color: var(--color-white);
   position: fixed;
-  z-index: var(--zindex-fixed-element); }
+  width: 100%;
+  z-index: var(--zindex-popover); }
+  .navigation .overlay {
+    margin-top: var(--nav-bar-height);
+    opacity: 0;
+    visibility: hidden;
+    z-index: var(--zindex-popover); }
 
 .nav-bar {
   height: var(--nav-bar-height);
   background: var(--color-white);
-  position: fixed;
-  width: 100%;
-  left: 0;
-  padding: 0 var(--outer-container-column);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -7301,11 +7303,6 @@ Usage: codyhouse.co/license
   .nav-bar__logo {
     margin-right: 5.875rem;
     height: 32px; }
-  .nav-bar + .overlay {
-    top: var(--nav-bar-height);
-    opacity: 0;
-    visibility: hidden;
-    z-index: var(--zindex-popover); }
 
 .nav {
   background: var(--color-black-lighter);
@@ -7325,7 +7322,8 @@ Usage: codyhouse.co/license
   height: 1.0625rem;
   background: url(../images/icons/icon-hamburger.svg) no-repeat;
   -webkit-animation: rotate1 1s;
-          animation: rotate1 1s; }
+          animation: rotate1 1s;
+  cursor: pointer; }
 
 @-webkit-keyframes rotate1 {
   0% {
@@ -7343,12 +7341,12 @@ Usage: codyhouse.co/license
     transform: rotate(360deg);
     opacity: 1; } }
 
-.nav-bar.open .nav {
+.navigation.open .nav {
   transform: translateX(0%);
   visibility: visible;
   opacity: 1; }
 
-.nav-bar.open .nav-icon {
+.navigation.open .nav-icon {
   width: 20px;
   height: 21px;
   background: url(../images/icons/icon-close.svg) no-repeat;
@@ -7371,7 +7369,7 @@ Usage: codyhouse.co/license
     transform: rotate(360deg);
     opacity: 1; } }
 
-.nav-bar.open + .overlay {
+.navigation.open .overlay {
   opacity: 1;
   visibility: visible; }
 

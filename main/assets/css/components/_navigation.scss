@@ -5,16 +5,24 @@
 .navigation {
   background-color: var(--color-white);
   position: fixed;
-  z-index: var(--zindex-fixed-element);
+  width: 100%;
+  z-index: var(--zindex-popover);
+
+  .overlay {
+    margin-top: var(--nav-bar-height);
+    opacity: 0;
+    visibility: hidden;
+    z-index: var(--zindex-popover);
+  }
 }
 
 .nav-bar {
   height: var(--nav-bar-height);
   background: var(--color-white);
-  position: fixed;
-  width: 100%;
-  left: 0;
-  padding: 0 var(--outer-container-column);
+  // position: fixed;
+  // width: 100%;
+  // left: 0;
+  // padding: 0 var(--outer-container-column);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -24,14 +32,6 @@
     margin-right: 5.875rem;
     height: 32px;
     }
-
-  & + .overlay {
-    top: var(--nav-bar-height);
-    opacity: 0;
-    visibility: hidden;
-    z-index: var(--zindex-popover);
-  }
-
 }
 
 .nav {
@@ -53,9 +53,11 @@
   height: 1.0625rem;
   background: url(../images/icons/icon-hamburger.svg) no-repeat;
    @include rotate-fade(rotate1, 1);
+   cursor: pointer;
 }
 
-.nav-bar.open {
+.navigation.open {
+
  .nav {
   transform: translateX(0%);
   visibility: visible;
@@ -69,7 +71,7 @@
    @include rotate-fade(rotate2, 1);
 }
 
- & + .overlay {
+ .overlay {
   opacity: 1;
   visibility: visible;
  }
