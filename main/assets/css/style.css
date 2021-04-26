@@ -7282,25 +7282,25 @@ Usage: codyhouse.co/license
 :root {
   --nav-bar-height: 6rem; }
 
-.nav-bar {
-  height: var(--nav-bar-height);
-  background: var(--color-white);
+.navigation {
+  background-color: var(--color-white);
   position: fixed;
   width: 100%;
-  left: 0;
-  padding: 0 var(--outer-container-column);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   z-index: var(--zindex-fixed-element); }
-  .nav-bar__logo {
-    margin-right: 5.875rem;
-    height: 32px; }
-  .nav-bar + .overlay {
+  .navigation .overlay {
     top: var(--nav-bar-height);
     opacity: 0;
     visibility: hidden;
-    z-index: var(--zindex-popover); }
+    z-index: -1; }
+
+.nav-bar {
+  height: var(--nav-bar-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .nav-bar__logo {
+    margin-right: 5.875rem;
+    height: 32px; }
 
 .nav {
   background: var(--color-black-lighter);
@@ -7320,7 +7320,8 @@ Usage: codyhouse.co/license
   height: 1.0625rem;
   background: url(../images/icons/icon-hamburger.svg) no-repeat;
   -webkit-animation: rotate1 1s;
-          animation: rotate1 1s; }
+          animation: rotate1 1s;
+  cursor: pointer; }
 
 @-webkit-keyframes rotate1 {
   0% {
@@ -7338,12 +7339,12 @@ Usage: codyhouse.co/license
     transform: rotate(360deg);
     opacity: 1; } }
 
-.nav-bar.open .nav {
+.navigation.open .nav {
   transform: translateX(0%);
   visibility: visible;
   opacity: 1; }
 
-.nav-bar.open .nav-icon {
+.navigation.open .nav-icon {
   width: 20px;
   height: 21px;
   background: url(../images/icons/icon-close.svg) no-repeat;
@@ -7366,19 +7367,18 @@ Usage: codyhouse.co/license
     transform: rotate(360deg);
     opacity: 1; } }
 
-.nav-bar.open + .overlay {
+.navigation.open .overlay {
   opacity: 1;
   visibility: visible; }
 
 @media (min-width: 48rem) {
   :root {
     --nav-bar-height: 9.5rem; }
-  .nav-bar,
+  .navigation,
   .nav {
-    position: static; }
+    position: initial; }
   .nav-bar {
-    justify-content: start;
-    padding: 0; }
+    justify-content: start; }
     .nav-bar__logo {
       height: 40px; }
   .nav {
