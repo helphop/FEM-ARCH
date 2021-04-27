@@ -7285,7 +7285,8 @@ Usage: codyhouse.co/license
 
 .footer {
   text-align: center;
-  margin-top: 36px; }
+  margin-top: 36px;
+  background: var(--color-black-lighter); }
   .footer__logo {
     display: inline-block;
     padding: 48px 31px;
@@ -7306,7 +7307,8 @@ Usage: codyhouse.co/license
     margin-bottom: 48px; }
   @media (min-width: 64rem) {
     .footer__logo {
-      padding: 80px 51px; } }
+      --logo-size:200px;
+      padding: 80px 50px; } }
 
 :root {
   --nav-bar-height: 6rem; }

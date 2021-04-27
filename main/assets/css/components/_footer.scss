@@ -1,6 +1,7 @@
 .footer {
   text-align: center;
   margin-top: 36px;
+  background: var(--color-black-lighter);
   &__logo {
     display: inline-block;
     padding: 48px 31px;
@@ -28,8 +29,10 @@
 
 
   @include breakpoint(md) {
+
     &__logo {
-      padding: 80px 51px;
+      --logo-size:200px;
+      padding: 80px 50px;
     }
   }
 }
