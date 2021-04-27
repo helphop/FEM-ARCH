@@ -6906,6 +6906,13 @@ h3 {
       font-size: MIN(16vw, 12.5rem);
       letter-spacing: -5px; } }
 
+.nav-link {
+  color: var(--color-primary-lighter);
+  font-weight: 700;
+  transition: all .2s; }
+  .nav-link:hover {
+    color: var(--color-primary); }
+
 mark {
   background-color: hsla(var(--color-accent-h), var(--color-accent-s), var(--color-accent-l), 0.2);
   color: inherit; }
@@ -7277,13 +7284,26 @@ Usage: codyhouse.co/license
   border-top: 1px solid hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), 0.15); }
 
 .footer {
-  text-align: center; }
+  text-align: center;
+  margin-top: 36px; }
   .footer__logo {
     display: inline-block;
     padding: 48px 31px;
-    background: var(--color-primary); }
+    --logo-size: 120px;
+    max-width: var(--logo-size);
+    max-height: var(--logo-size);
+    background: var(--color-primary);
+    margin-top: -50%; }
     .footer__logo img {
       filter: invert(100%) sepia(0%) saturate(13%) hue-rotate(225deg) brightness(103%) contrast(103%); }
+  .footer__nav {
+    --nav-spacing: 32px;
+    margin: var(--nav-spacing) 0;
+    display: grid;
+    justify-items: center;
+    gap: var(--nav-spacing); }
+  .footer .btn {
+    margin-bottom: 48px; }
   @media (min-width: 64rem) {
     .footer__logo {
       padding: 80px 51px; } }

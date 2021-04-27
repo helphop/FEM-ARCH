@@ -90,6 +90,14 @@ h3 {
   }
 }
 
+.nav-link {
+  color: var(--color-primary-lighter);
+  font-weight: 700;
+  transition: all .2s;
+  &:hover {
+    color: var(--color-primary);
+  }
+}
 
 mark {
   background-color: alpha(var(--color-accent), 0.2);
