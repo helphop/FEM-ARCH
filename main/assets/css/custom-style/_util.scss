@@ -25,6 +25,13 @@
   }
 }
 
+.col-content\@md {
+  @include breakpoint(md) {
+    grid-column-start: content-start;
+    grid-column-end: content-end;
+  }
+}
+
 .container-width\@md {
 
   @include breakpoint(md) {
