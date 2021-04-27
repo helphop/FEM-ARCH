@@ -7070,6 +7070,11 @@ mark {
     grid-column-end: content-end; } }
 
 @media (min-width: 64rem) {
+  .col-content\@md {
+    grid-column-start: content-start;
+    grid-column-end: content-end; } }
+
+@media (min-width: 64rem) {
   .container-width\@md {
     width: var(--container-width); } }
 
@@ -7289,7 +7294,7 @@ Usage: codyhouse.co/license
   background: var(--color-black-lighter); }
   .footer__logo {
     display: inline-block;
-    padding: 48px 31px;
+    padding: 48px 32px;
     --logo-size: 120px;
     max-width: var(--logo-size);
     max-height: var(--logo-size);
@@ -7305,10 +7310,34 @@ Usage: codyhouse.co/license
     gap: var(--nav-spacing); }
   .footer .btn {
     margin-bottom: 48px; }
+  @media (min-width: 48rem) {
+    .footer {
+      max-width: 80vw;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      background: initial; }
+      .footer__nav {
+        margin: 0;
+        background: var(--color-black-lighter);
+        grid-template-columns: repeat(3, auto);
+        -moz-column-gap: 56px;
+             column-gap: 56px;
+        align-items: center;
+        justify-content: start;
+        padding-left: 40px; }
+      .footer__logo {
+        margin-top: initial; }
+      .footer .btn {
+        margin-bottom: initial;
+        align-self: center;
+        position: absolute;
+        right: 0; } }
   @media (min-width: 64rem) {
     .footer__logo {
       --logo-size:200px;
-      padding: 80px 50px; } }
+      padding: 80px 50px; }
+    .footer__nav {
+      padding-left: 85px; } }
 
 :root {
   --nav-bar-height: 6rem; }

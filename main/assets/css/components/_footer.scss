@@ -2,9 +2,10 @@
   text-align: center;
   margin-top: 36px;
   background: var(--color-black-lighter);
+
   &__logo {
     display: inline-block;
-    padding: 48px 31px;
+    padding: 48px 32px;
     --logo-size: 120px;
     max-width: var(--logo-size);
     max-height: var(--logo-size);
@@ -27,12 +28,46 @@
     margin-bottom: 48px;
   }
 
+  @include breakpoint(sm) {
+    max-width: 80vw;
+    display: grid;
+    grid-template-columns: auto 1fr;
+
+    background: initial;
+
+    &__nav {
+      margin: 0;
+      background: var(--color-black-lighter);
+      grid-template-columns: repeat(3, auto);
+      column-gap: 56px;
+      align-items: center;
+      justify-content: start;
+      padding-left: 40px;
+
+    }
+
+    &__logo {
+      margin-top: initial;
+    }
+
+    .btn {
+      margin-bottom: initial;
+      align-self: center;
+      position: absolute;
+      right: 0;
+    }
+  }
 
   @include breakpoint(md) {
+
 
     &__logo {
       --logo-size:200px;
       padding: 80px 50px;
+    }
+
+    &__nav {
+      padding-left: 85px;
     }
   }
 }
