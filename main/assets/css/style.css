@@ -7305,10 +7305,10 @@ Usage: codyhouse.co/license
       filter: invert(100%) sepia(0%) saturate(13%) hue-rotate(225deg) brightness(103%) contrast(103%); }
   .footer__nav {
     --nav-spacing: 32px;
-    margin: var(--nav-spacing) 0;
     display: grid;
     justify-items: center;
-    gap: var(--nav-spacing); }
+    gap: var(--nav-spacing);
+    margin: var(--nav-spacing) 0; }
   .footer .btn {
     margin-bottom: 48px; }
   @media (min-width: 48rem) {

@@ -12,6 +12,7 @@
     max-height: var(--logo-size);
     background: var(--color-primary);
     margin-top: -50%;
+
     img {
       filter: invert(100%) sepia(0%) saturate(13%) hue-rotate(225deg) brightness(103%) contrast(103%);
     }
@@ -19,10 +20,10 @@
 
   &__nav {
     --nav-spacing: 32px;
-    margin: var(--nav-spacing) 0;
     display: grid;
     justify-items: center;
     gap: var(--nav-spacing);
+    margin: var(--nav-spacing) 0;
   }
 
   .btn {
