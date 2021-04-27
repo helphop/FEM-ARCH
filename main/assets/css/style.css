@@ -7278,6 +7278,15 @@ Usage: codyhouse.co/license
 
 .footer {
   text-align: center; }
+  .footer__logo {
+    display: inline-block;
+    padding: 48px 31px;
+    background: var(--color-primary); }
+    .footer__logo img {
+      filter: invert(100%) sepia(0%) saturate(13%) hue-rotate(225deg) brightness(103%) contrast(103%); }
+  @media (min-width: 64rem) {
+    .footer__logo {
+      padding: 80px 51px; } }
 
 :root {
   --nav-bar-height: 6rem; }
