@@ -7291,7 +7291,8 @@ Usage: codyhouse.co/license
 .footer {
   text-align: center;
   margin-top: 36px;
-  background: var(--color-black-lighter); }
+  background: var(--color-black-lighter);
+  position: relative; }
   .footer__logo {
     display: inline-block;
     padding: 48px 32px;
@@ -7312,10 +7313,11 @@ Usage: codyhouse.co/license
     margin-bottom: 48px; }
   @media (min-width: 48rem) {
     .footer {
-      max-width: 80vw;
-      display: grid;
-      grid-template-columns: auto 1fr;
       background: initial; }
+      .footer__container {
+        max-width: MAX(85vw, 612px);
+        display: grid;
+        grid-template-columns: auto 1fr; }
       .footer__nav {
         margin: 0;
         background: var(--color-black-lighter);
@@ -7333,6 +7335,9 @@ Usage: codyhouse.co/license
         position: absolute;
         right: 0; } }
   @media (min-width: 64rem) {
+    .footer__container {
+      max-width: MIN(65vw, 984px); } }
+  @media (min-width: 80rem) {
     .footer__logo {
       --logo-size:200px;
       padding: 80px 50px; }
