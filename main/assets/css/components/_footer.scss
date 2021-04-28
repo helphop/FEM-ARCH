@@ -1,11 +1,14 @@
 .footer {
-  text-align: center;
   margin-top: 2.25rem;
   position: relative;
 
   &__container {
-    padding-bottom: 4rem;
+    --nav-spacing: 2rem;
+    padding-bottom: 3rem;
     background: var(--color-black-lighter);
+    display: grid;
+    place-items: center;
+    gap: var(--nav-spacing);
   }
 
   &__logo {
@@ -15,7 +18,7 @@
     max-width: var(--logo-size);
     max-height: var(--logo-size);
     background: var(--color-primary);
-    margin-top: -50%;
+    margin-top: calc(-1 * var(--logo-size)/2);
 
     img {
       filter: invert(100%) sepia(0%) saturate(13%) hue-rotate(225deg) brightness(103%) contrast(103%);
@@ -23,30 +26,24 @@
   }
 
   &__nav {
-    --nav-spacing: 2rem;
     display: grid;
-    justify-items: center;
+    place-items: center;
     gap: var(--nav-spacing);
-    margin: var(--nav-spacing) 0;
   }
 
   @include breakpoint(sm) {
-    background: initial;
 
     &__container {
       padding-bottom: initial;
       max-width: MAX(85vw, 612px);
-      display: grid;
       grid-template-columns: auto 1fr;
+      justify-items: start;
     }
 
     &__nav {
       margin: 0;
-      grid-template-columns: repeat(3, auto);
-      column-gap: 56px;
-      align-items: center;
-      justify-content: start;
-      padding-left: 40px;
+      grid-auto-flow: column;
+      gap: 3.5rem;
     }
 
     &__logo {
@@ -54,7 +51,6 @@
     }
 
     .btn {
-      align-self: center;
       position: absolute;
       right: 0;
     }
@@ -62,20 +58,21 @@
 
   @include breakpoint(md) {
     &__container {
-      max-width: MIN(65vw,984px);;
+      max-width: MIN(65vw, 164rem);
     }
   }
 
   @include breakpoint(lg) {
 
-    &__logo {
-      --logo-size:200px;
-      padding: 80px 50px;
+    &__container {
+      gap: 5.375rem;
     }
 
-    &__nav {
-      padding-left: 85px;
+    &__logo {
+      --logo-size: 12.5rem;
+      padding: 5rem 3rem;
     }
+
   }
 }
 
