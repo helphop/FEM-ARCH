@@ -7290,13 +7290,15 @@ Usage: codyhouse.co/license
 
 .footer {
   text-align: center;
-  margin-top: 36px;
-  background: var(--color-black-lighter);
+  margin-top: 2.25rem;
   position: relative; }
+  .footer__container {
+    padding-bottom: 4rem;
+    background: var(--color-black-lighter); }
   .footer__logo {
     display: inline-block;
-    padding: 48px 32px;
-    --logo-size: 120px;
+    padding: 3rem 2rem;
+    --logo-size: 7.5rem;
     max-width: var(--logo-size);
     max-height: var(--logo-size);
     background: var(--color-primary);
@@ -7304,23 +7306,21 @@ Usage: codyhouse.co/license
     .footer__logo img {
       filter: invert(100%) sepia(0%) saturate(13%) hue-rotate(225deg) brightness(103%) contrast(103%); }
   .footer__nav {
-    --nav-spacing: 32px;
+    --nav-spacing: 2rem;
     display: grid;
     justify-items: center;
     gap: var(--nav-spacing);
     margin: var(--nav-spacing) 0; }
-  .footer .btn {
-    margin-bottom: 48px; }
   @media (min-width: 48rem) {
     .footer {
       background: initial; }
       .footer__container {
+        padding-bottom: initial;
         max-width: MAX(85vw, 612px);
         display: grid;
         grid-template-columns: auto 1fr; }
       .footer__nav {
         margin: 0;
-        background: var(--color-black-lighter);
         grid-template-columns: repeat(3, auto);
         -moz-column-gap: 56px;
              column-gap: 56px;
@@ -7330,7 +7330,6 @@ Usage: codyhouse.co/license
       .footer__logo {
         margin-top: initial; }
       .footer .btn {
-        margin-bottom: initial;
         align-self: center;
         position: absolute;
         right: 0; } }

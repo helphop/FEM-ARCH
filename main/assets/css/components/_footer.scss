@@ -1,13 +1,17 @@
 .footer {
   text-align: center;
-  margin-top: 36px;
-  background: var(--color-black-lighter);
+  margin-top: 2.25rem;
   position: relative;
+
+  &__container {
+    padding-bottom: 4rem;
+    background: var(--color-black-lighter);
+  }
 
   &__logo {
     display: inline-block;
-    padding: 48px 32px;
-    --logo-size: 120px;
+    padding: 3rem 2rem;
+    --logo-size: 7.5rem;
     max-width: var(--logo-size);
     max-height: var(--logo-size);
     background: var(--color-primary);
@@ -19,21 +23,18 @@
   }
 
   &__nav {
-    --nav-spacing: 32px;
+    --nav-spacing: 2rem;
     display: grid;
     justify-items: center;
     gap: var(--nav-spacing);
     margin: var(--nav-spacing) 0;
   }
 
-  .btn {
-    margin-bottom: 48px;
-  }
-
   @include breakpoint(sm) {
     background: initial;
 
     &__container {
+      padding-bottom: initial;
       max-width: MAX(85vw, 612px);
       display: grid;
       grid-template-columns: auto 1fr;
@@ -41,7 +42,6 @@
 
     &__nav {
       margin: 0;
-      background: var(--color-black-lighter);
       grid-template-columns: repeat(3, auto);
       column-gap: 56px;
       align-items: center;
@@ -54,7 +54,6 @@
     }
 
     .btn {
-      margin-bottom: initial;
       align-self: center;
       position: absolute;
       right: 0;
