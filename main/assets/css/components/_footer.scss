@@ -12,7 +12,6 @@
   }
 
   &__logo {
-    display: inline-block;
     padding: 3rem 2rem;
     --logo-size: 7.5rem;
     max-width: var(--logo-size);
@@ -35,13 +34,12 @@
 
     &__container {
       padding-bottom: initial;
-      max-width: MAX(85vw, 612px);
+      max-width: MAX(85vw, 38.25rem);
       grid-template-columns: auto 1fr;
       justify-items: start;
     }
 
     &__nav {
-      margin: 0;
       grid-auto-flow: column;
       gap: 3.5rem;
     }

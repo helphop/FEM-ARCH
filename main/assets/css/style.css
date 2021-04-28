@@ -7299,7 +7299,6 @@ Usage: codyhouse.co/license
     place-items: center;
     gap: var(--nav-spacing); }
   .footer__logo {
-    display: inline-block;
     padding: 3rem 2rem;
     --logo-size: 7.5rem;
     max-width: var(--logo-size);
@@ -7315,11 +7314,10 @@ Usage: codyhouse.co/license
   @media (min-width: 48rem) {
     .footer__container {
       padding-bottom: initial;
-      max-width: MAX(85vw, 612px);
+      max-width: MAX(85vw, 38.25rem);
       grid-template-columns: auto 1fr;
       justify-items: start; }
     .footer__nav {
-      margin: 0;
       grid-auto-flow: column;
       gap: 3.5rem; }
     .footer__logo {
