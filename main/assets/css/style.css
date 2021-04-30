@@ -6928,7 +6928,7 @@ h3 {
   color: var(--color-primary-lighter);
   font-weight: 700;
   transition: all .2s; }
-  .nav-link:hover {
+  .nav-link:hover, .nav-link.current {
     color: var(--color-primary); }
 
 mark {
@@ -7456,7 +7456,18 @@ Usage: codyhouse.co/license
     padding: 0;
     visibility: visible;
     opacity: 1;
-    transform: translateX(0%); } }
+    transform: translateX(0%); }
+  .nav-link {
+    position: relative; }
+  .nav-link.current:after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background: var(--color-primary);
+    bottom: -7px;
+    left: 50%;
+    transform: translateX(-50%); } }
 
 .project-card {
   position: relative;
