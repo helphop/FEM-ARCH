@@ -1,7 +1,6 @@
 // HEADER
 
 header {
-  margin-top: var(--nav-bar-height); //move down the header for the navigation fixed nav bar in mobile
   position: relative;
 }
 
@@ -36,10 +35,6 @@ header {
 }
 
 @include breakpoint(sm) {
-
-  header {
-    margin-top: initial;
-  }
 
   .slide {
     padding: 11.25rem 0;
@@ -188,6 +183,8 @@ main.home {
       grid-area: button;
     }
   }
+
+  // PROJECT CARDS
 
   .project-cards {
     margin-top: var(--space-xl);
