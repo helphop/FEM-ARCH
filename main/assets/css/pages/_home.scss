@@ -62,33 +62,6 @@ header {
 }
 
 
-// MAIN STYLES
-
-main.home {
-  --section-spacer: 12.5rem;
-
-  .container-outer {
-      > :first-child {
-      margin-top: 8.75rem;
-    }
-
-    > * {
-      margin-bottom: 6rem;
-    }
-
-    @include breakpoint(sm) {
-      > :first-child {
-      margin-top: var(--section-spacer);
-      }
-
-      > * {
-      margin-bottom: var(--section-spacer);
-      }
-    }
-  }
-}
-
-
 // WELCOME SECTION
 
 .welcome {

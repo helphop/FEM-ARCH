@@ -31,15 +31,20 @@
 }
 
 .flow-content {
-  --section-spacer: 6rem;
+  --section-spacer-bottom: 6rem;
+  --section-spacer-top: 8.75rem;
 
+  > :first-child:not(:only-child) {
+    margin-top: var(--section-spacer-top);
+  }
 
   > * {
-    margin-bottom: var(--section-spacer);
+    margin-bottom: var(--section-spacer-bottom);
   }
 
   @include breakpoint(sm) {
-    --section-spacer: 12.5rem;
+    --section-spacer-bottom: 12.5rem;
+    --section-spacer-top: var(--section-spacer-bottom);
   }
 }
 
