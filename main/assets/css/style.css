@@ -6840,12 +6840,16 @@ html:not(.js) .no-js\:is-hidden {
       margin-top: initial; } }
 
 .flow-content {
-  --section-spacer: 6rem; }
+  --section-spacer-bottom: 6rem;
+  --section-spacer-top: 8.75rem; }
+  .flow-content > :first-child:not(:only-child) {
+    margin-top: var(--section-spacer-top); }
   .flow-content > * {
-    margin-bottom: var(--section-spacer); }
+    margin-bottom: var(--section-spacer-bottom); }
   @media (min-width: 48rem) {
     .flow-content {
-      --section-spacer: 12.5rem; } }
+      --section-spacer-bottom: 12.5rem;
+      --section-spacer-top: var(--section-spacer-bottom); } }
 
 .container {
   --component-padding: var(--outer-container-column); }
@@ -7131,18 +7135,6 @@ header {
     display: flex; }
     .slide-nav button:not(:last-child) {
       border-right: 1px solid var(--color-black-lighter); } }
-
-main.home {
-  --section-spacer: 12.5rem; }
-  main.home .container-outer > :first-child {
-    margin-top: 8.75rem; }
-  main.home .container-outer > * {
-    margin-bottom: 6rem; }
-  @media (min-width: 48rem) {
-    main.home .container-outer > :first-child {
-      margin-top: var(--section-spacer); }
-    main.home .container-outer > * {
-      margin-bottom: var(--section-spacer); } }
 
 .welcome {
   position: relative; }
