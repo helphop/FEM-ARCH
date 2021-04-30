@@ -6833,6 +6833,20 @@ html:not(.js) .no-js\:is-hidden {
   grid-column-start: main-start;
   grid-row: span 2; }
 
+.margin-top-menu {
+  margin-top: var(--nav-bar-height); }
+  @media (min-width: 48rem) {
+    .margin-top-menu {
+      margin-top: initial; } }
+
+.flow-content {
+  --section-spacer: 6rem; }
+  .flow-content > * {
+    margin-bottom: var(--section-spacer); }
+  @media (min-width: 48rem) {
+    .flow-content {
+      --section-spacer: 12.5rem; } }
+
 .container {
   --component-padding: var(--outer-container-column); }
   .container :is(h1, h2, h3) {
@@ -7079,7 +7093,6 @@ mark {
     width: var(--container-width); } }
 
 header {
-  margin-top: var(--nav-bar-height);
   position: relative; }
 
 .slide {
@@ -7104,8 +7117,6 @@ header {
       align-self: end; }
 
 @media (min-width: 48rem) {
-  header {
-    margin-top: initial; }
   .slide {
     padding: 11.25rem 0; }
     .slide .slide__content {
@@ -7207,6 +7218,14 @@ main.home {
         margin-top: var(--space-lg);
         grid-template-columns: repeat(3, 1fr);
         gap: 1.875rem; } }
+
+.portfolio .project-cards {
+  display: grid;
+  gap: 24px; }
+  @media (min-width: 64rem) {
+    .portfolio .project-cards {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px; } }
 
 /* -------------------------------- 
 

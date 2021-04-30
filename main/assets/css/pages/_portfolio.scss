@@ -1,0 +1,12 @@
+.portfolio {
+
+  .project-cards {
+    display: grid;
+    gap: 24px;
+
+    @include breakpoint(md) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+  }
+}

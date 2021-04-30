@@ -23,6 +23,25 @@
   grid-row: span 2;
 }
 
+.margin-top-menu {
+  margin-top: var(--nav-bar-height);
+  @include breakpoint(sm) {
+    margin-top: initial;
+  }
+}
+
+.flow-content {
+  --section-spacer: 6rem;
+
+
+  > * {
+    margin-bottom: var(--section-spacer);
+  }
+
+  @include breakpoint(sm) {
+    --section-spacer: 12.5rem;
+  }
+}
 
 .container {
   :is(h1,h2,h3) {
@@ -45,3 +64,4 @@
     }
   }
 }
+
