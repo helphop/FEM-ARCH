@@ -100,4 +100,19 @@
      opacity: 1;
      transform: translateX(0%);
   }
+
+  .nav-link {
+    position: relative;
+  }
+
+  .nav-link.current:after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background: var(--color-primary);
+    bottom: -7px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
