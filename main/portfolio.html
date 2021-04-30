@@ -1,29 +1,99 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Arch Studio Website Challenge</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>document.getElementsByTagName("html")[0].className += " js";</script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap" rel="stylesheet">
+    <link id="codyframe" rel="stylesheet" href="assets/css/style.css">
+    <title>Get Started | CodyFrame</title>
+  </head>
 
-  Portfolio
+  <body>
+    <div class="container-outer">
 
-  Portfolio
-  About Us
-  Contact
+      <div class="vertical-content display@sm">
+        <div class="vertical-content__line"></div>
+        <div class="vertical-content__text text-uppercase">Portfolio</div>
+      </div>
 
-  Seraph Station
-  September 2019
+      <section class="navigation">
+        <div class="overlay hide@sm" aria-hidden="true"></div>
+        <div class="container width-100%@sm">
+          <div class="nav-bar">
+            <img class="nav-bar__logo" src="assets/images/logo.svg" alt="arch logo">
+            <nav class="nav" id="nav-items" hidden>
+              <a href="portfolio.html" class="nav-link">Portfolio</a>
+              <a href="about.html" class="nav-link">About Us</a>
+              <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <button class="nav-icon hide@sm" aria-expanded="false" aria-controls="nav-items"></button>
+          </div>
+        </div>
+      </section>
 
-  Eebox Building
-  August 2017
+    </div>
 
-  Federal II Tower
-  March 2017
+    <main class="portfolio">
+      <div class="container-outer">
+        <div class="project-cards">
+
+          <div class="project-card" id="project1">
+            <img class="project-card__img" sizes="(min-width: 1024px) 294px, (min-width: 768px) 500px, 250px"
+              srcset="assets/images/portfolio/desktop/image-seraph.jpg 294w, assets/images/portfolio/tablet/image-seraph.jpg 480w, assets/images/portfolio/mobile/image-seraph.jpg 250w"
+              src="assets/images/portfolio/mobile/image-seraph.jpg" alt="picture of hotel near water">
+            <div class="text-component">
+              <h3>Seraf Station</h3>
+              <p class="link--subtle">September 2019</p>
+            </div>
+          </div>
+
+          <div class="project-card" id="project1">
+            <img class="project-card__img" sizes="(min-width: 1024px) 294px, (min-width: 768px) 500px, 250px"
+              srcset="assets/images/portfolio/desktop/image-eebox.jpg 294w, assets/images/portfolio/tablet/image-eebox.jpg 480w, assets/images/portfolio/mobile/image-eebox.jpg 250w"
+              src="assets/images/portfolio/mobile/image-eebox.jpg" alt="picture of hotel near water">
+            <div class="text-component">
+              <h3>Eebox Building</h3>
+              <p class="link--subtle">August 2017</p>
+            </div>
+          </div>
+
+          <div class="project-card" id="project1">
+            <img class="project-card__img" sizes="(min-width: 1024px) 294px, (min-width: 768px) 500px, 250px"
+              srcset="assets/images/portfolio/desktop/image-federal.jpg 294w, assets/images/portfolio/tablet/image-federal.jpg 480w, assets/images/portfolio/mobile/image-federal.jpg 250w"
+              src="assets/images/portfolio/mobile/image-federal.jpg" alt="picture of hotel near water">
+            <div class="text-component">
+              <h3>Federal Building</h3>
+              <p class="link--subtle">March 2017</p>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </main>
+
+    <div class="container-outer">
+      <footer class="footer full-width col-content@md">
+        <div class="footer__container">
+          <div class="footer__logo">
+            <img src="assets/images/logo.svg" alt="logo white">
+          </div>
+          <nav class="footer__nav">
+            <a href="portfolio.html" class="nav-link">Portfolio</a>
+            <a href="about.html" class="nav-link">About Us</a>
+            <a href="contact.html" class="nav-link">contact</a>
+          </nav>
+          <a href="portfolio.html" class="btn btn--primary--dark">See Our Portfolio</a>
+        </div>
+      </footer>
+    </div>
+    <script src="assets/js/scripts.js"></script>
+
+  </body>
+
 
   Project Del Sol
   January 2016
@@ -58,5 +128,4 @@
 
   See Our Portfolio
 
-</body>
 </html>
