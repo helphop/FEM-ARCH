@@ -1,0 +1,79 @@
+.about {
+   .header {
+
+
+   }
+
+   .cards {
+      display: grid;
+      gap: var(--space-xl);
+
+      .card {
+         display: grid;
+         gap: var(--space-xxs);
+         h3 {
+            margin-top: 1.5rem;
+         }
+      }
+
+      .card__img {
+         width: 100%;
+      }
+
+      .card__role {
+         color: alpha(var(--color-primary), 0.75);
+      }
+
+      .social {
+         > :first-child {
+            margin-right: var(--space-lg);
+         }
+         img {
+            width: 32px;
+         }
+      }
+
+   }
+
+   @include breakpoint(sm) {
+      .cards {
+         grid-template-columns: repeat(2, 1fr);
+         row-gap: var(--space-xxxxl);
+         column-gap: var(--space-lg);
+      }
+   }
+
+   @include breakpoint(md) {
+      .leaders {
+         display: grid;
+         grid-template-columns: 0.3fr 0.6fr;
+      }
+      .cards {
+         row-gap: var(--space-xl);
+
+         .card__img {
+            grid-row: 1;
+            grid-column: 1;
+            transition: all 0.4s;
+         }
+         .social {
+            grid-row: 1;
+            grid-column: 1;
+            transition: all 0.2s;
+            opacity: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+               width: 40px;
+               filter: invert(100%) sepia(96%) saturate(15%) hue-rotate(212deg) brightness(104%) contrast(104%);
+            }
+         }
+
+         .social:hover {
+            opacity: 1;
+            background-color: alpha(var(--color-primary), 0.5);
+         }
+      }
+   }
+}

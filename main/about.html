@@ -1,60 +1,131 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Arch Studio Website Challenge</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.getElementsByTagName("html")[0].className += " js";</script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap" rel="stylesheet">
+  <link id="codyframe" rel="stylesheet" href="assets/css/style.css">
+  <title>Get Started | CodyFrame</title>
 </head>
-<body>
 
-  About Us
+<body class="about">
+  <div class="container-outer">
 
-  Portfolio
-  About Us
-  Contact
+    <div class="vertical-content display@sm">
+      <div class="vertical-content__line"></div>
+      <div class="vertical-content__text text-uppercase">about</div>
+    </div>
 
-  About
+    <section class="navigation">
+      <div class="overlay hide@sm" aria-hidden="true"></div>
+      <div class="container width-100%@sm">
+        <div class="nav-bar">
+          <img class="nav-bar__logo" src="assets/images/logo.svg" alt="arch logo">
+          <nav class="nav" id="nav-items" hidden>
+            <a href="portfolio.html" class="nav-link">Portfolio</a>
+            <a href="about.html" class="nav-link">About Us</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+          </nav>
+          <button class="nav-icon hide@sm" aria-expanded="false" aria-controls="nav-items"></button>
+        </div>
+      </div>
+    </section>
 
-  Your team of professionals
+    <header class="header margin-top-menu full-width col-content@sm">
+      <div class="white-box"></div>
+      <h1 class="text--huge display@sm">About</h1>
+      <h1>Your team of professionals</h1>
+      <p>Our small team of world-class professionals will work with you every step of the way.
+  Strong relationships are at the core of everything we do. This extends to the
+  relationship our projects have with their surroundings.</p>
+    </header>
+  </div>
 
-  Our small team of world-class professionals will work with you every step of the way. 
-  Strong relationships are at the core of everything we do. This extends to the 
-  relationship our projects have with their surroundings.
 
-  Our Heritage
+  <main>
+    <div class="container-outer flow-content">
 
-  Founded in 2007, we started as a trio of architects. Our complimentary skills and 
-  relentless attention to detail turned Arch into one of the most sought after boutique 
-  firms in the country.
+    <section class="heritage">
+      <h1 class="two-lines">Our Heritage</h1>
+      <p> Founded in 2007, we started as a trio of architects. Our complimentary skills and
+    relentless attention to detail turned Arch into one of the most sought after boutique
+    firms in the country.
 
-  Speciliazing in Urban Design allowed us to focus on creating exceptional structures that 
-  live in harmony with their surroundings. We consider every detail from every surrounding 
-  element to inform our designs. 
+    Specializing in Urban Design allowed us to focus on creating exceptional structures that
+    live in harmony with their surroundings. We consider every detail from every surrounding
+    element to inform our designs.
 
-  Our small team of world-class professionals provides input on every project.
+    Our small team of world-class professionals provides input on every project.</p>
+    </section>
 
-  The Leaders
+    <section class="leaders">
+      <h2 class="two-lines margin-bottom-xl">The Leaders</h2>
 
-  Jake Richards
-  Chief Architect
+      <div class="cards">
 
-  Thompson Smith
-  Head of Finance
+        <div class="card">
+          <img src="assets/images/about/desktop/avatar-jake.jpg" alt="face of Jake" class="card__img">
+          <h3>Jake Richards</h3>
+          <p class="card__role">Chief Architect</p>
+          <div class="social">
+            <a href="linkedin.com"><img src="assets/images/icons/icon-linkedin.svg" alt="linkedin icon"></a>
+            <a href="twitter.com"><img src="assets/images/icons/icon-twitter.svg" alt="twitter icon"></a>
+          </div>
+        </div>
 
-  Jackson Rourke
-  Lead Designer
+        <div class="card">
+          <img src="assets/images/about/desktop/avatar-thompson.jpg" alt="face of Thompson" class="card__img">
+          <h3>Jake Richards</h3>
+          <p class="card__role">Head of Finance</p>
+          <div class="social">
+            <a href="linkedin.com"><img src="assets/images/icons/icon-linkedin.svg" alt="linkedin icon"></a>
+            <img src="assets/images/icons/icon-twitter.svg" alt="twitter icon">
+          </div>
+        </div>
 
-  Maria Simpson
-  Senior Architect
+        <div class="card">
+          <img src="assets/images/about/desktop/avatar-jackson.jpg" alt="face of Jackson" class="card__img">
+          <h3>Jake Richards</h3>
+          <p class="card__role">Lead Designer</p>
+          <div class="social">
+            <a href="linkedin.com"><img src="assets/images/icons/icon-linkedin.svg" alt="linkedin icon"></a>
+            <img src="assets/images/icons/icon-twitter.svg" alt="twitter icon">
+          </div>
+        </div>
 
-  Portfolio
-  About Us
-  Contact
+        <div class="card">
+          <img src="assets/images/about/desktop/avatar-maria.jpg" alt="face of maria" class="card__img">
+          <h3>Jake Richards</h3>
+          <p class="card__role">Senior Architect</p>
+          <div class="social">
+            <a href="linkedin.com"><img src="assets/images/icons/icon-linkedin.svg" alt="linkedin icon"></a>
+            <img src="assets/images/icons/icon-twitter.svg" alt="twitter icon">
+          </div>
+        </div>
+      </div>
 
-  See Our Portfolio
+    </section>
 
-</body>
+    </div>
+
+  </main>
+
+  <div class="container-outer">
+    <footer class="footer full-width col-content@md">
+      <div class="footer__container">
+        <div class="footer__logo">
+          <img src="assets/images/logo.svg" alt="logo white">
+        </div>
+        <nav class="footer__nav">
+          <a href="portfolio.html" class="nav-link">Portfolio</a>
+          <a href="about.html" class="nav-link">About Us</a>
+          <a href="contact.html" class="nav-link">contact</a>
+        </nav>
+        <a href="portfolio.html" class="btn btn--primary--dark">See Our Portfolio</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="assets/js/scripts.js"></script>
+  </body>
 </html>
