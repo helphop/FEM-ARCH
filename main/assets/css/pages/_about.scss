@@ -11,13 +11,6 @@
       .card {
          display: grid;
          gap: var(--space-xxs);
-         h3 {
-            margin-top: 1.5rem;
-         }
-      }
-
-      .card__img {
-         width: 100%;
       }
 
       .card__role {
@@ -29,7 +22,7 @@
             margin-right: var(--space-lg);
          }
          img {
-            width: 32px;
+            width: 2rem;
          }
       }
 
@@ -51,6 +44,7 @@
       }
       .cards {
          row-gap: var(--space-xl);
+         column-gap: var(var(--space-sm));
 
          .card__img {
             grid-row: 1;
@@ -67,7 +61,7 @@
             justify-content: center;
             img {
                transition: all 0.2s;
-               width: 40px;
+               width: 2.5rem;
                filter: invert(100%) sepia(96%) saturate(15%) hue-rotate(212deg) brightness(104%) contrast(104%);
             }
          }
