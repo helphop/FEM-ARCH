@@ -30,9 +30,30 @@
   }
 }
 
+.horizontal-line {
+  position: absolute;
+  height: 1px;
+  width: 4.125rem;
+  background-color: var(--color-black-light);
+  top: 0;
+  left: 0;
+}
+
+:root {
+  --horizontal-line-bottom-margin: 4rem; //spaces out the horizontal line from the content
+
+  @include breakpoint(sm) {
+    --horizontal-line-bottom-margin: 5rem;
+  }
+
+  @include breakpoint(md) {
+    --horizontal-line-bottom-margin: 6.5rem;
+  }
+}
+
 .flow-content {
   --section-spacer-bottom: 6rem;
-  --section-spacer-top: 8.75rem;
+  --section-spacer-top: 4.25rem;
 
   > :first-child:not(:only-child) {
     margin-top: var(--section-spacer-top);
