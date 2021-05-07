@@ -7249,7 +7249,8 @@ header {
 @media (min-width: 64rem) {
   .about .leaders {
     display: grid;
-    grid-template-columns: 0.3fr 0.6fr; }
+    grid-template-columns: 0.3333fr 0.6666667fr;
+    justify-content: space-between; }
   .about .cards {
     row-gap: var(--space-xl); }
     .about .cards .card__img {
@@ -7265,11 +7266,14 @@ header {
       align-items: center;
       justify-content: center; }
       .about .cards .social img {
+        transition: all 0.2s;
         width: 40px;
         filter: invert(100%) sepia(96%) saturate(15%) hue-rotate(212deg) brightness(104%) contrast(104%); }
     .about .cards .social:hover {
       opacity: 1;
-      background-color: hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.5); } }
+      background-color: hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.5); }
+      .about .cards .social:hover img:hover {
+        filter: invert(61%) sepia(45%) saturate(1463%) hue-rotate(343deg) brightness(102%) contrast(92%); } }
 
 /* -------------------------------- 
 
