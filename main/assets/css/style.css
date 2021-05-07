@@ -6931,9 +6931,6 @@ h3 {
   .nav-link:hover, .nav-link.current {
     color: var(--color-primary); }
 
-.two-lines {
-  width: 3ch; }
-
 mark {
   background-color: hsla(var(--color-accent-h), var(--color-accent-s), var(--color-accent-l), 0.2);
   color: inherit; }
