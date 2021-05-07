@@ -1,8 +1,35 @@
 .about {
-   .header {
-
-
+   p {
+      color: var(--color-primary-light);
    }
+
+   //HERITAGE SECTION
+   .heritage {
+      .text-component {
+         --text-vspace-multiplier: 2;
+      }
+
+      .horizontal-line {
+         top: 0;
+      }
+
+      &__content {
+         margin-top: var(--horizontal-line-bottom-margin);
+      }
+
+      @include breakpoint(md) {
+         display: grid;
+         grid-template-columns: 40% 50%;
+         gap: 10%;
+
+      &__image {
+         background: url(../images/about/desktop/image-heritage.jpg) no-repeat;
+         background-size: cover;
+      }
+   }
+}
+
+   //LEADERS SECTION
 
    .cards {
       display: grid;

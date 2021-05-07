@@ -6839,9 +6839,26 @@ html:not(.js) .no-js\:is-hidden {
     .margin-top-menu {
       margin-top: initial; } }
 
+.horizontal-line {
+  position: absolute;
+  height: 1px;
+  width: 4.125rem;
+  background-color: var(--color-black-light);
+  top: 0;
+  left: 0; }
+
+:root {
+  --horizontal-line-bottom-margin: 4rem; }
+  @media (min-width: 48rem) {
+    :root {
+      --horizontal-line-bottom-margin: 5rem; } }
+  @media (min-width: 64rem) {
+    :root {
+      --horizontal-line-bottom-margin: 6.5rem; } }
+
 .flow-content {
   --section-spacer-bottom: 6rem;
-  --section-spacer-top: 8.75rem; }
+  --section-spacer-top: 4.25rem; }
   .flow-content > :first-child:not(:only-child) {
     margin-top: var(--section-spacer-top); }
   .flow-content > * {
@@ -7136,38 +7153,35 @@ header {
     .slide-nav button:not(:last-child) {
       border-right: 1px solid var(--color-black-lighter); } }
 
-.welcome {
-  position: relative; }
-  .welcome .horizontal-line {
-    position: absolute;
-    height: 1px;
-    width: 4.125rem;
-    background-color: var(--color-black-light);
-    top: -4.25rem;
-    left: 0; }
-  .welcome .text-component {
-    --text-vspace-multiplier: 1.5; }
+.welcome .text-component {
+  --text-vspace-multiplier: 1.5; }
+  .welcome .text-component h2 {
+    --text-vspace-multiplier: 2.8; }
+
+.welcome .container {
+  margin-top: var(--horizontal-line-bottom-margin); }
+
+.welcome p {
+  color: var(--color-primary-light); }
+
+@media (min-width: 48rem) {
+  .welcome {
+    padding-top: 3rem; }
+    .welcome h1 {
+      position: absolute;
+      top: -5.375rem; }
     .welcome .text-component h2 {
-      --text-vspace-multiplier: 2.8; }
-  .welcome p {
-    color: var(--color-primary-light); }
-  @media (min-width: 48rem) {
-    .welcome {
-      padding-top: 3rem; }
-      .welcome h1 {
-        position: absolute;
-        top: -5.375rem; }
-      .welcome .text-component h2 {
-        --text-vspace-multiplier: 4.6; } }
-  @media (min-width: 64rem) {
-    .welcome {
-      background: url(../images/home/desktop/image-welcome.jpg) no-repeat;
-      background-position: right center;
-      padding-top: 4.7rem; }
-      .welcome .text-component h2 {
-        --text-vspace-multiplier: 2.8;
-        z-index: var(--zindex-popover);
-        position: relative; } }
+      --text-vspace-multiplier: 4.6; } }
+
+@media (min-width: 64rem) {
+  .welcome {
+    background: url(../images/home/desktop/image-welcome.jpg) no-repeat;
+    background-position: right center;
+    padding-top: 4.7rem; }
+    .welcome .text-component h2 {
+      --text-vspace-multiplier: 2.8;
+      z-index: var(--zindex-popover);
+      position: relative; } }
 
 .teams {
   --bg-image: url(../images/home/mobile/image-small-team.jpg);
@@ -7218,6 +7232,27 @@ header {
     .portfolio .project-cards {
       grid-template-columns: repeat(3, 1fr);
       gap: 32px; } }
+
+.about p {
+  color: var(--color-primary-light); }
+
+.about .heritage .text-component {
+  --text-vspace-multiplier: 2; }
+
+.about .heritage .horizontal-line {
+  top: 0; }
+
+.about .heritage__content {
+  margin-top: var(--horizontal-line-bottom-margin); }
+
+@media (min-width: 64rem) {
+  .about .heritage {
+    display: grid;
+    grid-template-columns: 40% 50%;
+    gap: 10%; }
+    .about .heritage__image {
+      background: url(../images/about/desktop/image-heritage.jpg) no-repeat;
+      background-size: cover; } }
 
 .about .cards {
   display: grid;
