@@ -5,17 +5,15 @@
 
    header {
       .text-component {
-         padding: var(--space-xxxl) 0;
-      }
-   }
+         margin-top: var(--space-xxxl);
+          --text-vspace-multiplier: 2;
 
-   @include breakpoint(sm) {
-      header {
-         .text-component {
-
+         @include breakpoint(sm) {
+            --text-vspace-multiplier: 4;
          }
       }
    }
+
 
    //HERITAGE SECTION
    .heritage {
