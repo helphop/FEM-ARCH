@@ -3,7 +3,7 @@
 }
 
 .navigation {
-  background-color: purple;
+  background-color: var(--color-white);
   position: fixed;
   width: 100%;
   z-index: var(--zindex-fixed-element);

@@ -9,7 +9,6 @@ body {
   padding-left: var(--sides-padding);
   padding-right: var(--sides-padding);
   max-width: 69.375rem;
-  background-color: green;
 
   @include breakpoint(sm) {
     --sides-padding: 0;
