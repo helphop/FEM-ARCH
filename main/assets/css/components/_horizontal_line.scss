@@ -1,0 +1,14 @@
+.horizontal-line {
+  height: 1px;
+  width: 4.125rem;
+  background-color: var(--color-black-light);
+  margin-bottom: var(--hz-line-spacer, 4rem);
+
+  @include breakpoint(sm) {
+    --hz-line-spacer: 5rem;
+  }
+
+  @include breakpoint(md) {
+    --hz-line-spacer: 6.5rem;
+  }
+}
