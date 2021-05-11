@@ -1,44 +1,48 @@
+
+body {
+  display: flow-root; //eliminates collapsing margin
+}
+
 .container.container--outer {
   --component-padding: 0;
   --sides-padding: var(--space-xl);
   padding-left: var(--sides-padding);
   padding-right: var(--sides-padding);
-  max-width: 69.375rem;;
+  max-width: 69.375rem;
+  background-color: green;
 
   @include breakpoint(sm) {
     --sides-padding: 0;
-    --component-padding: 35.75rem;
+    --component-padding: 11.45vw;
   }
+
 }
 
 
+// .container-outer {
+//   --outer-container-column: 8.5vw;
+//   max-width: 90rem; //1440px
+//   margin: 0 auto;
+//   display: grid;
+//   grid-template-columns: [main-start] var(--outer-container-column) [content-start] minmax(19.4385rem, 69.375rem) [content-end] var(--outer-container-column) [main-end];
 
+//   > * {
+//     grid-column-start: content-start;
+//   }
 
+//   @include breakpoint(sm) {
+//     --outer-container-column: 11.45vw;
+//   }
 
-.container-outer {
-  --outer-container-column: 8.5vw;
-  max-width: 90rem; //1440px
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: [main-start] var(--outer-container-column) [content-start] minmax(19.4385rem, 69.375rem) [content-end] var(--outer-container-column) [main-end];
+//   @include breakpoint(md) {
+//     --outer-container-column: MIN(10.3125rem, 11.45vw);
+//   }
+// }
 
-  > * {
-    grid-column-start: content-start;
-  }
-
-  @include breakpoint(sm) {
-    --outer-container-column: 11.45vw;
-  }
-
-  @include breakpoint(md) {
-    --outer-container-column: MIN(10.3125rem, 11.45vw);
-  }
-}
-
-.vertical-content {
-  grid-column-start: main-start;
-  grid-row: span 2;
-}
+// .vertical-content {
+//   grid-column-start: main-start;
+//   grid-row: span 2;
+// }
 
 .margin-top-menu {
   margin-top: var(--nav-bar-height);
@@ -47,23 +51,23 @@
   }
 }
 
-.flow-content {
-  --section-spacer-bottom: 6rem;
-  --section-spacer-top: 4.25rem;
+// .flow-content {
+//   --section-spacer-bottom: 6rem;
+//   --section-spacer-top: 4.25rem;
 
-  > :first-child:not(:only-child) {
-    margin-top: var(--section-spacer-top);
-  }
+//   > :first-child:not(:only-child) {
+//     margin-top: var(--section-spacer-top);
+//   }
 
-  > * {
-    margin-bottom: var(--section-spacer-bottom);
-  }
+//   > * {
+//     margin-bottom: var(--section-spacer-bottom);
+//   }
 
-  @include breakpoint(sm) {
-    --section-spacer-bottom: 12.5rem;
-    --section-spacer-top: var(--section-spacer-bottom);
-  }
-}
+//   @include breakpoint(sm) {
+//     --section-spacer-bottom: 12.5rem;
+//     --section-spacer-top: var(--section-spacer-bottom);
+//   }
+// }
 
 // .container {
 //   :is(h1,h2,h3) {

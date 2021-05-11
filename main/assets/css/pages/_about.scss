@@ -3,24 +3,25 @@
       color: var(--color-primary-light);
    }
 
+
    //HERITAGE SECTION
-   .heritage {
-      .text-component {
-         --text-vspace-multiplier: 2;
-      }
+//    .heritage {
+//       .text-component {
+//          --text-vspace-multiplier: 2;
+//       }
 
 
-      @include breakpoint(md) {
-         display: grid;
-         grid-template-columns: 40% 50%;
-         gap: 10%;
+//       @include breakpoint(md) {
+//          display: grid;
+//          grid-template-columns: 40% 50%;
+//          gap: 10%;
 
-      &__image {
-         background: url(../images/about/desktop/image-heritage.jpg) no-repeat;
-         background-size: cover;
-      }
-   }
-}
+//       &__image {
+//          background: url(../images/about/desktop/image-heritage.jpg) no-repeat;
+//          background-size: cover;
+//       }
+//    }
+// }
 
    //LEADERS SECTION
 
