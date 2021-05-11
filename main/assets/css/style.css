@@ -6814,6 +6814,17 @@ html:not(.js) .no-js\:is-hidden {
       --space-xxxl: calc(5.063 * var(--space-unit));
       --space-xxxxl: calc(7.59 * var(--space-unit)); } } }
 
+.container.container--outer {
+  --component-padding: 0;
+  --sides-padding: var(--space-xl);
+  padding-left: var(--sides-padding);
+  padding-right: var(--sides-padding);
+  max-width: 69.375rem; }
+  @media (min-width: 48rem) {
+    .container.container--outer {
+      --sides-padding: 0;
+      --component-padding: 35.75rem; } }
+
 .container-outer {
   --outer-container-column: 8.5vw;
   max-width: 90rem;
@@ -6850,20 +6861,6 @@ html:not(.js) .no-js\:is-hidden {
     .flow-content {
       --section-spacer-bottom: 12.5rem;
       --section-spacer-top: var(--section-spacer-bottom); } }
-
-.container {
-  --component-padding: var(--outer-container-column); }
-  .container :is(h1, h2, h3) {
-    max-width: 9ch; }
-  @media (min-width: 48rem) {
-    .container {
-      --component-padding: 3.3rem; } }
-  @media (min-width: 64rem) {
-    .container {
-      --container-padding: 11.875rem;
-      --component-padding: var(--container-padding); }
-      .container p {
-        max-width: 28rem; } }
 
 :root {
   --font-primary: 'Spartan', sans-serif;
@@ -7422,7 +7419,7 @@ Usage: codyhouse.co/license
   --nav-bar-height: 6rem; }
 
 .navigation {
-  background-color: var(--color-white);
+  background-color: purple;
   position: fixed;
   width: 100%;
   z-index: var(--zindex-fixed-element); }
@@ -7446,7 +7443,7 @@ Usage: codyhouse.co/license
   padding: 3rem;
   position: absolute;
   right: 0;
-  left: var(--outer-container-column);
+  left: var(--sides-padding);
   top: var(--nav-bar-height);
   transform: translateX(100%);
   display: grid;

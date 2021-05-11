@@ -3,7 +3,7 @@
 }
 
 .navigation {
-  background-color: var(--color-white);
+  background-color: purple;
   position: fixed;
   width: 100%;
   z-index: var(--zindex-fixed-element);
@@ -33,7 +33,7 @@
   padding: 3rem;
   position: absolute;
   right: 0;
-  left: var(--outer-container-column);
+  left: var(--sides-padding);
   top: var(--nav-bar-height);
   transform: translateX(100%);
   display: grid;
