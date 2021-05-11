@@ -9,13 +9,6 @@
          --text-vspace-multiplier: 2;
       }
 
-      .horizontal-line {
-         top: 0;
-      }
-
-      &__content {
-         margin-top: var(--horizontal-line-bottom-margin);
-      }
 
       @include breakpoint(md) {
          display: grid;
