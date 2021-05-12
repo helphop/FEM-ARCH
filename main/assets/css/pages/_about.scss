@@ -72,7 +72,7 @@
    }
 
    @include breakpoint(md) {
-      .leaders {
+      .leaders__main {
          display: grid;
          grid-template-columns: 0.3333fr 0.6666667fr;
          justify-content: space-between;
