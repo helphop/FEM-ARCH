@@ -6815,7 +6815,7 @@ html:not(.js) .no-js\:is-hidden {
       --space-xxxxl: calc(7.59 * var(--space-unit)); } } }
 
 :root {
-  --container-component-padding: var(--space-xl); }
+  --container-component-padding: var(--space-xxl); }
   @media (min-width: 48rem) {
     :root {
       --container-component-padding: 11.45vw; } }
@@ -6854,8 +6854,9 @@ body {
 .container :is(h1, h2, h3) {
   max-width: 9ch; }
 
-.container p {
-  max-width: 28rem; }
+@media (min-width: 64rem) {
+  .container p {
+    max-width: 28rem; } }
 
 :root {
   --font-primary: 'Spartan', sans-serif;
@@ -7069,20 +7070,6 @@ mark {
   opacity: 1;
   visibility: visible;
   transition: all 0.2s; }
-
-.full-width {
-  grid-column-start: main-start;
-  grid-column-end: main-end; }
-
-@media (min-width: 48rem) {
-  .col-content\@sm {
-    grid-column-start: content-start;
-    grid-column-end: content-end; } }
-
-@media (min-width: 64rem) {
-  .col-content\@md {
-    grid-column-start: content-start;
-    grid-column-end: content-end; } }
 
 @media (min-width: 48rem) {
   .container-width\@sm {
