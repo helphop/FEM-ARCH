@@ -33,8 +33,7 @@
 }
 
 .container-width\@md {
-
   @include breakpoint(md) {
-    width: var(--container-width);
+    --component-padding: var(--container-component-padding);
   }
 }

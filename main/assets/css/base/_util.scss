@@ -1404,6 +1404,7 @@
         .padding-x-0\@#{$breakpoint}     { padding-left: 0; padding-right: 0; }
         .padding-x-component\@#{$breakpoint} { padding-left: var(--component-padding); padding-right: var(--component-padding); }
 
+
         .padding-y-xxxxs\@#{$breakpoint} { padding-top: var(--space-xxxxs); padding-bottom: var(--space-xxxxs); }
         .padding-y-xxxs\@#{$breakpoint}  { padding-top: var(--space-xxxs); padding-bottom: var(--space-xxxs); }
         .padding-y-xxs\@#{$breakpoint}   { padding-top: var(--space-xxs); padding-bottom: var(--space-xxs); }
