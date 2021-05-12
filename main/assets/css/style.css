@@ -6814,19 +6814,29 @@ html:not(.js) .no-js\:is-hidden {
       --space-xxxl: calc(5.063 * var(--space-unit));
       --space-xxxxl: calc(7.59 * var(--space-unit)); } } }
 
+:root {
+  --container-component-padding: 0; }
+  @media (min-width: 48rem) {
+    :root {
+      --container-component-padding: 11.45vw; } }
+
 body {
   display: flow-root; }
 
-.container.container--outer {
-  --component-padding: 0;
+.container--outer {
+  --component-padding: var(--container-component-padding);
   --sides-padding: var(--space-xl);
   padding-left: var(--sides-padding);
   padding-right: var(--sides-padding);
   max-width: 69.375rem; }
   @media (min-width: 48rem) {
-    .container.container--outer {
+    .container--outer {
       --sides-padding: 0;
-      --component-padding: 11.45vw; } }
+      --component-padding: var(--container-component-padding); } }
+
+.container--outer--full-width {
+  --sides-padding: 0;
+  --component-padding: 0; }
 
 .margin-top-menu {
   margin-top: var(--nav-bar-height); }
@@ -7075,7 +7085,7 @@ mark {
 
 @media (min-width: 64rem) {
   .container-width\@md {
-    width: var(--container-width); } }
+    --component-padding: var(--container-component-padding); } }
 
 header {
   position: relative; }
@@ -7348,9 +7358,8 @@ Usage: codyhouse.co/license
   border-top: 1px solid hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), 0.15); }
 
 .footer {
-  margin-top: 2.25rem;
-  position: relative; }
-  .footer__container {
+  margin-top: 2.25rem; }
+  .footer__main {
     --nav-spacing: 2rem;
     padding-bottom: 3rem;
     background: var(--color-black-lighter);
@@ -7371,7 +7380,7 @@ Usage: codyhouse.co/license
     place-items: center;
     gap: var(--nav-spacing); }
   @media (min-width: 48rem) {
-    .footer__container {
+    .footer__main {
       padding-bottom: initial;
       max-width: MAX(85vw, 38.25rem);
       grid-template-columns: auto 1fr;
@@ -7385,10 +7394,10 @@ Usage: codyhouse.co/license
       position: absolute;
       right: 0; } }
   @media (min-width: 64rem) {
-    .footer__container {
+    .footer__main {
       max-width: MIN(65vw, 164rem); } }
   @media (min-width: 80rem) {
-    .footer__container {
+    .footer__main {
       gap: 5.375rem; }
     .footer__logo {
       --logo-size: 12.5rem;

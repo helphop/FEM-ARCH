@@ -1,8 +1,7 @@
 .footer {
   margin-top: 2.25rem;
-  position: relative;
 
-  &__container {
+  &__main{
     --nav-spacing: 2rem;
     padding-bottom: 3rem;
     background: var(--color-black-lighter);
@@ -32,7 +31,7 @@
 
   @include breakpoint(sm) {
 
-    &__container {
+    &__main {
       padding-bottom: initial;
       max-width: MAX(85vw, 38.25rem);
       grid-template-columns: auto 1fr;
@@ -55,14 +54,16 @@
   }
 
   @include breakpoint(md) {
-    &__container {
+
+
+    &__main {
       max-width: MIN(65vw, 164rem);
     }
   }
 
   @include breakpoint(lg) {
 
-    &__container {
+    &__main{
       gap: 5.375rem;
     }
 

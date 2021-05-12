@@ -1,10 +1,15 @@
-
+:root {
+  --container-component-padding: 0;
+  @include breakpoint(sm) {
+    --container-component-padding: 11.45vw;
+  }
+}
 body {
   display: flow-root; //eliminates collapsing margin
 }
 
-.container.container--outer {
-  --component-padding: 0;
+.container--outer {
+  --component-padding: var(--container-component-padding);
   --sides-padding: var(--space-xl);
   padding-left: var(--sides-padding);
   padding-right: var(--sides-padding);
@@ -12,36 +17,15 @@ body {
 
   @include breakpoint(sm) {
     --sides-padding: 0;
-    --component-padding: 11.45vw;
+    --component-padding: var(--container-component-padding);
   }
 
 }
 
-
-// .container-outer {
-//   --outer-container-column: 8.5vw;
-//   max-width: 90rem; //1440px
-//   margin: 0 auto;
-//   display: grid;
-//   grid-template-columns: [main-start] var(--outer-container-column) [content-start] minmax(19.4385rem, 69.375rem) [content-end] var(--outer-container-column) [main-end];
-
-//   > * {
-//     grid-column-start: content-start;
-//   }
-
-//   @include breakpoint(sm) {
-//     --outer-container-column: 11.45vw;
-//   }
-
-//   @include breakpoint(md) {
-//     --outer-container-column: MIN(10.3125rem, 11.45vw);
-//   }
-// }
-
-// .vertical-content {
-//   grid-column-start: main-start;
-//   grid-row: span 2;
-// }
+.container--outer--full-width {
+  --sides-padding: 0;
+  --component-padding: 0;
+}
 
 .margin-top-menu {
   margin-top: var(--nav-bar-height);
