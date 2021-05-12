@@ -1,5 +1,5 @@
 :root {
-  --container-component-padding: 0;
+  --container-component-padding: var(--space-xl);
   @include breakpoint(sm) {
     --container-component-padding: 11.45vw;
   }
@@ -10,20 +10,14 @@ body {
 
 .container--outer {
   --component-padding: var(--container-component-padding);
-  --sides-padding: var(--space-xl);
-  padding-left: var(--sides-padding);
-  padding-right: var(--sides-padding);
   max-width: 69.375rem;
 
   @include breakpoint(sm) {
-    --sides-padding: 0;
     --component-padding: var(--container-component-padding);
   }
-
 }
 
 .container--outer--full-width {
-  --sides-padding: 0;
   --component-padding: 0;
 }
 
@@ -35,10 +29,8 @@ body {
 }
 
 .flow-content {
-
   --section-spacer-top: 4rem;
   --section-spacer-bottom: 6rem;
-
 
   > :first-child:not(:only-child) {
     margin-top: var(--section-spacer-top);

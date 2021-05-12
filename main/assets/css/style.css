@@ -6815,7 +6815,7 @@ html:not(.js) .no-js\:is-hidden {
       --space-xxxxl: calc(7.59 * var(--space-unit)); } } }
 
 :root {
-  --container-component-padding: 0; }
+  --container-component-padding: var(--space-xl); }
   @media (min-width: 48rem) {
     :root {
       --container-component-padding: 11.45vw; } }
@@ -6825,17 +6825,12 @@ body {
 
 .container--outer {
   --component-padding: var(--container-component-padding);
-  --sides-padding: var(--space-xl);
-  padding-left: var(--sides-padding);
-  padding-right: var(--sides-padding);
   max-width: 69.375rem; }
   @media (min-width: 48rem) {
     .container--outer {
-      --sides-padding: 0;
       --component-padding: var(--container-component-padding); } }
 
 .container--outer--full-width {
-  --sides-padding: 0;
   --component-padding: 0; }
 
 .margin-top-menu {
