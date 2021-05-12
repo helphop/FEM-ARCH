@@ -10,28 +10,26 @@
     <title>Get Started | CodyFrame</title>
   </head>
   <body>
-    <div class="container-outer">
-
-      <div class="vertical-content display@sm">
+      <!-- <div class="vertical-content display@sm">
         <div class="vertical-content__line"></div>
         <div class="vertical-content__text text-uppercase">home</div>
-      </div>
+      </div> -->
 
-      <section class="navigation">
+    <section class="navigation">
+      <div class="container container--outer">
         <div class="overlay hide@sm" aria-hidden="true"></div>
-        <div class="container width-100%@sm">
-          <div class="nav-bar">
-            <img class="nav-bar__logo" src="assets/images/logo.svg" alt="arch logo">
-            <nav class="nav" id="nav-items" hidden>
-              <a href="portfolio.html" class="nav-link">Portfolio</a>
-              <a href="about.html" class="nav-link">About Us</a>
-              <a href="contact.html" class="nav-link">Contact</a>
-            </nav>
-            <button class="nav-icon hide@sm" aria-expanded="false" aria-controls="nav-items"></button>
-          </div>
+        <div class="nav-bar">
+          <a href="/"><img class="nav-bar__logo" src="assets/images/logo.svg" alt="arch logo"></a>
+          <nav class="nav" id="nav-items" hidden>
+            <a href="portfolio.html" class="nav-link">Portfolio</a>
+            <a href="about.html" class="nav-link">About Us</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+          </nav>
+          <button class="nav-icon hide@sm" aria-expanded="false" aria-controls="nav-items"></button>
         </div>
-
-      </section>
+      </div>
+      </div>
+    </section>
 
       <header class="header margin-top-menu full-width col-content@sm">
 
@@ -110,7 +108,6 @@
 
       </header>
 
-    </div> <!-- close outer-container-->
 
 
     <main class="home">
@@ -189,21 +186,21 @@
       </div><!--container outer-->
     </main>
 
-    <div class="container-outer">
-      <footer class="footer full-width col-content@md">
-        <div class="footer__container">
-          <div class="footer__logo">
-            <img src="assets/images/logo.svg" alt="logo white">
-          </div>
-          <nav class="footer__nav">
-            <a href="portfolio.html" class="nav-link">Portfolio</a>
-            <a href="about.html" class="nav-link">About Us</a>
-            <a href="contact.html" class="nav-link">contact</a>
-          </nav>
-          <a href="portfolio.html" class="btn btn--primary--dark">See Our Portfolio</a>
+  <footer class="footer">
+    <div class="container container--outer container--outer--full-width container-width@md position-relative">
+      <div class="footer__main">
+        <div class="footer__logo">
+          <img src="assets/images/logo.svg" alt="logo white">
         </div>
-      </footer>
+        <nav class="footer__nav">
+          <a href="portfolio.html" class="nav-link">Portfolio</a>
+          <a href="about.html" class="nav-link">About Us</a>
+          <a href="contact.html" class="nav-link">contact</a>
+        </nav>
+        <a href="portfolio.html" class="btn btn--primary--dark">See Our Portfolio</a>
+      </div>
     </div>
+  </footer>
     <script src="assets/js/scripts.js"></script>
   </body>
 </html>
