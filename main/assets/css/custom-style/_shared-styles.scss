@@ -1,5 +1,5 @@
 :root {
-  --container-component-padding: var(--space-xl);
+  --container-component-padding: var(--space-xxl);
   @include breakpoint(sm) {
     --container-component-padding: 11.45vw;
   }
@@ -52,8 +52,10 @@ body {
     max-width: 9ch;
   }
 
-  p {
-    max-width: 28rem;
+  @include breakpoint(md) {
+    p {
+      max-width: 28rem;
+    }
   }
 }
 

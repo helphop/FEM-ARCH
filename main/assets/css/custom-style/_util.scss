@@ -12,27 +12,6 @@
   transition: all 0.2s;
 }
 
-.full-width {
-  grid-column-start: main-start;
-  grid-column-end: main-end;
-}
-
-//change to col2@sm
-.col-content\@sm {
-  @include breakpoint(sm) {
-    grid-column-start: content-start;
-    grid-column-end: content-end;
-  }
-}
-
-.col-content\@md {
-  @include breakpoint(md) {
-    grid-column-start: content-start;
-    grid-column-end: content-end;
-  }
-}
-
-
 .container-width\@sm{
   @include breakpoint(sm) {
     --component-padding: var(--container-component-padding);
