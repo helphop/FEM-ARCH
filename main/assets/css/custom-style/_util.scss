@@ -32,6 +32,13 @@
   }
 }
 
+
+.container-width\@sm{
+  @include breakpoint(sm) {
+    --component-padding: var(--container-component-padding);
+  }
+}
+
 .container-width\@md {
   @include breakpoint(md) {
     --component-padding: var(--container-component-padding);

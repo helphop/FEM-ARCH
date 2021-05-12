@@ -54,10 +54,17 @@ body {
   }
 }
 
-// .container {
-//   :is(h1,h2,h3) {
-//     max-width: 9ch;
-//   }
+
+.container {
+  :is(h1,h2,h3) {
+    max-width: 9ch;
+  }
+
+  p {
+    max-width: 28rem;
+  }
+}
+
 
 //   --component-padding: var(--outer-container-column);
 

@@ -6856,6 +6856,12 @@ body {
       --section-spacer-bottom: 12.5rem;
       --section-spacer-top: var(--section-spacer-bottom); } }
 
+.container :is(h1, h2, h3) {
+  max-width: 9ch; }
+
+.container p {
+  max-width: 28rem; }
+
 :root {
   --font-primary: 'Spartan', sans-serif;
   --text-base-size: 0.9375em;
@@ -7083,12 +7089,13 @@ mark {
     grid-column-start: content-start;
     grid-column-end: content-end; } }
 
+@media (min-width: 48rem) {
+  .container-width\@sm {
+    --component-padding: var(--container-component-padding); } }
+
 @media (min-width: 64rem) {
   .container-width\@md {
     --component-padding: var(--container-component-padding); } }
-
-header {
-  position: relative; }
 
 .slide {
   padding: 6.875rem 0;
