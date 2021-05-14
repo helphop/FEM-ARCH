@@ -1,7 +1,8 @@
 .vertical-content {
 
   @include breakpoint(sm) {
-
+    position: absolute;
+    left: calc(-1 * 7vw);
    display: grid;
     justify-items: center;
     grid-template-rows: min-content auto;
