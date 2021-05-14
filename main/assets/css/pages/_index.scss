@@ -102,21 +102,33 @@
 // TEAMS SECTION
 
 .teams {
-  --bg-image: url(../images/home/mobile/image-small-team.jpg);
-  background-image: linear-gradient(alpha(var(--color-black), 0.527),alpha(var(--color-black), 0.5)),var(--bg-image);
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: var(--color-white);
-  padding: 11.25rem 0;
 
+  &__main {
+    --bg-image: url(../images/home/mobile/image-small-team.jpg);
+    background-image: linear-gradient(alpha(var(--color-black), 0.527),alpha(var(--color-black), 0.5)),var(--bg-image);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: var(--color-white);
+    --padding-y: 11.25rem;
+    padding-top: var(--padding-y);
+    padding-bottom: var(--padding-y);
+
+    .text-component {
+      --text-vspace-multiplier: 3;
+    }
+  }
 
   @include breakpoint(sm) {
-    --bg-image: url(../images/home/tablet/image-small-team.jpg);
-    padding: 10.5rem 0;
+    &__main {
+      --bg-image: url(../images/home/tablet/image-small-team.jpg);
+      --padding-y: 10.5rem;
+    }
   }
 
   @include breakpoint(md) {
-    --bg-image: url(../images/home/desktop/image-small-team.jpg);
+    &__main {
+      --bg-image: url(../images/home/desktop/image-small-team.jpg);
+    }
   }
 }
 
