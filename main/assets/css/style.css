@@ -6823,11 +6823,11 @@ html:not(.js) .no-js\:is-hidden {
 body {
   display: flow-root; }
 
-.container--outer {
+.container {
   --component-padding: var(--container-component-padding);
   max-width: 69.375rem; }
   @media (min-width: 48rem) {
-    .container--outer {
+    .container {
       --component-padding: var(--container-component-padding); } }
 
 .container--full-width {

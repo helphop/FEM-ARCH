@@ -8,7 +8,7 @@ body {
   display: flow-root; //eliminates collapsing margin
 }
 
-.container--outer {
+.container {
   --component-padding: var(--container-component-padding);
   max-width: 69.375rem;
 
