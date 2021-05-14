@@ -7567,6 +7567,8 @@ Usage: codyhouse.co/license
 
 @media (min-width: 48rem) {
   .vertical-content {
+    position: absolute;
+    left: calc(-1 * 7vw);
     display: grid;
     justify-items: center;
     grid-template-rows: -webkit-min-content auto;
