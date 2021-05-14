@@ -60,7 +60,7 @@
 .welcome {
 
   .text-component {
-    --text-vspace-multiplier: 1.5;
+    --text-vspace-multiplier: 2.4;
     h2 {
       --text-vspace-multiplier: 2.8;
     }
@@ -71,7 +71,7 @@
   }
 
   @include breakpoint(sm) {
-    padding-top: 3rem;
+
     h1 {
       position: absolute;
       top: -5.375rem;
@@ -79,21 +79,20 @@
 
     .text-component {
       h2 {
-        --text-vspace-multiplier: 4.6;
+        --text-vspace-multiplier: 4;
       }
     }
   }
 
   @include breakpoint(md) {
-    background: url(../images/home/desktop/image-welcome.jpg) no-repeat;
-    background-position: right center;
-    padding-top: 4.7rem;
+    &__main{
+      background: url(../images/home/desktop/image-welcome.jpg) no-repeat;
+      background-position: right center;
+    }
 
     .text-component {
       h2 {
-        --text-vspace-multiplier: 2.8;
-        z-index: var(--zindex-popover); //position above H1;
-        position: relative;
+        --text-vspace-multiplier: 2.4;
       }
     }
   }
