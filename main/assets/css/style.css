@@ -7138,20 +7138,26 @@ mark {
   .welcome .text-component h2 {
     --text-vspace-multiplier: 2.4; } }
 
-.teams {
+.teams__main {
   --bg-image: url(../images/home/mobile/image-small-team.jpg);
   background-image: linear-gradient(hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.527), hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.5)), var(--bg-image);
   background-size: cover;
   background-repeat: no-repeat;
   color: var(--color-white);
-  padding: 11.25rem 0; }
-  @media (min-width: 48rem) {
-    .teams {
-      --bg-image: url(../images/home/tablet/image-small-team.jpg);
-      padding: 10.5rem 0; } }
-  @media (min-width: 64rem) {
-    .teams {
-      --bg-image: url(../images/home/desktop/image-small-team.jpg); } }
+  --padding-y: 11.25rem;
+  padding-top: var(--padding-y);
+  padding-bottom: var(--padding-y); }
+  .teams__main .text-component {
+    --text-vspace-multiplier: 3; }
+
+@media (min-width: 48rem) {
+  .teams__main {
+    --bg-image: url(../images/home/tablet/image-small-team.jpg);
+    --padding-y: 10.5rem; } }
+
+@media (min-width: 64rem) {
+  .teams__main {
+    --bg-image: url(../images/home/desktop/image-small-team.jpg); } }
 
 .featured {
   --col-gap: 1.5rem;
