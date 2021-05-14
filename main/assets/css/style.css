@@ -6852,7 +6852,7 @@ body {
       --section-spacer-top: var(--section-spacer-bottom); } }
 
 .container :is(h1, h2, h3) {
-  max-width: 9ch; }
+  max-width: 10ch; }
 
 @media (min-width: 64rem) {
   .container p {
@@ -7159,29 +7159,29 @@ mark {
   .teams__main {
     --bg-image: url(../images/home/desktop/image-small-team.jpg); } }
 
-.featured {
+.featured__main {
   --col-gap: 1.5rem;
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--col-gap); }
   @media (min-width: 48rem) {
-    .featured {
+    .featured__main {
       grid-template-columns: 1fr auto;
       grid-template-areas: "title button" "cards cards";
       align-items: center; }
-      .featured .btn {
+      .featured__main .btn {
         grid-area: button; } }
-  .featured .project-cards {
+  .featured__main .project-cards {
     margin-top: var(--space-xl);
     display: grid;
     grid-template-columns: 1fr;
     gap: var(--col-gap); }
     @media (min-width: 48rem) {
-      .featured .project-cards {
+      .featured__main .project-cards {
         margin-top: var(--space-xxxxl);
         grid-area: cards; } }
     @media (min-width: 64rem) {
-      .featured .project-cards {
+      .featured__main .project-cards {
         margin-top: var(--space-lg);
         grid-template-columns: repeat(3, 1fr);
         gap: 1.875rem; } }
@@ -7348,7 +7348,7 @@ Usage: codyhouse.co/license
   border-top: 1px solid hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), 0.15); }
 
 .footer {
-  margin-top: 2.25rem; }
+  margin-top: 8.25rem; }
   .footer__main {
     --nav-spacing: 2rem;
     padding-bottom: 3rem;
