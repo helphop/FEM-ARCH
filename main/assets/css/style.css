@@ -7117,7 +7117,7 @@ mark {
       border-right: 1px solid var(--color-black-lighter); } }
 
 .welcome .text-component {
-  --text-vspace-multiplier: 1.5; }
+  --text-vspace-multiplier: 2.4; }
   .welcome .text-component h2 {
     --text-vspace-multiplier: 2.8; }
 
@@ -7125,23 +7125,18 @@ mark {
   color: var(--color-primary-light); }
 
 @media (min-width: 48rem) {
-  .welcome {
-    padding-top: 3rem; }
-    .welcome h1 {
-      position: absolute;
-      top: -5.375rem; }
-    .welcome .text-component h2 {
-      --text-vspace-multiplier: 4.6; } }
+  .welcome h1 {
+    position: absolute;
+    top: -5.375rem; }
+  .welcome .text-component h2 {
+    --text-vspace-multiplier: 4; } }
 
 @media (min-width: 64rem) {
-  .welcome {
+  .welcome__main {
     background: url(../images/home/desktop/image-welcome.jpg) no-repeat;
-    background-position: right center;
-    padding-top: 4.7rem; }
-    .welcome .text-component h2 {
-      --text-vspace-multiplier: 2.8;
-      z-index: var(--zindex-popover);
-      position: relative; } }
+    background-position: right center; }
+  .welcome .text-component h2 {
+    --text-vspace-multiplier: 2.4; } }
 
 .teams {
   --bg-image: url(../images/home/mobile/image-small-team.jpg);
