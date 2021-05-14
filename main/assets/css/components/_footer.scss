@@ -1,5 +1,5 @@
 .footer {
-  margin-top: 2.25rem;
+  margin-top: 8.25rem;
 
   &__main{
     --nav-spacing: 2rem;
@@ -54,8 +54,6 @@
   }
 
   @include breakpoint(md) {
-
-
     &__main {
       max-width: MIN(65vw, 164rem);
     }
@@ -71,7 +69,6 @@
       --logo-size: 12.5rem;
       padding: 5rem 3rem;
     }
-
   }
 }
 

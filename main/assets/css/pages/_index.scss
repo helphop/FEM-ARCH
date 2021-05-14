@@ -135,6 +135,7 @@
 // FEATURED SECTION
 
 .featured {
+  &__main {
   --col-gap: 1.5rem;
   display: grid;
   grid-template-columns: 1fr;
@@ -152,7 +153,6 @@
   }
 
   // PROJECT CARDS
-
   .project-cards {
     margin-top: var(--space-xl);
     display: grid;
@@ -170,4 +170,5 @@
       gap: 1.875rem;
     }
   }
+}
 }
