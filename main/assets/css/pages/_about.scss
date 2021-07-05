@@ -4,11 +4,10 @@
    }
 
    header {
-      .text-component {
-         margin-top: var(--space-xxxl);
-          --text-vspace-multiplier: 2;
-           background: var(--color-white);
-      }
+
+         h2 {
+            margin-top: var(--space-lg);
+         }
 
         @include breakpoint(sm) {
          .container {

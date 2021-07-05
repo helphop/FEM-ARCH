@@ -7197,10 +7197,8 @@ mark {
 .about p {
   color: var(--color-primary-light); }
 
-.about header .text-component {
-  margin-top: var(--space-xxxl);
-  --text-vspace-multiplier: 2;
-  background: var(--color-white); }
+.about header h2 {
+  margin-top: var(--space-lg); }
 
 @media (min-width: 48rem) {
   .about header .container {
