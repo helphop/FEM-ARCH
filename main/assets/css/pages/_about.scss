@@ -7,10 +7,26 @@
       .text-component {
          margin-top: var(--space-xxxl);
           --text-vspace-multiplier: 2;
+           background: var(--color-white);
+      }
 
-         @include breakpoint(sm) {
-            --text-vspace-multiplier: 4;
+        @include breakpoint(sm) {
+         .container {
+            background: url('../images/about/tablet/image-hero.jpg') no-repeat;
+            background-size: cover;
+            padding: 18rem 0 0 3.625rem;
+            position: relative;
          }
+         .header__content {
+            padding: 5.5rem 0 0 3.6875rem;
+            background: var(--color-white);
+         }
+         h1 {
+            position: absolute;
+            right: 0;
+            top: 235px;
+         }
+
       }
    }
 

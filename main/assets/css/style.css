@@ -7199,10 +7199,22 @@ mark {
 
 .about header .text-component {
   margin-top: var(--space-xxxl);
-  --text-vspace-multiplier: 2; }
-  @media (min-width: 48rem) {
-    .about header .text-component {
-      --text-vspace-multiplier: 4; } }
+  --text-vspace-multiplier: 2;
+  background: var(--color-white); }
+
+@media (min-width: 48rem) {
+  .about header .container {
+    background: url("../images/about/tablet/image-hero.jpg") no-repeat;
+    background-size: cover;
+    padding: 18rem 0 0 3.625rem;
+    position: relative; }
+  .about header .header__content {
+    padding: 5.5rem 0 0 3.6875rem;
+    background: var(--color-white); }
+  .about header h1 {
+    position: absolute;
+    right: 0;
+    top: 235px; } }
 
 .about .heritage .text-component {
   --text-vspace-multiplier: 2; }
