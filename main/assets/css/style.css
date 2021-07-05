@@ -7197,10 +7197,8 @@ mark {
 .about p {
   color: var(--color-primary-light); }
 
-.about header .text-component {
-  margin-top: var(--space-xxxl);
-  --text-vspace-multiplier: 2;
-  background: var(--color-white); }
+.about header h2 {
+  margin: var(--space-lg) 0 var(--space-sm); }
 
 @media (min-width: 48rem) {
   .about header .container {
@@ -7214,7 +7212,18 @@ mark {
   .about header h1 {
     position: absolute;
     right: 0;
-    top: 235px; } }
+    top: 14.6875rem; }
+  .about header h2 {
+    margin-top: 0; } }
+
+@media (min-width: 80rem) {
+  .about header .container {
+    padding: 13.5625rem 0 0 30.125rem;
+    background-size: 40rem; }
+  .about header h1 {
+    top: 8.125rem; }
+  .about header .header__content {
+    padding: 10rem 0 0 11.375rem; } }
 
 .about .heritage .text-component {
   --text-vspace-multiplier: 2; }
@@ -7222,7 +7231,7 @@ mark {
 @media (min-width: 64rem) {
   .about .heritage__main {
     display: grid;
-    grid-template-columns: 40% 50%;
+    grid-template-columns: 40% 45%;
     gap: 15%; }
   .about .heritage__image {
     background: url(../images/about/desktop/image-heritage.jpg) no-repeat;
@@ -7413,9 +7422,6 @@ Usage: codyhouse.co/license
   @media (min-width: 48rem) {
     .horizontal-line {
       --hz-line-spacer: 5rem; } }
-  @media (min-width: 64rem) {
-    .horizontal-line {
-      --hz-line-spacer: 6.5rem; } }
 
 :root {
   --nav-bar-height: 6rem; }
