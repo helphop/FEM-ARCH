@@ -7198,7 +7198,7 @@ mark {
   color: var(--color-primary-light); }
 
 .about header h2 {
-  margin-top: var(--space-lg); }
+  margin: var(--space-lg) 0 var(--space-sm); }
 
 @media (min-width: 48rem) {
   .about header .container {
@@ -7212,16 +7212,18 @@ mark {
   .about header h1 {
     position: absolute;
     right: 0;
-    top: 235px; } }
+    top: 14.6875rem; }
+  .about header h2 {
+    margin-top: 0; } }
 
 @media (min-width: 80rem) {
   .about header .container {
     padding: 13.5625rem 0 0 30.125rem;
-    background-size: 635px; }
+    background-size: 40rem; }
   .about header h1 {
-    top: 130px; }
+    top: 8.125rem; }
   .about header .header__content {
-    padding: 160px 0 0 182px; } }
+    padding: 10rem 0 0 11.375rem; } }
 
 .about .heritage .text-component {
   --text-vspace-multiplier: 2; }
@@ -7420,9 +7422,6 @@ Usage: codyhouse.co/license
   @media (min-width: 48rem) {
     .horizontal-line {
       --hz-line-spacer: 5rem; } }
-  @media (min-width: 64rem) {
-    .horizontal-line {
-      --hz-line-spacer: 6.5rem; } }
 
 :root {
   --nav-bar-height: 6rem; }

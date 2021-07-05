@@ -6,7 +6,7 @@
    header {
 
          h2 {
-            margin-top: var(--space-lg);
+            margin: var(--space-lg) 0 var(--space-sm);
          }
 
         @include breakpoint(sm) {
@@ -23,22 +23,26 @@
          h1 {
             position: absolute;
             right: 0;
-            top: 235px;
+            top: 14.6875rem;
+         }
+
+         h2 {
+            margin-top: 0;
          }
       }
 
       @include breakpoint(lg) {
          .container {
             padding: 13.5625rem 0 0 30.125rem;
-            background-size: 635px;
+            background-size: 40rem; //creates illusion that image
          }
 
          h1 {
-            top: 130px;
+            top: 8.125rem;
          }
 
          .header__content {
-            padding: 160px 0 0 182px;
+            padding: 10rem 0 0 11.375rem;
          }
       }
    }
@@ -50,14 +54,12 @@
          --text-vspace-multiplier: 2;
       }
 
-
       @include breakpoint(md) {
          &__main {
            display: grid;
             grid-template-columns: 40% 45%;
             gap: 15%;
          }
-
 
       &__image {
          background: url(../images/about/desktop/image-heritage.jpg) no-repeat;
