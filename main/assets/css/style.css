@@ -7214,13 +7214,22 @@ mark {
     right: 0;
     top: 235px; } }
 
+@media (min-width: 80rem) {
+  .about header .container {
+    padding: 13.5625rem 0 0 30.125rem;
+    background-size: 635px; }
+  .about header h1 {
+    top: 130px; }
+  .about header .header__content {
+    padding: 160px 0 0 182px; } }
+
 .about .heritage .text-component {
   --text-vspace-multiplier: 2; }
 
 @media (min-width: 64rem) {
   .about .heritage__main {
     display: grid;
-    grid-template-columns: 40% 50%;
+    grid-template-columns: 40% 45%;
     gap: 15%; }
   .about .heritage__image {
     background: url(../images/about/desktop/image-heritage.jpg) no-repeat;

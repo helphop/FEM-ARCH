@@ -25,7 +25,21 @@
             right: 0;
             top: 235px;
          }
+      }
 
+      @include breakpoint(lg) {
+         .container {
+            padding: 13.5625rem 0 0 30.125rem;
+            background-size: 635px;
+         }
+
+         h1 {
+            top: 130px;
+         }
+
+         .header__content {
+            padding: 160px 0 0 182px;
+         }
       }
    }
 
@@ -40,7 +54,7 @@
       @include breakpoint(md) {
          &__main {
            display: grid;
-            grid-template-columns: 40% 50%;
+            grid-template-columns: 40% 45%;
             gap: 15%;
          }
 
