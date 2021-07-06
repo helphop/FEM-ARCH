@@ -12,6 +12,15 @@
   transition: all 0.2s;
 }
 
+
+//container utilities
+
+.container-width\@md {
+  @include breakpoint(md) {
+    --component-padding: var(--container-component-padding);
+  }
+}
+
 .container-width\@sm{
   @include breakpoint(sm) {
     --component-padding: var(--container-component-padding);

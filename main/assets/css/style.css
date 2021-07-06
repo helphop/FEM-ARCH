@@ -6830,9 +6830,6 @@ body {
     .container {
       --component-padding: var(--container-component-padding); } }
 
-.container--full-width {
-  --component-padding: 0; }
-
 .margin-top-menu {
   margin-top: var(--nav-bar-height); }
   @media (min-width: 48rem) {
@@ -7070,6 +7067,10 @@ mark {
   opacity: 1;
   visibility: visible;
   transition: all 0.2s; }
+
+@media (min-width: 64rem) {
+  .container-width\@md {
+    --component-padding: var(--container-component-padding); } }
 
 @media (min-width: 48rem) {
   .container-width\@sm {

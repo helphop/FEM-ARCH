@@ -34,7 +34,7 @@
       @include breakpoint(lg) {
          .container {
             padding: 13.5625rem 0 0 30.125rem;
-            background-size: 40rem; //creates illusion that image
+            background-size: 40rem; //creates illusion that image is in the shape of the letter 'r'
          }
 
          h1 {
