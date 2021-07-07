@@ -1125,7 +1125,7 @@ img, video, svg {
 body {
   font-size: var(--text-base-size, 1em);
   font-family: var(--font-primary, sans-serif);
-  color: var(--color-contrast-high, #313135); }
+  color: var(--color-primary-light, #62626a); }
 
 h1, h2, h3, h4 {
   color: var(--color-contrast-higher, #1c1c21);
@@ -6889,8 +6889,7 @@ body {
 
 h1, h2, h3, h4 {
   font-family: var(--font-primary);
-  font-weight: 700;
-  color: inherit; }
+  font-weight: 700; }
 
 .font-primary {
   font-family: var(--font-primary); }
@@ -6985,6 +6984,9 @@ mark {
   transition: all 0.2s ease;
   will-change: transform;
   justify-content: center; }
+
+.btn--primary--link {
+  padding: 0; }
 
 .btn--primary:hover {
   text-decoration: underline; }
@@ -7297,7 +7299,24 @@ mark {
   background-color: var(--color-white);
   width: 343px;
   position: absolute;
-  bottom: 1px; }
+  bottom: 0.5px; }
+
+.contact__details {
+  margin-top: 72px; }
+  .contact__details__content {
+    display: flex;
+    flex-wrap: wrap; }
+  .contact__details .contact-card__header {
+    font-weight: 700; }
+  .contact__details .contact-card__body {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; }
+    .contact__details .contact-card__body p {
+      line-height: 2; }
+
+.contact__map {
+  margin-top: 72px; }
 
 /* -------------------------------- 
 
