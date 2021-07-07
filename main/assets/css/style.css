@@ -7289,6 +7289,16 @@ mark {
       .about .cards .social:hover img:hover {
         filter: invert(61%) sepia(45%) saturate(1463%) hue-rotate(343deg) brightness(102%) contrast(92%); } }
 
+.contact .header__img {
+  position: relative; }
+
+.contact .header .white-box {
+  padding: 22.5px 0;
+  background-color: var(--color-white);
+  width: 343px;
+  position: absolute;
+  bottom: 1px; }
+
 /* -------------------------------- 
 
 File#: _1_list
