@@ -7316,6 +7316,20 @@ mark {
   position: absolute;
   bottom: 0.5px; }
 
+@media (min-width: 48rem) {
+  .contact .header .container {
+    background: url("../images/contact/tablet/image-hero.jpg") no-repeat;
+    background-size: cover;
+    padding: 18rem 0 0 3.625rem;
+    position: relative; }
+  .contact .header .header__content {
+    padding: 5.5rem 0 0 3.6875rem;
+    background: var(--color-white); }
+  .contact .header h1 {
+    position: absolute;
+    right: 0;
+    top: 14.6875rem; } }
+
 .contact__details__content {
   display: flex;
   flex-wrap: wrap; }
