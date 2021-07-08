@@ -7312,6 +7312,8 @@ mark {
     display: flex;
     align-items: center;
     flex-wrap: wrap; }
+    .contact__details .contact-card__body .info {
+      padding: var(--space-md) 0; }
     .contact__details .contact-card__body p {
       line-height: 2; }
 
