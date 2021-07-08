@@ -39,4 +39,29 @@
   &__map {
     margin-top: 72px;
   }
+
+  .connect {
+    margin-top: 72px;
+    &__form {
+      display: grid;
+      input,
+      textarea {
+        border: none;
+        width: 100%;
+        border-bottom: 1px solid var(--color-primary);
+        padding: 0 0 var(--space-md) var(--space-md);
+        resize: none;
+      }
+      ::placeholder {
+        color: var(--color-black-light);
+        font-weight: 700;
+      }
+      .form-action {
+        margin-left: auto;
+      }
+
+    }
+  }
+
+
 }
