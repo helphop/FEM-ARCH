@@ -34,8 +34,11 @@
     &__content {
       display: flex;
       flex-wrap: wrap;
+
     }
+
     .contact-card {
+      flex-grow: 1;
       &__header {
         font-weight: 700;
       }
@@ -48,6 +51,18 @@
         };
          p {
           line-height: 2;
+        }
+      }
+    }
+    @include breakpoint(sm) {
+       h2 {
+        flex-grow: 1;
+        max-width: 20ch;
+      }
+
+      .contact-card {
+        &__body {
+          justify-content: space-between;
         }
       }
     }
