@@ -13,7 +13,6 @@
   }
 
   &__details {
-    margin-top: 72px;
     &__content {
       display: flex;
       flex-wrap: wrap;
@@ -36,12 +35,9 @@
     }
   }
 
-  &__map {
-    margin-top: 72px;
-  }
+
 
   .connect {
-    margin-top: 72px;
     &__form {
       display: grid;
       input,

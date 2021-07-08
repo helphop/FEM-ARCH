@@ -7316,47 +7316,42 @@ mark {
   position: absolute;
   bottom: 0.5px; }
 
-.contact__details {
-  margin-top: 72px; }
-  .contact__details__content {
-    display: flex;
-    flex-wrap: wrap; }
-  .contact__details .contact-card__header {
+.contact__details__content {
+  display: flex;
+  flex-wrap: wrap; }
+
+.contact__details .contact-card__header {
+  font-weight: 700; }
+
+.contact__details .contact-card__body {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; }
+  .contact__details .contact-card__body .info {
+    padding: var(--space-md) 0; }
+  .contact__details .contact-card__body p {
+    line-height: 2; }
+
+.contact .connect__form {
+  display: grid; }
+  .contact .connect__form input,
+  .contact .connect__form textarea {
+    border: none;
+    width: 100%;
+    border-bottom: 1px solid var(--color-primary);
+    padding: 0 0 var(--space-md) var(--space-md);
+    resize: none; }
+  .contact .connect__form ::-moz-placeholder {
+    color: var(--color-black-light);
     font-weight: 700; }
-  .contact__details .contact-card__body {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap; }
-    .contact__details .contact-card__body .info {
-      padding: var(--space-md) 0; }
-    .contact__details .contact-card__body p {
-      line-height: 2; }
-
-.contact__map {
-  margin-top: 72px; }
-
-.contact .connect {
-  margin-top: 72px; }
-  .contact .connect__form {
-    display: grid; }
-    .contact .connect__form input,
-    .contact .connect__form textarea {
-      border: none;
-      width: 100%;
-      border-bottom: 1px solid var(--color-primary);
-      padding: 0 0 var(--space-md) var(--space-md);
-      resize: none; }
-    .contact .connect__form ::-moz-placeholder {
-      color: var(--color-black-light);
-      font-weight: 700; }
-    .contact .connect__form :-ms-input-placeholder {
-      color: var(--color-black-light);
-      font-weight: 700; }
-    .contact .connect__form ::placeholder {
-      color: var(--color-black-light);
-      font-weight: 700; }
-    .contact .connect__form .form-action {
-      margin-left: auto; }
+  .contact .connect__form :-ms-input-placeholder {
+    color: var(--color-black-light);
+    font-weight: 700; }
+  .contact .connect__form ::placeholder {
+    color: var(--color-black-light);
+    font-weight: 700; }
+  .contact .connect__form .form-action {
+    margin-left: auto; }
 
 /* -------------------------------- 
 
