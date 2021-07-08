@@ -1125,7 +1125,7 @@ img, video, svg {
 body {
   font-size: var(--text-base-size, 1em);
   font-family: var(--font-primary, sans-serif);
-  color: var(--color-contrast-high, #313135); }
+  color: var(--color-primary-light, #62626a); }
 
 h1, h2, h3, h4 {
   color: var(--color-contrast-higher, #1c1c21);
@@ -6889,8 +6889,7 @@ body {
 
 h1, h2, h3, h4 {
   font-family: var(--font-primary);
-  font-weight: 700;
-  color: inherit; }
+  font-weight: 700; }
 
 .font-primary {
   font-family: var(--font-primary); }
@@ -6986,6 +6985,9 @@ mark {
   will-change: transform;
   justify-content: center; }
 
+.btn--primary--link {
+  padding: 0; }
+
 .btn--primary:hover {
   text-decoration: underline; }
 
@@ -7079,6 +7081,21 @@ mark {
 @media (min-width: 64rem) {
   .container-width\@md {
     --component-padding: var(--container-component-padding); } }
+
+.flow--sm > * + * {
+  margin-top: var(--space-sm); }
+
+.flow--md > * + * {
+  margin-top: var(--space-md); }
+
+.flow--lg > * + * {
+  margin-top: var(--space-lg); }
+
+.flow--xl > * + * {
+  margin-top: var(--space-xl); }
+
+.flow--xxl > * + * {
+  margin-top: var(--space-xxl); }
 
 .slide {
   padding: 6.875rem 0;
@@ -7288,6 +7305,53 @@ mark {
       background-color: hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.5); }
       .about .cards .social:hover img:hover {
         filter: invert(61%) sepia(45%) saturate(1463%) hue-rotate(343deg) brightness(102%) contrast(92%); } }
+
+.contact .header__img {
+  position: relative; }
+
+.contact .header .white-box {
+  padding: 22.5px 0;
+  background-color: var(--color-white);
+  width: 343px;
+  position: absolute;
+  bottom: 0.5px; }
+
+.contact__details__content {
+  display: flex;
+  flex-wrap: wrap; }
+
+.contact__details .contact-card__header {
+  font-weight: 700; }
+
+.contact__details .contact-card__body {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; }
+  .contact__details .contact-card__body .info {
+    padding: var(--space-md) 0; }
+  .contact__details .contact-card__body p {
+    line-height: 2; }
+
+.contact .connect__form {
+  display: grid; }
+  .contact .connect__form input,
+  .contact .connect__form textarea {
+    border: none;
+    width: 100%;
+    border-bottom: 1px solid var(--color-primary);
+    padding: 0 0 var(--space-md) var(--space-md);
+    resize: none; }
+  .contact .connect__form ::-moz-placeholder {
+    color: var(--color-black-light);
+    font-weight: 700; }
+  .contact .connect__form :-ms-input-placeholder {
+    color: var(--color-black-light);
+    font-weight: 700; }
+  .contact .connect__form ::placeholder {
+    color: var(--color-black-light);
+    font-weight: 700; }
+  .contact .connect__form .form-action {
+    margin-left: auto; }
 
 /* -------------------------------- 
 

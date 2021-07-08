@@ -5,6 +5,7 @@
 // --------------------------------
 
 :root, [data-theme="default"] {
+
   // main
   @include defineColorHSL(--color-primary-darker, 225, 13%, 0%);
   @include defineColorHSL(--color-primary-dark, 225, 13%, 6%);
