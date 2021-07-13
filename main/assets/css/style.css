@@ -7333,29 +7333,38 @@ mark {
     right: 0;
     top: 14.6875rem; } }
 
-.contact__details__content {
+.contact .details__content {
   display: flex;
   flex-wrap: wrap; }
 
-.contact__details .contact-card {
+.contact .details .details-card {
   flex-grow: 1; }
-  .contact__details .contact-card__header {
+  .contact .details .details-card__header {
     font-weight: 700; }
-  .contact__details .contact-card__body {
+  .contact .details .details-card__body {
     display: flex;
     align-items: center;
     flex-wrap: wrap; }
-    .contact__details .contact-card__body .info {
+    .contact .details .details-card__body .info {
       padding: var(--space-md) 0; }
-    .contact__details .contact-card__body p {
+    .contact .details .details-card__body p {
       line-height: 2; }
 
 @media (min-width: 48rem) {
-  .contact__details h2 {
+  .contact .details h2 {
     flex-grow: 1;
     max-width: 20ch; }
-  .contact__details .contact-card__body {
+  .contact .details .details-card__body {
     justify-content: space-between; } }
+
+@media (min-width: 64rem) {
+  .contact .details__content {
+    flex-wrap: nowrap;
+    justify-content: space-between; }
+  .contact .details h2 {
+    max-width: 8ch; }
+  .contact .details .details-card {
+    min-width: 360px; } }
 
 .contact .map img {
   width: 100%;
