@@ -7070,6 +7070,9 @@ mark {
   visibility: visible;
   transition: all 0.2s; }
 
+.container--full-width {
+  --component-padding: 0; }
+
 @media (min-width: 64rem) {
   .container-width\@md {
     --component-padding: var(--container-component-padding); } }
@@ -7353,6 +7356,12 @@ mark {
     max-width: 20ch; }
   .contact__details .contact-card__body {
     justify-content: space-between; } }
+
+.contact .map img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover; }
 
 .contact .connect__form {
   display: grid; }

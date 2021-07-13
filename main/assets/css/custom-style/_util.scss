@@ -15,6 +15,10 @@
 
 //container utilities
 
+.container--full-width {
+  --component-padding: 0;
+}
+
 .container-width\@md {
   @include breakpoint(md) {
     --component-padding: var(--container-component-padding);
