@@ -28,6 +28,21 @@
           top: 14.6875rem;
          }
     }
+
+    @include breakpoint(md) {
+      .container {
+        padding: 13.5625rem 0 0 30.125rem;
+        background-size: 40rem; //creates illusion that image is in the shape of the letter 'r'
+      }
+
+      h1 {
+      top: 8.125rem;
+      }
+
+      .header__content {
+        padding: 10rem 0 0 11.375rem;
+      }
+    }
   }
 
   .details {
@@ -109,6 +124,7 @@
       }
 
     }
+
   }
 
 

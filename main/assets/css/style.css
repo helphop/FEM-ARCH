@@ -7333,6 +7333,15 @@ mark {
     right: 0;
     top: 14.6875rem; } }
 
+@media (min-width: 64rem) {
+  .contact .header .container {
+    padding: 13.5625rem 0 0 30.125rem;
+    background-size: 40rem; }
+  .contact .header h1 {
+    top: 8.125rem; }
+  .contact .header .header__content {
+    padding: 10rem 0 0 11.375rem; } }
+
 .contact .details__content {
   display: flex;
   flex-wrap: wrap; }
