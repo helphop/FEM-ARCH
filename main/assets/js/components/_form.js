@@ -9,6 +9,7 @@ if(elementExists(connectForm)) {
   //remove the last element which is the button
   formInputs.pop()
 
+  formInputs.forEach(formInput => formInput.addEventListener('input', (e) => validateInput(formInput)));
   formInputs.forEach(formInput => formInput.addEventListener('focusout', (e) => validateInput(formInput)));
 
   submitButton.addEventListener('click', (e)=> {
@@ -26,5 +27,4 @@ if(elementExists(connectForm)) {
         errorMessage.remove();
       }
   }
-
 }
