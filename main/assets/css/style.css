@@ -7389,7 +7389,13 @@ mark {
     width: 100%;
     border-bottom: 1px solid var(--color-primary);
     padding: 0 0 var(--space-md) var(--space-md);
-    resize: none; }
+    resize: none;
+    font-weight: 700; }
+  .contact .connect__form input:focus,
+  .contact .connect__form textarea:focus {
+    outline: none;
+    border-bottom: 2px solid var(--color-primary);
+    margin-bottom: -1px; }
   .contact .connect__form ::-moz-placeholder {
     color: var(--color-black-light);
     font-weight: 700; }

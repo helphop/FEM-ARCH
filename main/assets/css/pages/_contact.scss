@@ -45,6 +45,7 @@
     }
   }
 
+  // Contact Details Section
   .details {
 
     &__content {
@@ -96,6 +97,7 @@
     }
   }
 
+  // Map Section
   .map {
     img {
       width: 100%;
@@ -104,6 +106,7 @@
     }
   }
 
+  // Connect With Us Section
   .connect {
     &__form {
       display: grid;
@@ -114,7 +117,15 @@
         border-bottom: 1px solid var(--color-primary);
         padding: 0 0 var(--space-md) var(--space-md);
         resize: none;
+        font-weight: 700;
       }
+      input:focus,
+      textarea:focus {
+        outline: none;
+        border-bottom: 2px solid var(--color-primary);
+        margin-bottom: -1px;
+      }
+
       ::placeholder {
         color: var(--color-black-light);
         font-weight: 700;
@@ -126,6 +137,5 @@
     }
 
   }
-
 
 }
