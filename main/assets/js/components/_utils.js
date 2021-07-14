@@ -16,3 +16,8 @@ const isInViewport = (element1, element2) => (element1.getBoundingClientRect().l
 
 //returns the last character in a given string
 const lastChar = (str) => str.charAt(str.length - 1);
+
+//used to detect if element is present on page
+function elementExists(elem) {
+  return (typeof(elem) != 'undefined' && elem != null)
+}
