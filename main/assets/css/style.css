@@ -7070,6 +7070,9 @@ mark {
   visibility: visible;
   transition: all 0.2s; }
 
+.container--full-width {
+  --component-padding: 0; }
+
 @media (min-width: 64rem) {
   .container-width\@md {
     --component-padding: var(--container-component-padding); } }
@@ -7316,21 +7319,67 @@ mark {
   position: absolute;
   bottom: 0.5px; }
 
-.contact__details__content {
+@media (min-width: 48rem) {
+  .contact .header .container {
+    background: url("../images/contact/tablet/image-hero.jpg") no-repeat;
+    background-size: cover;
+    padding: 18rem 0 0 3.625rem;
+    position: relative; }
+  .contact .header .header__content {
+    padding: 5.5rem 0 0 3.6875rem;
+    background: var(--color-white); }
+  .contact .header h1 {
+    position: absolute;
+    right: 0;
+    top: 14.6875rem; } }
+
+@media (min-width: 64rem) {
+  .contact .header .container {
+    padding: 13.5625rem 0 0 30.125rem;
+    background-size: 40rem; }
+  .contact .header h1 {
+    top: 8.125rem; }
+  .contact .header .header__content {
+    padding: 10rem 0 0 11.375rem; } }
+
+.contact .details__content {
   display: flex;
   flex-wrap: wrap; }
 
-.contact__details .contact-card__header {
-  font-weight: 700; }
+.contact .details .details-card {
+  flex-grow: 1; }
+  .contact .details .details-card__header {
+    font-weight: 700; }
+  .contact .details .details-card__body {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; }
+    .contact .details .details-card__body .info {
+      padding: var(--space-md) 0; }
+    .contact .details .details-card__body p {
+      line-height: 2; }
 
-.contact__details .contact-card__body {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap; }
-  .contact__details .contact-card__body .info {
-    padding: var(--space-md) 0; }
-  .contact__details .contact-card__body p {
-    line-height: 2; }
+@media (min-width: 48rem) {
+  .contact .details h2 {
+    flex-grow: 1;
+    max-width: 20ch; }
+  .contact .details .details-card__body {
+    justify-content: space-between; } }
+
+@media (min-width: 64rem) {
+  .contact .details__content {
+    flex-wrap: nowrap;
+    justify-content: space-between; }
+  .contact .details h2 {
+    max-width: 8ch; }
+  .contact .details .details-card {
+    min-width: 360px; } }
+
+.contact .map img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover; }
 
 .contact .connect__form {
   display: grid; }

@@ -41,8 +41,8 @@
           <div class="white-box hide@sm"></div>
         </div>
         <div class="container">
-          <h1 class="text--huge display@sm">Contact</h1>
           <div class="header__content">
+            <h1 class="text--huge display@sm">Contact</h1>
             <div class="horizontal-line display@sm"></div>
             <h2 class="margin-top-md">Tell us about your project</h2>
             <p class="margin-top-md">We’d love to hear more about your project. Please, leave a message below or give
@@ -54,22 +54,26 @@
       </header>
 
       <main class="flow-content">
-        <section class="contact__details">
+
+        <section class="details">
           <div class="container">
+
             <div class="horizontal-line"></div>
-            <div class="contact__details__content">
+
+            <div class="details__content">
+
               <h2 class="margin-bottom-lg">Contact Details</h2>
 
-              <div class="contact-card">
-                <div class="contact-card__header">Main Office</div>
-                  <div class="contact-card__body">
+              <div class="details-card">
+                <div class="details-card__header">Main Office</div>
+                  <div class="details-card__body">
                     <div class="flex info">
                       <div>
                         <p>Mail:</p>
                         <p>Address:</p>
                         <p>Phone:</p>
                       </div>
-                      <div class=" margin-left-sm">
+                      <div class=" margin-left-sm margin-left-xxl@sm">
                         <p>archone@mail.com</p>
                         <p>1892 Chenoweth Drive TN</p>
                         <p>123-456-3451</p>
@@ -78,18 +82,16 @@
                     <a href="#" class="btn btn--primary btn--primary--link">View on Map</a>
                   </div>
                 </div>
-              </div>
-
-              <div class="contact-card margin-top-xxxl">
-                <div class="contact-card__header">Office II</div>
-                <div class="contact-card__body">
+               <div class="details-card margin-top-xxxl@sm margin-top-0@md">
+                <div class="details-card__header">Office II</div>
+                <div class="details-card__body">
                   <div class="flex info">
                     <div>
                       <p>Mail:</p>
                       <p>Address:</p>
                       <p>Phone:</p>
                     </div>
-                    <div class="margin-left-sm">
+                    <div class="margin-left-sm margin-left-xxl@sm">
                       <p>archtwo@mail.com</p>
                       <p>3399 Wines Lane TX</p>
                       <p>832-123-4321</p>
@@ -98,21 +100,31 @@
                     <a href="#" class="btn btn--primary btn--primary--link">View on Map</a>
                 </div>
               </div>
+              </div>
+
+
 
             </div>
           </div>
         </section>
 
         <section class="map">
-          <img src="assets/images/contact/mobile/image-map.png" alt="map showing offices">
+          <div class="container container--full-width container-width@sm">
+            <figure>
+              <img src="assets/images/contact/mobile/image-map.png" alt="map showing offices"
+              sizes="(min-width: 1024px) 1110px, (min-width: 768px) 768px, 375px"
+              srcset="assets/images/contact/desktop/image-map.png 1110w, assets/images/contact/tablet/image-map.png 573w, assets/images/contact/mobile/image-map.png 375w">
+            </figure>
+          </div>
+
         </section>
 
         <section class="connect">
           <div class="container">
-            <h2 class="margin-bottom-lg">Connect <br/>with us</h2>
-
-            <form action="#" class="connect__form">
-              <div class="form__control flow--xxl">
+            <div class="flex@md">
+              <h2 class="margin-bottom-lg margin-right-xl@md">Connect <br/>with us</h2>
+              <form action="#" class="connect__form">
+              <div class="form__control flow--xl">
                 <input type="text" placeholder="Name">
                 <input type="email" name="email" id="email" placeholder="Email">
                 <textarea name="message" id="mesage" rows="3" placeholder="Message"></textarea>
@@ -122,7 +134,8 @@
               </div>
 
 
-            </form>
+              </form>
+            </div>
           </div>
       </section>
     </main>
