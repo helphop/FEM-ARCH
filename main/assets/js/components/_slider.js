@@ -6,7 +6,6 @@ if (elementExists(carousel)) {
   const slider = document.querySelector('.slider');
   const carouselWidth = carousel.offsetWidth;
   const numSlides = slider.childElementCount;
-  const container = document.querySelector('.container-outer');
   let loopTimes = 0;
   let touchstartX = 0;
   let touchendX = 0;
@@ -37,7 +36,7 @@ if (elementExists(carousel)) {
   //set the current button to match the current slide
   //when resize from mobile screen size to desktop
   function resetCarousel() {
-    if (container.offsetWidth > 1024) setCurrentButton(getButtonForSlide(currentSlide.id));
+    if (slider.offsetWidth > 3158) setCurrentButton(getButtonForSlide(currentSlide.id));
   }
 
   function setCurrentButton(button) {
