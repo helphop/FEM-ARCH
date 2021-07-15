@@ -29,7 +29,7 @@
          }
     }
 
-    @include breakpoint(md) {
+    @include breakpoint(lg) {
       .container {
         padding: 13.5625rem 0 0 30.125rem;
         background-size: 40rem; //creates illusion that image is in the shape of the letter 'r'
@@ -55,17 +55,12 @@
 
     .details-card {
       flex-grow: 1;
-      &__header {
-        font-weight: 700;
-      }
+
       &__body {
         display: flex;
         align-items: center;
         flex-wrap: wrap;
         justify-content: space-between;
-        .info {
-          padding: var(--space-md) 0;
-        };
          p {
           line-height: 2;
         }
@@ -78,7 +73,7 @@
       }
     }
 
-    @include breakpoint(md) {
+    @include breakpoint(lg) {
       &__content {
         flex-wrap: nowrap;
         justify-content: space-between;

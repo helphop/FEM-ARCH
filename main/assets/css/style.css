@@ -6851,10 +6851,6 @@ body {
 .container :is(h1, h2, h3) {
   max-width: 10ch; }
 
-@media (min-width: 64rem) {
-  .container p {
-    max-width: 28rem; } }
-
 :root {
   --font-primary: 'Spartan', sans-serif;
   --text-base-size: 0.9375em;
@@ -7118,6 +7114,8 @@ mark {
     display: grid;
     justify-items: start;
     color: var(--color-white); }
+    .slide__content p {
+      max-width: 28rem; }
     .slide__content > a {
       align-self: end; }
 
@@ -7333,7 +7331,7 @@ mark {
     right: 0;
     top: 14.6875rem; } }
 
-@media (min-width: 64rem) {
+@media (min-width: 80rem) {
   .contact .header .container {
     padding: 13.5625rem 0 0 30.125rem;
     background-size: 40rem; }
@@ -7348,15 +7346,11 @@ mark {
 
 .contact .details .details-card {
   flex-grow: 1; }
-  .contact .details .details-card__header {
-    font-weight: 700; }
   .contact .details .details-card__body {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-between; }
-    .contact .details .details-card__body .info {
-      padding: var(--space-md) 0; }
     .contact .details .details-card__body p {
       line-height: 2; }
 
@@ -7365,7 +7359,7 @@ mark {
     flex-grow: 1;
     max-width: 20ch; } }
 
-@media (min-width: 64rem) {
+@media (min-width: 80rem) {
   .contact .details__content {
     flex-wrap: nowrap;
     justify-content: space-between; }

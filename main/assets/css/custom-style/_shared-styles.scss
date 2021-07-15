@@ -48,29 +48,6 @@ body {
   :is(h1,h2,h3) {
     max-width: 10ch;
   }
-
-  @include breakpoint(md) {
-    p {
-      max-width: 28rem;
-    }
-  }
 }
 
-
-//   --component-padding: var(--outer-container-column);
-
-//   @include breakpoint(sm) {
-//     --component-padding: 3.3rem;
-//   }
-
-//   @include breakpoint(md) {
-//     //another way to set the component so that it can be overwritten
-//     --container-padding: 11.875rem;
-//     --component-padding: var(--container-padding);
-
-//     p {
-//       max-width: 28rem;
-//     }
-//   }
-// }
 
