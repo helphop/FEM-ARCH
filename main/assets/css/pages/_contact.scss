@@ -62,6 +62,7 @@
         display: flex;
         align-items: center;
         flex-wrap: wrap;
+        justify-content: space-between;
         .info {
           padding: var(--space-md) 0;
         };
@@ -74,12 +75,6 @@
        h2 {
         flex-grow: 1;
         max-width: 20ch;
-      }
-
-      .details-card {
-        &__body {
-          justify-content: space-between;
-        }
       }
     }
 
