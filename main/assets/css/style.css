@@ -7375,11 +7375,11 @@ mark {
   .contact .details .details-card {
     min-width: 360px; } }
 
-.contact .map img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover; }
+.contact #mapContainer {
+  height: 367px; }
+  @media (min-width: 48rem) {
+    .contact #mapContainer {
+      height: 560px; } }
 
 .contact .connect__form {
   display: grid; }

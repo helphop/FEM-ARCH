@@ -8,6 +8,8 @@
       <link rel="preconnect" href="https://fonts.gstatic.com">
       <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap" rel="stylesheet">
       <link id="codyframe" rel="stylesheet" href="assets/css/style.css">
+      <link rel="stylesheet" href="assets/css/leaflet/leaflet.css" />
+      <script src="assets/js/leaflet/leaflet.js"></script>
       <title>Get Started | CodyFrame</title>
     </head>
     <body class="contact">
@@ -73,13 +75,13 @@
                         <p>Address:</p>
                         <p>Phone:</p>
                       </div>
-                      <div class=" margin-left-sm margin-left-xxl@sm">
+                      <div class="margin-left-sm margin-left-xxl@sm">
                         <p>archone@mail.com</p>
-                        <p>1892 Chenoweth Drive TN</p>
+                        <p id="mainOffice">1892 Chenoweth Drive TN</p>
                         <p>123-456-3451</p>
                       </div>
                     </div>
-                    <a href="#" class="btn btn--primary btn--primary--link">View on Map</a>
+                    <a href="#" class="btn btn--primary btn--primary--link" data-address-id="mainOffice" data-title="Main Office">View on Map</a>
                   </div>
                 </div>
                <div class="details-card margin-top-xxxl@sm margin-top-0@md">
@@ -93,11 +95,11 @@
                     </div>
                     <div class="margin-left-sm margin-left-xxl@sm">
                       <p>archtwo@mail.com</p>
-                      <p>3399 Wines Lane TX</p>
+                      <p id="officeII">3399 Wines Lane TX</p>
                       <p>832-123-4321</p>
                     </div>
                   </div>
-                    <a href="#" class="btn btn--primary btn--primary--link">View on Map</a>
+                    <a href="#" class="btn btn--primary btn--primary--link" data-address-id="officeII" data-title="Office II">View on Map</a>
                 </div>
               </div>
               </div>
@@ -109,14 +111,10 @@
         </section>
 
         <section class="map">
-          <div class="container container--full-width container-width@sm">
-            <figure>
-              <img src="assets/images/contact/mobile/image-map.png" alt="map showing offices"
-              sizes="(min-width: 1024px) 1110px, (min-width: 768px) 768px, 375px"
-              srcset="assets/images/contact/desktop/image-map.png 1110w, assets/images/contact/tablet/image-map.png 573w, assets/images/contact/mobile/image-map.png 375w">
-            </figure>
-          </div>
 
+          <div class="container container--full-width container-width@sm">
+            <div id="mapContainer"></div>
+          </div>
         </section>
 
         <section class="connect">

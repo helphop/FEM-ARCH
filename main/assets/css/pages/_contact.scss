@@ -98,11 +98,11 @@
   }
 
   // Map Section
-  .map {
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+  #mapContainer {
+    height: 367px;
+
+    @include breakpoint(sm) {
+      height: 560px;
     }
   }
 
