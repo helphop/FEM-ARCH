@@ -7353,7 +7353,8 @@ mark {
   .contact .details .details-card__body {
     display: flex;
     align-items: center;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    justify-content: space-between; }
     .contact .details .details-card__body .info {
       padding: var(--space-md) 0; }
     .contact .details .details-card__body p {
@@ -7362,9 +7363,7 @@ mark {
 @media (min-width: 48rem) {
   .contact .details h2 {
     flex-grow: 1;
-    max-width: 20ch; }
-  .contact .details .details-card__body {
-    justify-content: space-between; } }
+    max-width: 20ch; } }
 
 @media (min-width: 64rem) {
   .contact .details__content {
