@@ -7111,8 +7111,7 @@ mark {
     .slide__content h1 {
       color: inherit; }
     .slide__content p {
-      margin-top: var(--space-xs);
-      margin-bottom: var(--space-xxxl); }
+      margin: var(--space-xs) 0 var(--space-xxxl); }
 
 @media (min-width: 48rem) {
   .slide__content {
