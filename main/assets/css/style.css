@@ -7115,8 +7115,8 @@ mark {
     margin-top: var(--space-md); }
 
 @media (min-width: 64rem) {
-  .slide {
-    padding: 180px 470px 180px 190px; }
+  .slide__content {
+    margin: 180px 470px 180px 190px; }
   #slide4 h1 {
     letter-spacing: -6px; }
   .slide-nav {
