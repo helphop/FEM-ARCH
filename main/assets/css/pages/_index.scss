@@ -1,9 +1,9 @@
 
 //HEADER SLIDES
 .slide {
-  padding: 6.875rem 0;
   position: relative;
   background: linear-gradient(alpha(var(--color-black), 0.4),alpha(var(--color-black), 0.4));
+  color: var(--color-white);
 
   img {
     position: absolute;
@@ -16,45 +16,48 @@
   }
 
   &__content {
-    height: 21.25rem;
-    display: grid; //use grid so the spacing for slide content with more text matches the design
-    justify-items: start;
-    color: var(--color-white);
+    padding: 110px var(--container-component-padding);
+
     h1 {
       color: inherit;
     }
     p {
-      max-width: 28rem;
-    }
-    > a {
-      align-self: end;
+      margin: var(--space-xs) 0 var(--space-xxxl);
     }
   }
 }
 
 @include breakpoint(sm) {
+  .slide__content {
+    padding: 180px 55px;
 
-  .slide {
-    padding: 11.25rem 0;
-
-    .slide__content {
-      height: 22.5625rem; //keep height the same for tablet and desktop
+    p {
+      margin-bottom: var(--space-xxxl);
     }
   }
 }
 
-
 @include breakpoint(md) {
+
+  .slide__content {
+  padding: 180px 0 180px 190px;
+  max-width: 690px;
+
+   p {
+     max-width: 466px;
+     margin-bottom: var(--space-lg);
+   }
+  }
 
   .slide-nav {
     position: absolute;
-     border-bottom: 1px solid var(--color-black-lighter);
+    border-bottom: 1px solid var(--color-black-lighter);
     bottom: 0px;
     left: calc(-1 * var(--btn-num-icon-width));
     display: flex;
 
-     button:not(:last-child) {
-       border-right: 1px solid var(--color-black-lighter);
+    button:not(:last-child) {
+      border-right: 1px solid var(--color-black-lighter);
     }
   }
 }
@@ -140,6 +143,7 @@
 // FEATURED SECTION
 
 .featured {
+
   &__main {
   --col-gap: 1.5rem;
   display: grid;
