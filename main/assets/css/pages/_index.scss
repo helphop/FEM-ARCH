@@ -3,6 +3,7 @@
 .slide {
   position: relative;
   background: linear-gradient(alpha(var(--color-black), 0.4),alpha(var(--color-black), 0.4));
+  color: var(--color-white);
 
   img {
     position: absolute;
@@ -14,37 +15,40 @@
     object-fit: cover;
   }
 
-  color: var(--color-white);
-
   &__content {
-    margin: 110px auto;
+    padding: 110px var(--container-component-padding);
+
     h1 {
       color: inherit;
-
     }
-    > a {
-    margin-top: var(--space-md);
+    p {
+      margin-top: var(--space-xs) 0 var(--space-xxxl);
+      margin-bottom:
     }
   }
 }
 
-  @include breakpoint(sm) {
+@include breakpoint(sm) {
+  .slide__content {
+    padding: 180px 55px;
+
+    p {
+      margin-bottom: var(--space-xxxl);
+    }
+  }
+}
+
+@include breakpoint(md) {
 
   .slide__content {
-    margin: 180px 50px;
+  padding: 180px 0 180px 190px;
+  max-width: 690px;
+
+   p {
+     max-width: 466px;
+     margin-bottom: var(--space-lg);
+   }
   }
-
-  }
-
-
-  @include breakpoint(md) {
-
-  .slide__content {
-    margin: 180px 0 180px 190px;
-    max-width: 495px;
-  }
-
-
 
   .slide-nav {
     position: absolute;
@@ -57,7 +61,7 @@
       border-right: 1px solid var(--color-black-lighter);
     }
   }
-  }
+}
 
 
 // WELCOME SECTION
