@@ -37,22 +37,22 @@
   }
 }
 
-.flow--sm > * + *{
+.flow--sm > * + * {
     margin-top: var(--space-sm);
 }
 
-.flow--md > * + *{
+.flow--md > * + * {
     margin-top: var(--space-md);
 }
 
-.flow--lg> * + *{
+.flow--lg> * + * {
     margin-top: var(--space-lg);
 }
 
-.flow--xl > * + *{
+.flow--xl > * + * {
     margin-top: var(--space-xl);
 }
 
-.flow--xxl > * + *{
+.flow--xxl > * + * {
     margin-top: var(--space-xxl);
 }
