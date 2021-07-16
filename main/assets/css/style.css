@@ -7109,17 +7109,21 @@ mark {
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover; }
-  .slide__content h1 {
-    color: inherit; }
-  .slide__content > a {
-    margin-top: var(--space-md); }
+  .slide__content {
+    margin: 110px auto; }
+    .slide__content h1 {
+      color: inherit; }
+    .slide__content > a {
+      margin-top: var(--space-md); }
+
+@media (min-width: 48rem) {
+  .slide__content {
+    margin: 180px 50px; } }
 
 @media (min-width: 64rem) {
   .slide__content {
     margin: 180px 0 180px 190px;
-    max-width: 466px; }
-  #slide4 h1 {
-    letter-spacing: -6px; }
+    max-width: 495px; }
   .slide-nav {
     position: absolute;
     border-bottom: 1px solid var(--color-black-lighter);

@@ -17,7 +17,7 @@
   color: var(--color-white);
 
   &__content {
-
+    margin: 110px auto;
     h1 {
       color: inherit;
 
@@ -30,6 +30,9 @@
 
   @include breakpoint(sm) {
 
+  .slide__content {
+    margin: 180px 50px;
+  }
 
   }
 
@@ -38,14 +41,9 @@
 
   .slide__content {
     margin: 180px 0 180px 190px;
-    max-width: 466px;
+    max-width: 495px;
   }
 
-  #slide4 {
-    h1 {
-      letter-spacing: -6px;
-    }
-  }
 
 
   .slide-nav {
