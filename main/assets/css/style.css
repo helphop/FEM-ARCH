@@ -7116,7 +7116,8 @@ mark {
 
 @media (min-width: 64rem) {
   .slide__content {
-    margin: 180px 470px 180px 190px; }
+    margin: 180px 0 180px 190px;
+    max-width: 466px; }
   #slide4 h1 {
     letter-spacing: -6px; }
   .slide-nav {
