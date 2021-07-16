@@ -7114,6 +7114,8 @@ mark {
     display: grid;
     justify-items: start;
     color: var(--color-white); }
+    .slide__content h1 {
+      color: inherit; }
     .slide__content p {
       max-width: 28rem; }
     .slide__content > a {

@@ -20,6 +20,9 @@
     display: grid; //use grid so the spacing for slide content with more text matches the design
     justify-items: start;
     color: var(--color-white);
+    h1 {
+      color: inherit;
+    }
     p {
       max-width: 28rem;
     }
