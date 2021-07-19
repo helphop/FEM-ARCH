@@ -55,7 +55,7 @@
 
   @include breakpoint(md) {
     &__main {
-      max-width: MIN(65vw, 164rem);
+      max-width: MIN(65vw, 61.5rem);
     }
   }
 
