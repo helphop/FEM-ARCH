@@ -1,4 +1,5 @@
 :root {
+  --paragraph-width: 446px;
   --container-component-padding: var(--space-xxl);
   @include breakpoint(sm) {
     --container-component-padding: 11.45vw;
@@ -43,11 +44,5 @@ body {
   }
 }
 
-
-.container {
-  :is(h1,h2,h3) {
-    // max-width: 10ch;
-  }
-}
 
 
