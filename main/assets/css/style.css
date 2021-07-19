@@ -7549,7 +7549,7 @@ Usage: codyhouse.co/license
       right: 0; } }
   @media (min-width: 64rem) {
     .footer__main {
-      max-width: MIN(65vw, 164rem); } }
+      max-width: MIN(65vw, 61.5rem); } }
   @media (min-width: 80rem) {
     .footer__main {
       gap: 5.375rem; }
