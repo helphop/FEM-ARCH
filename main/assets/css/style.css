@@ -7120,8 +7120,11 @@ mark {
       margin-bottom: var(--space-xxxl); } }
 
 @media (min-width: 64rem) {
+  .slide {
+    padding: 180px 0 180px 190px; }
   .slide__content {
-    padding: 180px 0 180px 190px;
+    padding: 0;
+    max-height: 360px;
     max-width: 690px; }
     .slide__content p {
       max-width: 466px;

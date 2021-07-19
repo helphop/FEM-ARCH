@@ -38,9 +38,12 @@
 }
 
 @include breakpoint(md) {
-
+  .slide {
+    padding: 180px 0 180px 190px;
+  }
   .slide__content {
-  padding: 180px 0 180px 190px;
+  padding: 0;
+  max-height: 360px;
   max-width: 690px;
 
    p {
