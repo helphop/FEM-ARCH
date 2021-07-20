@@ -54,7 +54,7 @@ if (elementExists(carousel)) {
       slideleft();
     }
     //swiped to the right
-    else {
+    else if (touchendX > touchstartX) {
       slideright();
     }
   }
@@ -104,6 +104,7 @@ if (elementExists(carousel)) {
 
   //listen for slide button clicks
   slideNav.addEventListener('click', (event) => {
+
     button = event.target;
     buttonId = lastChar(button.getAttribute('data-slide'));
     slideId = lastChar(currentSlide.id);
@@ -126,6 +127,7 @@ if (elementExists(carousel)) {
 
   //listen for finger gesture start
   slider.addEventListener('touchstart', e => {
+    console.log('touched')
     touchstartX = e.changedTouches[0].screenX;
   });
 
