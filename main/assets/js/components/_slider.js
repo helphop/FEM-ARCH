@@ -138,32 +138,33 @@ if (elementExists(carousel)) {
   });
 
   //listen for when the slide has finished moving
-  slider.addEventListener('transitionend', function() {
+  slider.addEventListener('transitionend', function(e) {
+    //check that it is the transform that has been fired not the button background color or other property
+    if (e.propertyName === "transform") {
+      //makes the slider seem infinite
+      if (direction === 'right') {
+        //move the last element to the start
+        slider.prepend(slider.lastElementChild);
+      } else {
+        //move the first element to the end
+        slider.appendChild(slider.firstElementChild);
+      }
 
-    //makes the slider seem infinite
-    if (direction === 'right') {
-      //move the last element to the start
-      slider.prepend(slider.lastElementChild);
-    } else {
-      //move the first element to the end
-      slider.appendChild(slider.firstElementChild);
+      //stops animating when the transition is put back to 0
+      slider.style.transition = 'none';
+      //reset the slider element to the starting position
+      slider.style.transform = 'translate(0)';
+      //set the slide that is now showing in the viewport
+      setCurrentSlide();
+
+      //delay the setting of the transition and calling the slide function when sliding more than 1 slide
+      setTimeout(() => {
+        //add back the animation of the slider
+        slider.style.transition = 'all 0.5s';
+        //loop moving the slider to get requested slide.  Works when buttons are clicked.
+        loopSlides(direction)
+      })
     }
-
-    //stops animating when the transition is put back to 0
-    slider.style.transition = 'none';
-    //reset the slider element to the starting position
-    slider.style.transform = 'translate(0)';
-    //set the slide that is now showing in the viewport
-    setCurrentSlide();
-
-    //delay the setting of the transition and calling the slide function when sliding more than 1 slide
-    setTimeout(() => {
-      //add back the animation of the slider
-      slider.style.transition = 'all 0.5s';
-      //loop moving the slider to get requested slide.  Works when buttons are clicked.
-      loopSlides(direction)
-    })
-
   }, false);
 
   window.addEventListener("resize",debounce(resetCarousel));
