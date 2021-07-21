@@ -6896,7 +6896,8 @@ h1, .h1 {
       font-size: 5rem; } }
 
 h3 {
-  font-size: 1.125rem; }
+  font-size: 1.125rem;
+  color: inherit; }
 
 .text--huge {
   color: var(--color-black-medium);
@@ -7196,8 +7197,6 @@ mark {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--col-gap); }
-  .featured__main h3 {
-    color: inherit; }
   @media (min-width: 48rem) {
     .featured__main {
       grid-template-columns: 1fr auto;
@@ -7223,10 +7222,6 @@ mark {
 .portfolio .project-cards {
   display: grid;
   gap: 24px; }
-  .portfolio .project-cards .project-card > a:hover img {
-    opacity: 0.6; }
-  .portfolio .project-cards .project-card h3 {
-    color: inherit; }
   @media (min-width: 64rem) {
     .portfolio .project-cards {
       grid-template-columns: repeat(3, 1fr);
@@ -7704,13 +7699,15 @@ Usage: codyhouse.co/license
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover; }
+  .project-card a {
+    color: inherit; }
+    .project-card a:hover img {
+      opacity: 0.6; }
   .project-card .text-component {
     position: absolute;
     --text-offset: 1.5rem;
     left: var(--text-offset);
     bottom: var(--text-offset); }
-  .project-card a {
-    color: inherit; }
   @media (min-width: 48rem) {
     .project-card .text-component {
       --text-offset: 2.5rem; }

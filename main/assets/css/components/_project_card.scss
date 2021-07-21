@@ -5,11 +5,6 @@
   position: relative;
   color: var(--color-white);
 
-  > a:hover img {
-    opacity: 0.6;
-  }
-
-
   &__img {
     filter: brightness(75%);
     width: 100%;
@@ -17,15 +12,18 @@
     object-fit: cover;
   }
 
+   a {
+    color: inherit;
+    &:hover img {
+     opacity: 0.6;
+    }
+  }
+
   .text-component {
     position: absolute;
     --text-offset: 1.5rem;
     left: var(--text-offset);
     bottom: var(--text-offset);
-  }
-
-  a {
-    color: inherit;
   }
 
   @include breakpoint(sm) {
