@@ -7236,7 +7236,13 @@ mark {
     --bg-img-url: url('../images/about/desktop/image-hero.jpg'); } }
 
 .about .heritage .text-component {
-  --text-vspace-multiplier: 2; }
+  --text-vspace-multiplier: 2.5; }
+
+@media (min-width: 48rem) {
+  .about .heritage .text-component {
+    --text-vspace-multiplier: 2; }
+    .about .heritage .text-component h2 {
+      --text-vspace-multiplier: 3; } }
 
 @media (min-width: 64rem) {
   .about .heritage__main {

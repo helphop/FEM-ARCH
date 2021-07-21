@@ -13,7 +13,16 @@
    //HERITAGE SECTION
    .heritage {
       .text-component {
-         --text-vspace-multiplier: 2;
+         --text-vspace-multiplier: 2.5;
+      }
+
+      @include breakpoint(sm) {
+         .text-component {
+            h2 {
+               --text-vspace-multiplier: 3;
+            }
+            --text-vspace-multiplier: 2;
+         }
       }
 
       @include breakpoint(md) {
