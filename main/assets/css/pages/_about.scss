@@ -1,5 +1,5 @@
 .about {
-
+   //Header
    .header-card {
       @include breakpoint(sm) {
          --bg-img-url: url('../images/about/tablet/image-hero.jpg');
@@ -9,8 +9,6 @@
          --bg-img-url: url('../images/about/desktop/image-hero.jpg');
       }
    }
-
-
 
    //HERITAGE SECTION
    .heritage {
@@ -25,12 +23,12 @@
             gap: 15%;
          }
 
-      &__image {
-         background: url(../images/about/desktop/image-heritage.jpg) no-repeat;
-         background-size: cover;
+         &__image {
+            background: url(../images/about/desktop/image-heritage.jpg) no-repeat;
+            background-size: cover;
+         }
       }
    }
-}
 
    //LEADERS SECTION
 

@@ -1,4 +1,5 @@
 .contact {
+  //Header
    .header-card {
       @include breakpoint(sm) {
          --bg-img-url: url('../images/contact/tablet/image-hero.jpg');
