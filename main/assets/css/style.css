@@ -7221,6 +7221,10 @@ mark {
 .portfolio .project-cards {
   display: grid;
   gap: 24px; }
+  .portfolio .project-cards .project-card > a:hover img {
+    opacity: 0.6; }
+  .portfolio .project-cards .project-card h3 {
+    color: inherit; }
   @media (min-width: 64rem) {
     .portfolio .project-cards {
       grid-template-columns: repeat(3, 1fr);
