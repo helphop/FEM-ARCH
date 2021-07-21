@@ -7143,31 +7143,33 @@ mark {
   .welcome .text-component h2 {
     --text-vspace-multiplier: 2.8; }
 
-.welcome p {
-  color: var(--color-primary-light); }
-
 @media (min-width: 48rem) {
-  .welcome__main {
-    padding-top: 50px; }
   .welcome h1 {
     position: absolute;
-    top: -5.5rem;
+    top: -7.5rem;
     left: 0; }
   .welcome .text-component h2 {
     --text-vspace-multiplier: 4; } }
 
 @media (min-width: 64rem) {
-  .welcome__main {
-    background: url(../images/home/desktop/image-welcome.jpg) no-repeat;
-    background-position: right center;
-    background-size: auto 100%;
-    padding: 105px 0 0 189px; }
+  .welcome .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 21.875rem; }
+  .welcome h1 {
+    top: -5.5rem; }
   .welcome .text-component {
+    justify-self: center;
+    margin-top: var(--space-xxl);
+    margin-left: 60px;
     --text-vspace-multiplier: 1.2; }
+    .welcome .text-component h2 {
+      --text-vspace-multiplier: 2.4; }
     .welcome .text-component p {
       max-width: var(--paragraph-width); }
-    .welcome .text-component h2 {
-      --text-vspace-multiplier: 2.4; } }
+  .welcome__img {
+    background: url(../images/home/desktop/image-welcome.jpg) no-repeat;
+    background-position: right center;
+    background-size: cover; } }
 
 .teams__main {
   --bg-image: url(../images/home/mobile/image-small-team.jpg);
