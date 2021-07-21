@@ -1,0 +1,56 @@
+.header-card {
+  --bg-img-url: url('../images/about/tablet/image-hero.jpg');
+
+    &__img {
+    position: relative;
+  }
+
+  .white-box {
+    padding: 22.5px 0;
+    background-color: var(--color-white);
+    width: 343px;
+    position: absolute;
+    bottom: 0.5px;
+  }
+
+  h2 {
+    margin: var(--space-lg) 0 var(--space-sm);
+  }
+
+  @include breakpoint(sm) {
+    .container {
+      background: var(--bg-img-url) no-repeat;
+      background-size: cover;
+      padding: 18rem 0 0 3.625rem;
+      position: relative;
+    }
+    &__content {
+      padding: 5.5rem 0 0 3.6875rem;
+      background: var(--color-white);
+    }
+    h1 {
+      position: absolute;
+      right: 0;
+      top: 14.6875rem;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+  }
+
+  @include breakpoint(lg) {
+    .container {
+      background: var(--bg-img-url) no-repeat;
+      padding: 13.5625rem 0 0 30.125rem;
+    }
+
+    h1 {
+      top: 8.125rem;
+    }
+
+    &__content {
+      padding: 10rem 0 0 11.375rem;
+    }
+  }
+}
