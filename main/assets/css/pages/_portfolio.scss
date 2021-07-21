@@ -4,6 +4,10 @@
     display: grid;
     gap: 24px;
 
+    .project-card h3 {
+      color: inherit;
+    }
+
     @include breakpoint(md) {
       grid-template-columns: repeat(3, 1fr);
       gap: 32px;
