@@ -12,15 +12,18 @@
     object-fit: cover;
   }
 
+   a {
+    color: inherit;
+    &:hover img {
+     opacity: 0.6;
+    }
+  }
+
   .text-component {
     position: absolute;
     --text-offset: 1.5rem;
     left: var(--text-offset);
     bottom: var(--text-offset);
-  }
-
-  a {
-    color: inherit;
   }
 
   @include breakpoint(sm) {
