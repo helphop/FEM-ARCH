@@ -1,51 +1,15 @@
 .about {
-   p {
-      color: var(--color-primary-light);
-   }
 
-   header {
-
-         h2 {
-            margin: var(--space-lg) 0 var(--space-sm);
-         }
-
-        @include breakpoint(sm) {
-         .container {
-            background: url('../images/about/tablet/image-hero.jpg') no-repeat;
-            background-size: cover;
-            padding: 18rem 0 0 3.625rem;
-            position: relative;
-         }
-         .header__content {
-            padding: 5.5rem 0 0 3.6875rem;
-            background: var(--color-white);
-         }
-         h1 {
-            position: absolute;
-            right: 0;
-            top: 14.6875rem;
-         }
-
-         h2 {
-            margin-top: 0;
-         }
+   .header-card {
+      @include breakpoint(sm) {
+         --bg-img-url: url('../images/about/tablet/image-hero.jpg');
       }
 
       @include breakpoint(lg) {
-         .container {
-            padding: 13.5625rem 0 0 30.125rem;
-            background-size: 40rem; //creates illusion that image is in the shape of the letter 'r'
-         }
-
-         h1 {
-            top: 8.125rem;
-         }
-
-         .header__content {
-            padding: 10rem 0 0 11.375rem;
-         }
+         --bg-img-url: url('../images/about/desktop/image-hero.jpg');
       }
    }
+
 
 
    //HERITAGE SECTION

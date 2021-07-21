@@ -7227,36 +7227,13 @@ mark {
       grid-template-columns: repeat(3, 1fr);
       gap: 32px; } }
 
-.about p {
-  color: var(--color-primary-light); }
-
-.about header h2 {
-  margin: var(--space-lg) 0 var(--space-sm); }
-
 @media (min-width: 48rem) {
-  .about header .container {
-    background: url("../images/about/tablet/image-hero.jpg") no-repeat;
-    background-size: cover;
-    padding: 18rem 0 0 3.625rem;
-    position: relative; }
-  .about header .header__content {
-    padding: 5.5rem 0 0 3.6875rem;
-    background: var(--color-white); }
-  .about header h1 {
-    position: absolute;
-    right: 0;
-    top: 14.6875rem; }
-  .about header h2 {
-    margin-top: 0; } }
+  .about .header-card {
+    --bg-img-url: url('../images/about/tablet/image-hero.jpg'); } }
 
 @media (min-width: 80rem) {
-  .about header .container {
-    padding: 13.5625rem 0 0 30.125rem;
-    background-size: 40rem; }
-  .about header h1 {
-    top: 8.125rem; }
-  .about header .header__content {
-    padding: 10rem 0 0 11.375rem; } }
+  .about .header-card {
+    --bg-img-url: url('../images/about/desktop/image-hero.jpg'); } }
 
 .about .heritage .text-component {
   --text-vspace-multiplier: 2; }
@@ -7321,38 +7298,13 @@ mark {
       .about .cards .social:hover img:hover {
         filter: invert(61%) sepia(45%) saturate(1463%) hue-rotate(343deg) brightness(102%) contrast(92%); } }
 
-.contact .header__img {
-  position: relative; }
-
-.contact .header .white-box {
-  padding: 22.5px 0;
-  background-color: var(--color-white);
-  width: 343px;
-  position: absolute;
-  bottom: 0.5px; }
-
 @media (min-width: 48rem) {
-  .contact .header .container {
-    background: url("../images/contact/tablet/image-hero.jpg") no-repeat;
-    background-size: cover;
-    padding: 18rem 0 0 3.625rem;
-    position: relative; }
-  .contact .header .header__content {
-    padding: 5.5rem 0 0 3.6875rem;
-    background: var(--color-white); }
-  .contact .header h1 {
-    position: absolute;
-    right: 0;
-    top: 14.6875rem; } }
+  .contact .header-card {
+    --bg-img-url: url('../images/contact/tablet/image-hero.jpg'); } }
 
 @media (min-width: 80rem) {
-  .contact .header .container {
-    padding: 13.5625rem 0 0 30.125rem;
-    background-size: 40rem; }
-  .contact .header h1 {
-    top: 8.125rem; }
-  .contact .header .header__content {
-    padding: 10rem 0 0 11.375rem; } }
+  .contact .header-card {
+    --bg-img-url: url('../images/contact/desktop/image-hero.jpg'); } }
 
 .contact .details__content {
   display: flex;
@@ -7557,6 +7509,42 @@ Usage: codyhouse.co/license
     .footer__logo {
       --logo-size: 12.5rem;
       padding: 5rem 3rem; } }
+
+.header-card {
+  --bg-img-url: url('../images/about/tablet/image-hero.jpg'); }
+  .header-card__img {
+    position: relative; }
+  .header-card .white-box {
+    padding: 22.5px 0;
+    background-color: var(--color-white);
+    width: 343px;
+    position: absolute;
+    bottom: 0.5px; }
+  .header-card h2 {
+    margin: var(--space-lg) 0 var(--space-sm); }
+  @media (min-width: 48rem) {
+    .header-card .container {
+      background: var(--bg-img-url) no-repeat;
+      background-size: cover;
+      padding: 18rem 0 0 3.625rem;
+      position: relative; }
+    .header-card__content {
+      padding: 5.5rem 0 0 3.6875rem;
+      background: var(--color-white); }
+    .header-card h1 {
+      position: absolute;
+      right: 0;
+      top: 14.6875rem; }
+    .header-card h2 {
+      margin-top: 0; } }
+  @media (min-width: 80rem) {
+    .header-card .container {
+      background: var(--bg-img-url) no-repeat;
+      padding: 13.5625rem 0 0 30.125rem; }
+    .header-card h1 {
+      top: 8.125rem; }
+    .header-card__content {
+      padding: 10rem 0 0 11.375rem; } }
 
 .horizontal-line {
   height: 1px;
