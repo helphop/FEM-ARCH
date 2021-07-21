@@ -7196,6 +7196,8 @@ mark {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--col-gap); }
+  .featured__main h3 {
+    color: inherit; }
   @media (min-width: 48rem) {
     .featured__main {
       grid-template-columns: 1fr auto;

@@ -76,6 +76,7 @@ h1, .h1 {
 
 h3 {
   font-size: 1.125rem
+  color: inherit;
 }
 
 .text--huge {
@@ -128,3 +129,4 @@ mark {
   --body-line-height: 1.58; // set body line-height
   --text-vspace-multiplier: 1.2; // increase vertical spacing
 }
+

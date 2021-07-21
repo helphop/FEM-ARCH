@@ -5,6 +5,11 @@
   position: relative;
   color: var(--color-white);
 
+  > a:hover img {
+    opacity: 0.6;
+  }
+
+
   &__img {
     filter: brightness(75%);
     width: 100%;
