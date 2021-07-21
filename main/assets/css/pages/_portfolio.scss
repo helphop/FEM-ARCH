@@ -4,8 +4,14 @@
     display: grid;
     gap: 24px;
 
-    .project-card h3 {
-      color: inherit;
+    .project-card {
+      > a:hover img {
+        opacity: 0.6;
+      }
+      h3 {
+       color: inherit;
+      }
+
     }
 
     @include breakpoint(md) {
