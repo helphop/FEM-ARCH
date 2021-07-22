@@ -7195,12 +7195,12 @@ mark {
 @media (min-width: 48rem) {
   .teams__main {
     --bg-image: url(../images/home/tablet/image-small-team.jpg);
-    padding: 168px 0 168px var(--element-indent); } }
+    padding: 10.5rem var(--element-indent); } }
 
 @media (min-width: 64rem) {
   .teams__main {
     --bg-image: url(../images/home/desktop/image-small-team.jpg);
-    padding: 168px 0 168px var(--element-indent); } }
+    padding-left: var(--element-indent); } }
 
 .featured__main {
   --col-gap: 1.5rem;

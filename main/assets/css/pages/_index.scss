@@ -141,14 +141,14 @@
   @include breakpoint(sm) {
     &__main {
       --bg-image: url(../images/home/tablet/image-small-team.jpg);
-      padding: 168px 0 168px var(--element-indent);
+      padding: 10.5rem var(--element-indent);
     }
   }
 
   @include breakpoint(md) {
     &__main {
       --bg-image: url(../images/home/desktop/image-small-team.jpg);
-      padding: 168px 0 168px var(--element-indent);
+      padding-left: var(--element-indent);
     }
   }
 }
