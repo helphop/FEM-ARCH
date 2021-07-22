@@ -6936,6 +6936,9 @@ mark {
   --body-line-height: 1.58;
   --text-vspace-multiplier: 1.2; }
 
+.shift-left {
+  margin-left: -5px; }
+
 :root {
   --btn-font-size: 1em;
   --btn-padding-x: 2rem;
@@ -7122,7 +7125,8 @@ mark {
     height: 340px;
     display: grid; }
     .slide__content h1 {
-      color: inherit; }
+      color: inherit;
+      margin-left: -5px; }
     .slide__content a {
       align-self: end;
       justify-self: start; }
@@ -7163,13 +7167,13 @@ mark {
 @media (min-width: 64rem) {
   .welcome .grid-container {
     display: grid;
-    grid-template-columns: 1fr 21.875rem; }
+    grid-template-columns: .6667fr .3333fr; }
   .welcome h1 {
     top: -5.5rem; }
   .welcome .text-component {
     justify-self: center;
     margin-top: var(--space-xxl);
-    margin-left: 60px;
+    margin-left: 80px;
     --text-vspace-multiplier: 1.2; }
     .welcome .text-component h2 {
       --text-vspace-multiplier: 2.4; }

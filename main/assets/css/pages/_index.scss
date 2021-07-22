@@ -31,6 +31,8 @@
 
     h1 {
       color: inherit;
+      margin-left: -5px; //compensate for space in glyph of font
+
     }
 
     a {
@@ -96,7 +98,7 @@
   @include breakpoint(md) {
     .grid-container {
       display: grid;
-      grid-template-columns: 1fr 21.875rem;
+      grid-template-columns: .6667fr .3333fr;
     }
 
     h1 {top: -5.5rem;}
@@ -104,7 +106,7 @@
     .text-component {
       justify-self: center;
       margin-top: var(--space-xxl);
-      margin-left: 60px;
+      margin-left: 80px;
       --text-vspace-multiplier: 1.2;
       h2 { --text-vspace-multiplier: 2.4;}
       p {max-width: var(--paragraph-width);}
@@ -119,7 +121,6 @@
 
 
 // TEAMS SECTION
-
 .teams {
 
   &__main {
