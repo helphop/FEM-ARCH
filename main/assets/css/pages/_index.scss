@@ -1,10 +1,19 @@
+:root {
+  --element-indent: var(--container-component-padding);
+  @include breakpoint(sm) {
+    --element-indent: 3.4375rem;
+  }
 
+  @include breakpoint(md) {
+    --element-indent: 11.875rem;
+  }
+}
 //HEADER SLIDES
 .slide {
   position: relative;
   background: linear-gradient(alpha(var(--color-black), 0.4),alpha(var(--color-black), 0.4));
   color: var(--color-white);
-  padding: 110px var(--container-component-padding);
+  padding: 110px var(--element-indent);
 
   img {
     position: absolute;
@@ -22,6 +31,8 @@
 
     h1 {
       color: inherit;
+      margin-left: -5px; //compensate for space in glyph of font
+
     }
 
     a {
@@ -33,7 +44,7 @@
 
 @include breakpoint(sm) {
   .slide {
-    padding: 180px 55px;
+    padding: 180px var(--element-indent);
     &__content {
       height: 360px;
     }
@@ -42,7 +53,7 @@
 
 @include breakpoint(md) {
   .slide {
-    padding: 180px 0 180px 190px;
+    padding: 180px 0 180px var(--element-indent);
     &__content {
       p {
         max-width: var(--paragraph-width);
@@ -87,7 +98,7 @@
   @include breakpoint(md) {
     .grid-container {
       display: grid;
-      grid-template-columns: 1fr 21.875rem;
+      grid-template-columns: .6667fr .3333fr;
     }
 
     h1 {top: -5.5rem;}
@@ -95,7 +106,7 @@
     .text-component {
       justify-self: center;
       margin-top: var(--space-xxl);
-      margin-left: 60px;
+      margin-left: 80px;
       --text-vspace-multiplier: 1.2;
       h2 { --text-vspace-multiplier: 2.4;}
       p {max-width: var(--paragraph-width);}
@@ -110,7 +121,6 @@
 
 
 // TEAMS SECTION
-
 .teams {
 
   &__main {
@@ -119,9 +129,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     color: var(--color-white);
-    --padding-y: 11.25rem;
-    padding-top: var(--padding-y);
-    padding-bottom: var(--padding-y);
+    padding: 11.25rem var(--element-indent);
 
     .text-component {
       --text-vspace-multiplier: 3;
@@ -134,13 +142,14 @@
   @include breakpoint(sm) {
     &__main {
       --bg-image: url(../images/home/tablet/image-small-team.jpg);
-      --padding-y: 10.5rem;
+      padding: 10.5rem var(--element-indent);
     }
   }
 
   @include breakpoint(md) {
     &__main {
       --bg-image: url(../images/home/desktop/image-small-team.jpg);
+      padding-left: var(--element-indent);
     }
   }
 }
