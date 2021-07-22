@@ -135,43 +135,38 @@
 }
 
 // FEATURED SECTION
-
 .featured {
 
   &__main {
-  --col-gap: 1.5rem;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--col-gap);
-
-  @include breakpoint(sm) {
-    grid-template-columns: 1fr auto;
-    grid-template-areas: "title button"
-                         "cards cards";
-    align-items: center;
-
-    .btn {
-      grid-area: button;
-    }
-  }
-
-  // PROJECT CARDS
-  .project-cards {
-    margin-top: var(--space-xl);
-    display: grid;
-    grid-template-columns: 1fr;
+    --col-gap: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     gap: var(--col-gap);
+    .btn {flex-grow: 1;}
 
     @include breakpoint(sm) {
-      margin-top: var(--space-xxxxl);
-       grid-area: cards;
+      .btn {flex-grow: 0;}
     }
 
-    @include breakpoint(md) {
-      margin-top: var(--space-lg);
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.875rem;
+    // PROJECT CARDS
+    .project-cards {
+      width: 100%;
+      margin-top: var(--space-xl);
+      display: flex;
+      flex-direction: column;
+      gap: var(--col-gap);
+
+      @include breakpoint(sm) {
+        order: 1;
+        margin-top: var(--space-xxxl);
+      }
+
+      @include breakpoint(md) {
+        margin-top: var(--space-lg);
+      flex-direction: row;
+        gap: 1.875rem;
+      }
     }
   }
-}
 }

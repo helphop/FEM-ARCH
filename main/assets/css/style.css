@@ -7207,29 +7207,29 @@ mark {
 
 .featured__main {
   --col-gap: 1.5rem;
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   gap: var(--col-gap); }
+  .featured__main .btn {
+    flex-grow: 1; }
   @media (min-width: 48rem) {
-    .featured__main {
-      grid-template-columns: 1fr auto;
-      grid-template-areas: "title button" "cards cards";
-      align-items: center; }
-      .featured__main .btn {
-        grid-area: button; } }
+    .featured__main .btn {
+      flex-grow: 0; } }
   .featured__main .project-cards {
+    width: 100%;
     margin-top: var(--space-xl);
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     gap: var(--col-gap); }
     @media (min-width: 48rem) {
       .featured__main .project-cards {
-        margin-top: var(--space-xxxxl);
-        grid-area: cards; } }
+        order: 1;
+        margin-top: var(--space-xxxl); } }
     @media (min-width: 64rem) {
       .featured__main .project-cards {
         margin-top: var(--space-lg);
-        grid-template-columns: repeat(3, 1fr);
+        flex-direction: row;
         gap: 1.875rem; } }
 
 .portfolio .project-cards {
