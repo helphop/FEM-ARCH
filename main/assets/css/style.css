@@ -7135,11 +7135,11 @@ mark {
   .slide {
     padding: 11.25rem var(--element-indent); }
     .slide__content {
-      height: 360px; } }
+      height: 22.5rem; } }
 
 @media (min-width: 64rem) {
   .slide {
-    padding: 180px 0 180px var(--element-indent); }
+    padding: 11.25rem 0 11.25rem var(--element-indent); }
     .slide__content p {
       max-width: var(--paragraph-width); }
   .slide-nav {
