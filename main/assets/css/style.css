@@ -7111,7 +7111,7 @@ mark {
   position: relative;
   background: linear-gradient(hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.4), hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.4));
   color: var(--color-white);
-  padding: 110px var(--element-indent); }
+  padding: 6.875rem var(--element-indent); }
   .slide img {
     position: absolute;
     left: 0;
@@ -7122,7 +7122,7 @@ mark {
     -o-object-fit: cover;
        object-fit: cover; }
   .slide__content {
-    height: 340px;
+    height: 21.25rem;
     display: grid; }
     .slide__content h1 {
       color: inherit;
@@ -7133,7 +7133,7 @@ mark {
 
 @media (min-width: 48rem) {
   .slide {
-    padding: 180px var(--element-indent); }
+    padding: 11.25rem var(--element-indent); }
     .slide__content {
       height: 360px; } }
 

@@ -1,50 +1,45 @@
 :root {
   --element-indent: var(--container-component-padding);
-  @include breakpoint(sm) {
-    --element-indent: 3.4375rem;
-  }
-
-  @include breakpoint(md) {
-    --element-indent: 11.875rem;
-  }
+  @include breakpoint(sm) { --element-indent: 3.4375rem;}
+  @include breakpoint(md) { --element-indent: 11.875rem;}
 }
+
 //HEADER SLIDES
 .slide {
   position: relative;
   background: linear-gradient(alpha(var(--color-black), 0.4),alpha(var(--color-black), 0.4));
   color: var(--color-white);
-  padding: 110px var(--element-indent);
+  padding: 6.875rem var(--element-indent);
 
   img {
     position: absolute;
     left: 0;
     top: 0;
     z-index: -1;
-    width: 100%; //make sure img is as wide as its parent
-    height: 100%; //make sure img is as tall as its parent
+    width: 100%;
+    height: 100%;
     object-fit: cover;
   }
 
   &__content {
-    height: 340px;
+    height: 21.25rem;
     display: grid;
 
     h1 {
       color: inherit;
       margin-left: -5px; //compensate for space in glyph of font
-
     }
 
     a {
      align-self: end;
      justify-self: start;
-   }
+    }
   }
 }
 
 @include breakpoint(sm) {
   .slide {
-    padding: 180px var(--element-indent);
+    padding: 11.25rem var(--element-indent);
     &__content {
       height: 360px;
     }
@@ -78,9 +73,7 @@
 .welcome {
   .text-component {
     --text-vspace-multiplier: 2.4;
-    h2 {
-      --text-vspace-multiplier: 2.8;
-    }
+    h2 { --text-vspace-multiplier: 2.8;}
   }
 
   @include breakpoint(sm) {
@@ -89,10 +82,7 @@
       top: -7.5rem;
       left: 0;
     }
-
-    .text-component h2 {
-      --text-vspace-multiplier: 4;
-    }
+    .text-component h2 { --text-vspace-multiplier: 4; }
   }
 
   @include breakpoint(md) {
