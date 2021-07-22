@@ -7219,18 +7219,17 @@ mark {
   .featured__main .project-cards {
     width: 100%;
     margin-top: var(--space-xl);
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     gap: var(--col-gap); }
     @media (min-width: 48rem) {
       .featured__main .project-cards {
         order: 1;
-        margin-top: var(--space-xxxl);
-        grid-area: cards; } }
+        margin-top: var(--space-xxxl); } }
     @media (min-width: 64rem) {
       .featured__main .project-cards {
         margin-top: var(--space-lg);
-        grid-template-columns: repeat(3, 1fr);
+        flex-direction: row;
         gap: 1.875rem; } }
 
 .portfolio .project-cards {
