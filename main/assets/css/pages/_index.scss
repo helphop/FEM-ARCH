@@ -1,10 +1,19 @@
+:root {
+  --element-indent: var(--container-component-padding);
+  @include breakpoint(sm) {
+    --element-indent: 3.4375rem;
+  }
 
+  @include breakpoint(md) {
+    --element-indent: 11.875rem;
+  }
+}
 //HEADER SLIDES
 .slide {
   position: relative;
   background: linear-gradient(alpha(var(--color-black), 0.4),alpha(var(--color-black), 0.4));
   color: var(--color-white);
-  padding: 110px var(--container-component-padding);
+  padding: 110px var(--element-indent);
 
   img {
     position: absolute;
@@ -33,7 +42,7 @@
 
 @include breakpoint(sm) {
   .slide {
-    padding: 180px 55px;
+    padding: 180px var(--element-indent);
     &__content {
       height: 360px;
     }
@@ -42,7 +51,7 @@
 
 @include breakpoint(md) {
   .slide {
-    padding: 180px 0 180px 190px;
+    padding: 180px 0 180px var(--element-indent);
     &__content {
       p {
         max-width: var(--paragraph-width);
@@ -119,9 +128,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     color: var(--color-white);
-    --padding-y: 11.25rem;
-    padding-top: var(--padding-y);
-    padding-bottom: var(--padding-y);
+    padding: 11.25rem var(--element-indent);
 
     .text-component {
       --text-vspace-multiplier: 3;
@@ -134,13 +141,14 @@
   @include breakpoint(sm) {
     &__main {
       --bg-image: url(../images/home/tablet/image-small-team.jpg);
-      --padding-y: 10.5rem;
+      padding: 168px 0 168px var(--element-indent);
     }
   }
 
   @include breakpoint(md) {
     &__main {
       --bg-image: url(../images/home/desktop/image-small-team.jpg);
+      padding: 168px 0 168px var(--element-indent);
     }
   }
 }

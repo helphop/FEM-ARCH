@@ -7095,11 +7095,20 @@ mark {
 .flow--xxl > * + * {
   margin-top: var(--space-xxl); }
 
+:root {
+  --element-indent: var(--container-component-padding); }
+  @media (min-width: 48rem) {
+    :root {
+      --element-indent: 3.4375rem; } }
+  @media (min-width: 64rem) {
+    :root {
+      --element-indent: 11.875rem; } }
+
 .slide {
   position: relative;
   background: linear-gradient(hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.4), hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.4));
   color: var(--color-white);
-  padding: 110px var(--container-component-padding); }
+  padding: 110px var(--element-indent); }
   .slide img {
     position: absolute;
     left: 0;
@@ -7120,13 +7129,13 @@ mark {
 
 @media (min-width: 48rem) {
   .slide {
-    padding: 180px 55px; }
+    padding: 180px var(--element-indent); }
     .slide__content {
       height: 360px; } }
 
 @media (min-width: 64rem) {
   .slide {
-    padding: 180px 0 180px 190px; }
+    padding: 180px 0 180px var(--element-indent); }
     .slide__content p {
       max-width: var(--paragraph-width); }
   .slide-nav {
@@ -7177,9 +7186,7 @@ mark {
   background-size: cover;
   background-repeat: no-repeat;
   color: var(--color-white);
-  --padding-y: 11.25rem;
-  padding-top: var(--padding-y);
-  padding-bottom: var(--padding-y); }
+  padding: 11.25rem var(--element-indent); }
   .teams__main .text-component {
     --text-vspace-multiplier: 3; }
     .teams__main .text-component h2 {
@@ -7188,11 +7195,12 @@ mark {
 @media (min-width: 48rem) {
   .teams__main {
     --bg-image: url(../images/home/tablet/image-small-team.jpg);
-    --padding-y: 10.5rem; } }
+    padding: 168px 0 168px var(--element-indent); } }
 
 @media (min-width: 64rem) {
   .teams__main {
-    --bg-image: url(../images/home/desktop/image-small-team.jpg); } }
+    --bg-image: url(../images/home/desktop/image-small-team.jpg);
+    padding: 168px 0 168px var(--element-indent); } }
 
 .featured__main {
   --col-gap: 1.5rem;
