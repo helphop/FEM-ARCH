@@ -22,7 +22,7 @@
   }
 
   &__content {
-    height: 21.25rem;
+    height: 21.25rem; //need to set a height so that the button does not move when there is more or less text in a slide
     display: grid;
 
     h1 {
@@ -40,20 +40,14 @@
 @include breakpoint(sm) {
   .slide {
     padding: 11.25rem var(--element-indent);
-    &__content {
-      height: 360px;
-    }
+    &__content {height: 22.5rem; }
   }
 }
 
 @include breakpoint(md) {
   .slide {
-    padding: 180px 0 180px var(--element-indent);
-    &__content {
-      p {
-        max-width: var(--paragraph-width);
-      }
-    }
+    padding: 11.25rem 0 11.25rem var(--element-indent);
+    &__content p {max-width: var(--paragraph-width);}
   }
   .slide-nav {
     position: absolute;
@@ -109,23 +103,19 @@
   }
 }
 
-
 // TEAMS SECTION
 .teams {
 
   &__main {
     --bg-image: url(../images/home/mobile/image-small-team.jpg);
-    background-image: linear-gradient(alpha(var(--color-black), 0.527),alpha(var(--color-black), 0.5)),var(--bg-image);
+    background: linear-gradient(alpha(var(--color-black), 0.527),alpha(var(--color-black), 0.5)),var(--bg-image) no-repeat;
     background-size: cover;
-    background-repeat: no-repeat;
     color: var(--color-white);
     padding: 11.25rem var(--element-indent);
 
     .text-component {
       --text-vspace-multiplier: 3;
-      h2 {
-        color: inherit;
-      }
+      h2 {color: inherit; }
     }
   }
 
