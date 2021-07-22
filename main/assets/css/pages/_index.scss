@@ -103,23 +103,19 @@
   }
 }
 
-
 // TEAMS SECTION
 .teams {
 
   &__main {
     --bg-image: url(../images/home/mobile/image-small-team.jpg);
-    background-image: linear-gradient(alpha(var(--color-black), 0.527),alpha(var(--color-black), 0.5)),var(--bg-image);
+    background: linear-gradient(alpha(var(--color-black), 0.527),alpha(var(--color-black), 0.5)),var(--bg-image) no-repeat;
     background-size: cover;
-    background-repeat: no-repeat;
     color: var(--color-white);
     padding: 11.25rem var(--element-indent);
 
     .text-component {
       --text-vspace-multiplier: 3;
-      h2 {
-        color: inherit;
-      }
+      h2 {color: inherit; }
     }
   }
 

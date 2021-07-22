@@ -7186,9 +7186,8 @@ mark {
 
 .teams__main {
   --bg-image: url(../images/home/mobile/image-small-team.jpg);
-  background-image: linear-gradient(hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.527), hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.5)), var(--bg-image);
+  background: linear-gradient(hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.527), hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.5)), var(--bg-image) no-repeat;
   background-size: cover;
-  background-repeat: no-repeat;
   color: var(--color-white);
   padding: 11.25rem var(--element-indent); }
   .teams__main .text-component {
