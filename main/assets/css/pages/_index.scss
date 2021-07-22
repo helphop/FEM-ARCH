@@ -140,30 +140,27 @@
 
   &__main {
   --col-gap: 1.5rem;
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   gap: var(--col-gap);
+  .btn {flex-grow: 1;}
 
   @include breakpoint(sm) {
-    grid-template-columns: 1fr auto;
-    grid-template-areas: "title button"
-                         "cards cards";
-    align-items: center;
-
-    .btn {
-      grid-area: button;
-    }
+    .btn {flex-grow: 0;}
   }
 
   // PROJECT CARDS
   .project-cards {
+    width: 100%;
     margin-top: var(--space-xl);
     display: grid;
     grid-template-columns: 1fr;
     gap: var(--col-gap);
 
     @include breakpoint(sm) {
-      margin-top: var(--space-xxxxl);
+      order: 1;
+      margin-top: var(--space-xxxl);
        grid-area: cards;
     }
 
