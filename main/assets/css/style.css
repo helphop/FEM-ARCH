@@ -7209,6 +7209,7 @@ mark {
   --col-gap: 1.5rem;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: space-between;
   gap: var(--col-gap); }
   .featured__main .btn {

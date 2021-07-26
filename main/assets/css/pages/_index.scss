@@ -141,12 +141,15 @@
     --col-gap: 1.5rem;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: space-between;
     gap: var(--col-gap);
     .btn {flex-grow: 1;}
 
     @include breakpoint(sm) {
-      .btn {flex-grow: 0;}
+      .btn {
+        flex-grow: 0;
+      }
     }
 
     // PROJECT CARDS
@@ -164,7 +167,7 @@
 
       @include breakpoint(md) {
         margin-top: var(--space-lg);
-      flex-direction: row;
+       flex-direction: row;
         gap: 1.875rem;
       }
     }
