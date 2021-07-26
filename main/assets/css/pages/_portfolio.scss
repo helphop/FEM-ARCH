@@ -2,11 +2,11 @@
 
   .project-cards {
     display: grid;
-    gap: 24px;
+    gap: 1.5rem;
 
     @include breakpoint(md) {
       grid-template-columns: repeat(3, 1fr);
-      gap: 32px;
+      gap: 2rem;
     }
   }
 }

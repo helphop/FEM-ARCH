@@ -7235,11 +7235,11 @@ mark {
 
 .portfolio .project-cards {
   display: grid;
-  gap: 24px; }
+  gap: 1.5rem; }
   @media (min-width: 64rem) {
     .portfolio .project-cards {
       grid-template-columns: repeat(3, 1fr);
-      gap: 32px; } }
+      gap: 2rem; } }
 
 @media (min-width: 48rem) {
   .about .header-card {
