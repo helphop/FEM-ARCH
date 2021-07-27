@@ -7269,12 +7269,14 @@ mark {
   .about .cards .card {
     display: grid;
     gap: var(--space-xxs); }
-  .about .cards .card__role {
-    color: hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.75); }
-  .about .cards .social > :first-child {
-    margin-right: var(--space-lg); }
-  .about .cards .social img {
-    width: 2rem; }
+    .about .cards .card h3 {
+      margin-top: var(--space-md); }
+    .about .cards .card__role {
+      color: hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.75); }
+    .about .cards .card .social > :first-child {
+      margin-right: var(--space-lg); }
+    .about .cards .card .social img {
+      width: 2rem; }
 
 @media (min-width: 48rem) {
   .about .cards {
@@ -7295,7 +7297,7 @@ mark {
       grid-row: 1;
       grid-column: 1;
       transition: all 0.4s; }
-    .about .cards .social {
+    .about .cards .card .social {
       grid-row: 1;
       grid-column: 1;
       transition: all 0.2s;
@@ -7303,14 +7305,14 @@ mark {
       display: flex;
       align-items: center;
       justify-content: center; }
-      .about .cards .social img {
+      .about .cards .card .social img {
         transition: all 0.2s;
         width: 2.5rem;
         filter: invert(100%) sepia(96%) saturate(15%) hue-rotate(212deg) brightness(104%) contrast(104%); }
-    .about .cards .social:hover {
+    .about .cards .card .social:hover {
       opacity: 1;
       background-color: hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.5); }
-      .about .cards .social:hover img:hover {
+      .about .cards .card .social:hover img:hover {
         filter: invert(61%) sepia(45%) saturate(1463%) hue-rotate(343deg) brightness(102%) contrast(92%); } }
 
 @media (min-width: 48rem) {
