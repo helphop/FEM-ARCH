@@ -7353,54 +7353,61 @@ mark {
     min-width: 360px; } }
 
 .contact #mapContainer {
-  height: 367px; }
+  padding-block: 11.5rem; }
   @media (min-width: 48rem) {
     .contact #mapContainer {
-      height: 560px; } }
+      padding-block: 17.5rem; } }
 
-.contact .connect__form {
-  display: grid; }
-  .contact .connect__form input,
-  .contact .connect__form textarea {
-    --border-color: var(--color-primary);
-    border: none;
-    width: 100%;
-    border-bottom: 1px solid var(--border-color);
-    padding: 0 0 var(--space-md) var(--space-md);
-    resize: none;
-    font-weight: 700; }
-  .contact .connect__form input:focus,
-  .contact .connect__form textarea:focus {
-    outline: none;
-    border-bottom: 2px solid var(--border-color);
-    margin-bottom: -1px; }
-  .contact .connect__form ::-moz-placeholder {
-    color: var(--color-black-light);
-    font-weight: 700; }
-  .contact .connect__form :-ms-input-placeholder {
-    color: var(--color-black-light);
-    font-weight: 700; }
-  .contact .connect__form ::placeholder {
-    color: var(--color-black-light);
-    font-weight: 700; }
-  .contact .connect__form .form__input {
-    position: relative; }
-    .contact .connect__form .form__input p {
-      position: absolute;
-      bottom: 5px;
-      right: 0;
-      color: var(--color-error); }
-    .contact .connect__form .form__input.error ::-moz-placeholder {
-      color: var(--color-error); }
-    .contact .connect__form .form__input.error :-ms-input-placeholder {
-      color: var(--color-error); }
-    .contact .connect__form .form__input.error ::placeholder {
-      color: var(--color-error); }
-    .contact .connect__form .form__input.error input,
-    .contact .connect__form .form__input.error textarea {
-      --border-color: var(--color-error); }
-  .contact .connect__form .form-action {
-    margin-left: auto; }
+.contact .connect__form input,
+.contact .connect__form textarea {
+  --border-color: var(--color-primary);
+  border: none;
+  width: 100%;
+  border-bottom: 1px solid var(--border-color);
+  padding: 0 0 var(--space-md) var(--space-md);
+  resize: none;
+  font-weight: 700; }
+
+.contact .connect__form input:focus,
+.contact .connect__form textarea:focus {
+  outline: none;
+  border-bottom: 2px solid var(--border-color);
+  margin-bottom: -1px; }
+
+.contact .connect__form ::-moz-placeholder {
+  color: var(--color-black-light);
+  font-weight: 700; }
+
+.contact .connect__form :-ms-input-placeholder {
+  color: var(--color-black-light);
+  font-weight: 700; }
+
+.contact .connect__form ::placeholder {
+  color: var(--color-black-light);
+  font-weight: 700; }
+
+.contact .connect__form .form__input {
+  position: relative; }
+  .contact .connect__form .form__input p {
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+    color: var(--color-error); }
+  .contact .connect__form .form__input.error ::-moz-placeholder {
+    color: var(--color-error); }
+  .contact .connect__form .form__input.error :-ms-input-placeholder {
+    color: var(--color-error); }
+  .contact .connect__form .form__input.error ::placeholder {
+    color: var(--color-error); }
+  .contact .connect__form .form__input.error input,
+  .contact .connect__form .form__input.error textarea {
+    --border-color: var(--color-error); }
+
+.contact .connect__form .form-action {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  margin-left: auto; }
 
 /* -------------------------------- 
 

@@ -54,17 +54,16 @@
 
   // Map Section
   #mapContainer {
-    height: 367px;
+    padding-block: 11.5rem;
 
     @include breakpoint(sm) {
-      height: 560px;
+      padding-block: 17.5rem;
     }
   }
 
   // Connect With Us Section
   .connect {
     &__form {
-      display: grid;
       input,
       textarea {
         --border-color: var(--color-primary);
@@ -106,6 +105,7 @@
         }
       }
       .form-action {
+        width: min-content;
         margin-left: auto;
       }
     }
