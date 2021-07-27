@@ -7154,35 +7154,30 @@ mark {
 .welcome .text-component {
   --text-vspace-multiplier: 2.4; }
   .welcome .text-component h2 {
-    --text-vspace-multiplier: 2.8; }
+    margin-bottom: var(--space-sm); }
 
 @media (min-width: 48rem) {
   .welcome h1 {
     position: absolute;
     top: -7.5rem;
-    left: 0; }
-  .welcome .text-component h2 {
-    --text-vspace-multiplier: 4; } }
+    left: 0; } }
 
 @media (min-width: 64rem) {
-  .welcome .grid-container {
+  .welcome__main {
     display: grid;
-    grid-template-columns: .6667fr .3333fr; }
+    grid-template-columns: 66.66% 1fr;
+    gap: var(--space-xs); }
   .welcome h1 {
     top: -5.5rem; }
   .welcome .text-component {
-    justify-self: center;
-    margin-top: var(--space-xxl);
-    margin-left: 80px;
-    --text-vspace-multiplier: 1.2; }
-    .welcome .text-component h2 {
-      --text-vspace-multiplier: 2.4; }
+    --text-vspace-multiplier: 1.6;
+    margin: var(--space-xxl) var(--space-lg) 0 var(--element-indent); }
     .welcome .text-component p {
       max-width: var(--paragraph-width); }
   .welcome__img {
     background: url(../images/home/desktop/image-welcome.jpg) no-repeat;
-    background-position: right center;
-    background-size: cover; } }
+    background-size: cover;
+    background-position: right center; } }
 
 .teams__main {
   --bg-image: url(../images/home/mobile/image-small-team.jpg);
@@ -7250,22 +7245,23 @@ mark {
     --bg-img-url: url('../images/about/desktop/image-hero.jpg'); } }
 
 .about .heritage .text-component {
-  --text-vspace-multiplier: 2.5; }
-
-@media (min-width: 48rem) {
-  .about .heritage .text-component {
-    --text-vspace-multiplier: 2; }
-    .about .heritage .text-component h2 {
-      --text-vspace-multiplier: 3; } }
+  --text-vspace-multiplier: 2.4; }
+  .about .heritage .text-component h2 {
+    margin-bottom: var(--space-sm); }
 
 @media (min-width: 64rem) {
   .about .heritage__main {
     display: grid;
-    grid-template-columns: 40% 45%;
-    gap: 15%; }
-  .about .heritage__image {
+    grid-template-columns: auto 48.5%;
+    gap: var(--space-xs); }
+  .about .heritage .text-component {
+    --text-vspace-multiplier: 1.6; }
+    .about .heritage .text-component p {
+      max-width: var(--paragraph-width); }
+  .about .heritage__img {
     background: url(../images/about/desktop/image-heritage.jpg) no-repeat;
-    background-size: cover; } }
+    background-size: cover;
+    background-position: right center; } }
 
 .about .cards {
   display: grid;
@@ -7574,6 +7570,9 @@ Usage: codyhouse.co/license
   @media (min-width: 48rem) {
     .horizontal-line {
       --hz-line-spacer: 5rem; } }
+  @media (min-width: 64rem) {
+    .horizontal-line {
+      --hz-line-spacer: 6.5rem; } }
 
 :root {
   --nav-bar-height: 6rem; }
