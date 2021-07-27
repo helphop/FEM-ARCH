@@ -1,3 +1,5 @@
+/* Resets */
+
 *, *::after, *::before {
   box-sizing: inherit;
 }
@@ -67,6 +69,8 @@ img, svg {
   max-width: 100%;
 }
 
+/* spacing */
+
 :root {
   --space-unit:  1em;
 }
@@ -93,88 +97,6 @@ img, svg {
   margin-right: auto;
 }
 
-.grid {
-  --gap: 0px;
-  --gap-x: var(--gap);
-  --gap-y: var(--gap);
-  --offset: var(--gap-x);
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.grid > * {
-  flex-basis: 100%;
-  max-width: 100%;
-  min-width: 0;
-}
-
-/* #region (fallback for older browsers) */
-
-/* #endregion */
-@supports (--css: variables) {
-  .grid {
-    margin-bottom: calc(-1 * var(--gap-y));
-    margin-left: calc(-1 * var(--gap-x));
-  }
-  .grid > * {
-    margin-bottom: var(--gap-y);
-    margin-left: var(--offset);
-  }
-}
-
-@media (min-width: 32rem) {
-}
-
-@media (min-width: 48rem) {
-}
-
-@media (min-width: 64rem) {
-}
-
-@media (min-width: 80rem) {
-}
-
-@media (min-width: 90rem) {
-}
-
-:root {
-  --icon-xxxs: 8px;
-  --icon-xxs:  12px;
-  --icon-xs:   16px;
-  --icon-sm:   24px;
-  --icon-md:   32px;
-  --icon-lg:   48px;
-  --icon-xl:   64px;
-  --icon-xxl:  96px;
-  --icon-xxxl: 128px;
-}
-
-.icon {
-  --size: 1em;
-  display: inline-block;
-  color: inherit;
-  fill: currentColor;
-  height: var(--size);
-  width: var(--size);
-  line-height: 1;
-  flex-shrink: 0;
-  max-width: initial;
-}
-
-@-webkit-keyframes icon-spin {
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes icon-spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 
 :root {
   --zindex-header: 3;
