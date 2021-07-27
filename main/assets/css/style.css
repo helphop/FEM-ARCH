@@ -7557,8 +7557,8 @@ Usage: codyhouse.co/license
       margin-top: 0; } }
   @media (min-width: 80rem) {
     .header-card .container {
-      background: var(--bg-img-url) no-repeat;
-      padding: 13.5625rem 0 0 30.125rem; }
+      padding: 13.5625rem 0 0 30.125rem;
+      background-size: auto; }
     .header-card h1 {
       top: 8.125rem; }
     .header-card__content {

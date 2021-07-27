@@ -41,8 +41,8 @@
 
   @include breakpoint(lg) {
     .container {
-      background: var(--bg-img-url) no-repeat;
       padding: 13.5625rem 0 0 30.125rem;
+      background-size: auto;
     }
 
     h1 {
