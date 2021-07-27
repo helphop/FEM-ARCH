@@ -42,19 +42,19 @@
    .cards {
       display: grid;
       gap: var(--space-xl);
+   }
+   .card {
+      display: grid; //use grid to position grid items on top of each other
+      gap: var(--space-xxs);
+      h3 {margin-top: var(--space-md);}
+      &__role {color: alpha(var(--color-primary), 0.75);}
 
-      .card {
-         display: grid; //use grid to position grid items on top of each other
-         gap: var(--space-xxs);
-         h3 {margin-top: var(--space-md);}
-         &__role {color: alpha(var(--color-primary), 0.75);}
-
-         .social {
-            > :first-child {margin-right: var(--space-lg);}
-            img {width: 2rem;}
-         }
+      .social {
+         > :first-child {margin-right: var(--space-lg);}
+         img {width: 2rem;}
       }
    }
+
 
    @include breakpoint(sm) {
       .cards {
@@ -73,38 +73,38 @@
       .cards {
          row-gap: var(--space-xl);
          column-gap: var(var(--space-sm));
+      }
 
-         .card {
-            &__img {
-               grid-row: 1;
-               grid-column: 1;
-               transition: all 0.4s;
-            }
+      .card {
+         &__img {
+            grid-row: 1;
+            grid-column: 1;
+            transition: all 0.4s;
+         }
 
-            .social {
-               grid-row: 1;
-               grid-column: 1;
+         .social {
+            grid-row: 1;
+            grid-column: 1;
+            transition: all 0.2s;
+            opacity: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
                transition: all 0.2s;
-               opacity: 0;
-               display: flex;
-               align-items: center;
-               justify-content: center;
-               img {
-                  transition: all 0.2s;
-                  width: 2.5rem;
-                  filter: invert(100%) sepia(96%) saturate(15%) hue-rotate(212deg) brightness(104%) contrast(104%);
-               }
-            }
-
-            .social:hover {
-               opacity: 1;
-               background-color: alpha(var(--color-primary), 0.5);
-               img:hover {
-                  filter: invert(61%) sepia(45%) saturate(1463%) hue-rotate(343deg) brightness(102%) contrast(92%);
-               }
+               width: 2.5rem;
+               filter: invert(100%) sepia(96%) saturate(15%) hue-rotate(212deg) brightness(104%) contrast(104%);
             }
          }
 
+         .social:hover {
+            opacity: 1;
+            background-color: alpha(var(--color-primary), 0.5);
+            img:hover {
+               filter: invert(61%) sepia(45%) saturate(1463%) hue-rotate(343deg) brightness(102%) contrast(92%);
+            }
+         }
       }
+
    }
 }

@@ -7266,17 +7266,18 @@ mark {
 .about .cards {
   display: grid;
   gap: var(--space-xl); }
-  .about .cards .card {
-    display: grid;
-    gap: var(--space-xxs); }
-    .about .cards .card h3 {
-      margin-top: var(--space-md); }
-    .about .cards .card__role {
-      color: hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.75); }
-    .about .cards .card .social > :first-child {
-      margin-right: var(--space-lg); }
-    .about .cards .card .social img {
-      width: 2rem; }
+
+.about .card {
+  display: grid;
+  gap: var(--space-xxs); }
+  .about .card h3 {
+    margin-top: var(--space-md); }
+  .about .card__role {
+    color: hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.75); }
+  .about .card .social > :first-child {
+    margin-right: var(--space-lg); }
+  .about .card .social img {
+    width: 2rem; }
 
 @media (min-width: 48rem) {
   .about .cards {
@@ -7293,27 +7294,27 @@ mark {
     row-gap: var(--space-xl);
     -moz-column-gap: var(var(--space-sm));
          column-gap: var(var(--space-sm)); }
-    .about .cards .card__img {
-      grid-row: 1;
-      grid-column: 1;
-      transition: all 0.4s; }
-    .about .cards .card .social {
-      grid-row: 1;
-      grid-column: 1;
+  .about .card__img {
+    grid-row: 1;
+    grid-column: 1;
+    transition: all 0.4s; }
+  .about .card .social {
+    grid-row: 1;
+    grid-column: 1;
+    transition: all 0.2s;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .about .card .social img {
       transition: all 0.2s;
-      opacity: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center; }
-      .about .cards .card .social img {
-        transition: all 0.2s;
-        width: 2.5rem;
-        filter: invert(100%) sepia(96%) saturate(15%) hue-rotate(212deg) brightness(104%) contrast(104%); }
-    .about .cards .card .social:hover {
-      opacity: 1;
-      background-color: hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.5); }
-      .about .cards .card .social:hover img:hover {
-        filter: invert(61%) sepia(45%) saturate(1463%) hue-rotate(343deg) brightness(102%) contrast(92%); } }
+      width: 2.5rem;
+      filter: invert(100%) sepia(96%) saturate(15%) hue-rotate(212deg) brightness(104%) contrast(104%); }
+  .about .card .social:hover {
+    opacity: 1;
+    background-color: hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.5); }
+    .about .card .social:hover img:hover {
+      filter: invert(61%) sepia(45%) saturate(1463%) hue-rotate(343deg) brightness(102%) contrast(92%); } }
 
 @media (min-width: 48rem) {
   .contact .header-card {
