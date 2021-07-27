@@ -145,9 +145,7 @@
     .btn {flex-grow: 1;}
 
     @include breakpoint(sm) {
-      .btn {
-        flex-grow: 0;
-      }
+      .btn {flex-grow: 0;}
     }
 
     // PROJECT CARDS
