@@ -1,3 +1,118 @@
+
+//==================================================FORM VALIDATION=============================================
+
+const connectForm = document.querySelector('.connect__form');
+
+if(elementExists(connectForm)) {
+  const submitButton = document.querySelector('button[type="submit"]');
+  const errorElement = `<p class='error-message'>Can't be empty</p>`;
+  const formInputs = [...connectForm.elements];
+  //remove the last element which is the button
+  formInputs.pop()
+
+  formInputs.forEach(formInput => formInput.addEventListener('input', (e) => validateInput(formInput)));
+  formInputs.forEach(formInput => formInput.addEventListener('focusout', (e) => validateInput(formInput)));
+
+  submitButton.addEventListener('click', (e)=> {
+    e.preventDefault();
+    formInputs.forEach(formInput => validateInput(formInput))
+  })
+
+  function validateInput(formInput) {
+      const errorMessage = formInput.parentNode.querySelector('.error-message');
+      if (formInput.value.trim() === "" && !errorMessage) {
+       formInput.insertAdjacentHTML('afterend', errorElement);
+       formInput.parentNode.classList.add('error');
+      } else if (formInput.value.trim() !== "" && errorMessage) {
+        formInput.parentNode.classList.remove('error');
+        errorMessage.remove();
+      }
+  }
+}
+
+//==========================================================MAP CREATION========================================================
+
+const map = document.getElementById('mapContainer')
+
+if (elementExists(map)) {
+  //location coordinates
+	const coordinatesTen = [36.17006, -86.78382];
+  const coordinatesTex = [32.51935, -94.474008];
+  const coordinatesUSA = [34.91735, -90.92906];
+  const details = document.querySelector('.details');
+	const mapUSA = L.map('mapContainer').setView(coordinatesUSA, 5.5);
+	const markerTen = L.marker(coordinatesTen).addTo(mapUSA);
+  const markerTex = L.marker(coordinatesTex).addTo(mapUSA);
+
+	createMapTile(mapUSA);
+	setMapControl(mapUSA);
+
+  function createMapTile(mapName) {
+			L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+			attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+			maxZoom: 10,
+			tileSize: 512,
+			zoomOffset: -1,
+		}).addTo(mapName);
+	}
+
+  //disable scroll zoom until user clicks on map
+	function setMapControl(mapName){
+			mapName.scrollWheelZoom.disable();
+			mapName.on('focus', () => { mapName.scrollWheelZoom.enable(); });
+			mapName.on('blur', () => { mapName.scrollWheelZoom.disable(); });
+	}
+
+  function openMarkerPopup(marker, address, title) {
+    marker.bindPopup(`<span class='font-bold'>${title}</span><br>${address}.`).openPopup();
+  }
+
+  details.addEventListener('click', (e) => {
+    e.preventDefault()
+    link = e.target;
+    addressId = link.dataset.addressId;
+    address = document.getElementById(addressId).textContent;
+    title = document.getElementById(link.dataset.titleId).textContent;
+    marker = addressId === "mainOffice" ? markerTen : markerTex;
+    openMarkerPopup(marker, address, title);
+  })
+}
+
+//=========================================================NAVIGATION============================================
+
+const navigation = document.querySelector('.navigation');
+const navIcon = document.querySelector('.nav-icon');
+const nav = document.querySelector('.nav');
+
+navIcon.addEventListener('click', () => toggleNavigation())
+
+// listen for key events
+window.addEventListener('keyup', function(event){
+  // listen for esc key
+  if( keyPressed(event, 27, 'escape') && navigationOpen()) {
+    toggleNavigation();
+  } else if (keyPressed(event, 36, 'enter') && !navigationOpen()) {
+    toggleNavigation();
+  }
+});
+
+//close or open the navigation and change aria-expanded state
+const toggleNavigation = () => {
+  navigation.classList.toggle('open');
+  navIcon.setAttribute('aria-expanded', navigationOpen());
+  nav.hidden = !nav.hidden;
+};
+
+//check if navigation is open
+const navigationOpen = () => navigation.classList.contains('open') ? true : false;
+
+//check if key has been pressed
+const keyPressed = (event, key, label) => (event.key && event.key == key) || (event.key && event.key.toLowerCase() == label)
+
+
+
+//===========================================================CAROUSEL=================================================================
+
 const carousel = document.querySelector('.carousel');
 
 if (elementExists(carousel)) {
@@ -168,4 +283,30 @@ if (elementExists(carousel)) {
 
   window.addEventListener("resize",debounce(resetCarousel));
 
+}
+
+//===============================================UTILITY FUNCTIONS======================================================
+
+//Capitalizes the first letter of a string
+const capitalizeFirstLetter = (string) =>  string.charAt(0).toUpperCase() + string.slice(1);
+
+
+//slow down the execution of some function
+function debounce(func, delay=200){
+  var timer;
+  return function(event){
+    if(timer) clearTimeout(timer);
+    timer = setTimeout(func,delay,event);
+  };
+}
+
+//returns true if the slides left side location matches the carousel's left side location
+const isInViewport = (element1, element2) => (element1.getBoundingClientRect().left === element2.getBoundingClientRect().left);
+
+//returns the last character in a given string
+const lastChar = (str) => str.charAt(str.length - 1);
+
+//used to detect if element is present on page
+function elementExists(elem) {
+  return (typeof(elem) != 'undefined' && elem != null)
 }

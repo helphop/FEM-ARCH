@@ -1,0 +1,159 @@
+<!doctype html>
+  <html lang="en">
+
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <script>document.getElementsByTagName("html")[0].className += " js";</script>
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap" rel="stylesheet">
+      <link id="codyframe" rel="stylesheet" href="assets/css/style.css">
+      <link rel="stylesheet" href="assets/css/leaflet/leaflet.css" />
+      <script src="assets/js/leaflet/leaflet.js"></script>
+      <title>Get Started | CodyFrame</title>
+    </head>
+    <body class="contact">
+
+      <div class="container position-relative">
+        <div class="vertical-content display@sm">
+          <div class="vertical-content__line"></div>
+          <div class="vertical-content__text text-uppercase">About</div>
+        </div>
+      </div>
+
+      <section class="navigation">
+        <div class="container">
+          <div class="overlay hide@sm" aria-hidden="true"></div>
+          <div class="nav-bar">
+            <a href="/"><img class="nav-bar__logo" src="assets/images/logo.svg" alt="arch logo"></a>
+            <nav class="nav" id="nav-items" hidden>
+              <a href="portfolio.html" class="nav-link">Portfolio</a>
+              <a href="about.html" class="nav-link">About Us</a>
+              <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <button class="nav-icon hide@sm" aria-expanded="false" aria-controls="nav-items"></button>
+          </div>
+        </div>
+        </div>
+      </section>
+
+      <header class="header-card margin-top-menu">
+        <div class="header-card__img">
+          <img src="assets/images/contact/mobile/image-hero.jpg" class="width-100% block hide@sm" alt="">
+          <div class="white-box hide@sm"></div>
+        </div>
+        <div class="container">
+          <div class="header-card__content">
+            <h1 class="text--huge display@sm">Contact</h1>
+            <div class="horizontal-line display@sm"></div>
+            <h2>Tell us about your project</h2>
+            <p>We’d love to hear more about your project. Please, leave a message below or give
+            us a call. We have two offices, one in Texas and one in Tennessee. If you find
+            yourself nearby, come say hello!
+            </p>
+          </div>
+        </div>
+      </header>
+
+      <main class="flow-content">
+
+        <section class="details">
+          <div class="container">
+            <div class="horizontal-line"></div>
+            <div class="details__content">
+
+              <h2 class="margin-bottom-lg margin-right-xxs@md">Contact Details</h2>
+
+              <div class="details-card">
+                <div class="font-bold" id="mainTitle">Main Office</div>
+                  <div class="details-card__body">
+                    <div class="flex padding-y-md margin-right-sm">
+                      <div>
+                        <p>Mail:</p>
+                        <p>Address:</p>
+                        <p>Phone:</p>
+                      </div>
+                      <div class="margin-left-sm margin-left-xxl@sm">
+                        <p>archone@mail.com</p>
+                        <p class="ws-nowrap" id="mainOffice">1892 Chenoweth Drive TN</p>
+                        <p>123-456-3451</p>
+                      </div>
+                    </div>
+                    <a href="#" class="btn btn--primary btn--primary--link" data-address-id="mainOffice" data-title-id="mainTitle">View on Map</a>
+                  </div>
+              </div>
+              <div class="details-card margin-top-xxxl margin-top-0@md">
+                <div class="font-bold" id="officeTitle">Office II</div>
+                <div class="details-card__body">
+                  <div class="flex padding-y-md margin-right-sm">
+                    <div>
+                      <p>Mail:</p>
+                      <p>Address:</p>
+                      <p>Phone:</p>
+                    </div>
+                    <div class="margin-left-sm margin-left-xxl@sm">
+                      <p>archtwo@mail.com</p>
+                      <p id="officeII">3399 Wines Lane TX</p>
+                      <p>832-123-4321</p>
+                    </div>
+                  </div>
+                    <a href="#" class="btn btn--primary btn--primary--link" data-address-id="officeII" data-title-id="officeTitle">View on Map</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <section class="map">
+
+          <div class="container container--full-width container-width@sm">
+            <div id="mapContainer"></div>
+          </div>
+        </section>
+
+        <section class="connect">
+          <div class="container">
+            <div class="flex@md">
+              <h2 class="margin-bottom-lg margin-right-xl@md">Connect <br/>with us</h2>
+
+              <form action="#" class="connect__form flex-grow@md">
+              <div class="form__control flow--xl">
+                <div class="form__input">
+                  <input type="text" placeholder="Name">
+                </div>
+                <div class="form__input">
+                  <input type="email" name="email" id="email" placeholder="Email">
+                </div>
+                <div class="form__input">
+                  <textarea name="message" id="mesage" rows="3" placeholder="Message"></textarea>
+                </div>
+              </div>
+              <div class="form-action">
+                <button type="submit" class="btn btn--icon"></button>
+              </div>
+
+
+              </form>
+            </div>
+          </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container container--full-width container-width@md position-relative">
+        <div class="footer__main">
+          <div class="footer__logo">
+            <img src="assets/images/logo.svg" alt="logo white">
+          </div>
+          <nav class="footer__nav">
+            <a href="portfolio.html" class="nav-link">Portfolio</a>
+            <a href="about.html" class="nav-link">About Us</a>
+            <a href="contact.html" class="nav-link">contact</a>
+          </nav>
+          <a href="portfolio.html" class="btn btn--primary--dark">See Our Portfolio</a>
+        </div>
+      </div>
+    </footer>
+    <script src="assets/js/scripts.js"></script>
+  </body>
+</html>

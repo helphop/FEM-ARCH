@@ -21,12 +21,12 @@ if (elementExists(map)) {
     addressId = link.dataset.addressId;
     address = document.getElementById(addressId).textContent;
     title = document.getElementById(link.dataset.titleId).textContent;
-    marker = addressId === "mainOffice" ? "markerTen" : "markerTex";
+    marker = addressId === "mainOffice" ? markerTen : markerTex;
     openMarkerPopup(marker, address, title);
   })
 
   function openMarkerPopup(marker, address, title) {
-    eval(marker).bindPopup(`<span class='font-bold'>${title}</span><br>${address}.`).openPopup();
+    marker.bindPopup(`<span class='font-bold'>${title}</span><br>${address}.`).openPopup();
   }
 
   function createMapTile(mapName) {

@@ -37,12 +37,6 @@
 
 @supports(--css: variables) {
 
-  h1 {
-    font-size: 3rem;
-  }
-
-
-
   @include breakpoint(sm) {
     :root {
       --text-base-size: 0.9375em;
@@ -52,6 +46,7 @@
 }
 
 body {
+  font-size: var(--text-base-size, 1em);
   font-family: var(--font-primary);
   font-weight: 500;
   line-height: var(--body-line-height);
@@ -60,6 +55,8 @@ body {
 h1, h2, h3, h4 {
   font-family: var(--font-primary);
   font-weight: 700;
+  line-height: var(--heading-line-height, 1.2);
+   color: var(--color-contrast-higher, hsl(240, 8%, 12%));
 }
 
 // font family
@@ -72,6 +69,10 @@ h1, .h1 {
   @include breakpoint(sm) {
     font-size: 5rem;
   }
+}
+
+h2 {
+    font-size: var(--text-xl, 1.728em);
 }
 
 h3 {
@@ -133,3 +134,118 @@ mark {
 .shift-left {
   margin-left: -5px;
 }
+
+a, .link {
+  color: var(--color-primary, hsl(220, 90%, 56%));
+  text-decoration: none;
+}
+
+  .text-component {
+    h1, h2, h3, h4 {
+      line-height: calc(var(--heading-line-height) * var(--line-height-multiplier, 1));
+      margin-bottom: calc(var(--space-unit) * 0.25 * var(--text-vspace-multiplier, 1));
+    }
+
+    h2, h3, h4 {
+      margin-top: calc(var(--space-unit) * 0.75 * var(--text-vspace-multiplier, 1));
+    }
+
+    p, blockquote, ul li, ol li {
+      line-height: calc(var(--body-line-height) * var(--line-height-multiplier, 1));
+    }
+
+    ul, ol, p, blockquote, .text-component__block {
+      margin-bottom: calc(var(--space-unit) * 0.75 * var(--text-vspace-multiplier, 1));
+    }
+
+    ul, ol {
+      list-style-position: inside;
+    }
+
+    ul {
+      list-style-type: disc;
+    }
+
+    ol {
+      list-style-type: decimal;
+    }
+
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+
+    figcaption {
+      text-align: center;
+      margin-top: calc(var(--space-unit) * 0.5);
+    }
+
+    em {
+      font-style: italic;
+    }
+
+    hr {
+      margin-top: calc(var(--space-unit) * var(--text-vspace-multiplier, 1));
+      margin-bottom: calc(var(--space-unit) * var(--text-vspace-multiplier, 1));
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    > *:first-child {
+      margin-top: 0;
+    }
+
+    > *:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  // text block container
+  .text-component__block--full-width {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+  }
+
+  @include breakpoint(sm) {
+    .text-component__block--left,
+    .text-component__block--right {
+      width: 45%;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .text-component__block--left {
+      float: left;
+      margin-right: calc(var(--space-unit) * 0.75 * var(--text-vspace-multiplier, 1));
+    }
+
+    .text-component__block--right {
+      float: right;
+      margin-left: calc(var(--space-unit) * 0.75 * var(--text-vspace-multiplier, 1));
+    }
+  }
+
+  // outset content
+  @include breakpoint(xl) {
+    .text-component__block--outset {
+      width: calc(100% + 10.5 * var(--space-unit));
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .text-component__block--outset:not(.text-component__block--right) {
+      margin-left: calc(-5.25 * var(--space-unit));
+    }
+
+    .text-component__block--left, .text-component__block--right {
+      width: 50%;
+    }
+
+    .text-component__block--right.text-component__block--outset {
+      margin-right: calc(-5.25 * var(--space-unit));
+    }
+  }

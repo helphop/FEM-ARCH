@@ -30,7 +30,7 @@ function reload(done) {
 gulp.task('sass', function() {
   return gulp.src(scssFilesPath)
   .pipe(sassGlob())
-  .pipe(sass({outputStyle: 'extended'}).on('error', sass.logError))
+  .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
   .pipe(postcss([autoprefixer()]))
   .pipe(gulp.dest(cssFolder))
   .pipe(browserSync.reload({
@@ -42,7 +42,7 @@ gulp.task('sass', function() {
 gulp.task('sass-ie', function() {
   return gulp.src(scssFilesPath)
   .pipe(sassGlob())
-  .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+  .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
   .pipe(postcss([autoprefixer()]))
   .pipe(gulp.dest(cssFolder))
   .pipe(browserSync.reload({
@@ -132,7 +132,7 @@ function purgeCSS() {
 function minifyJs() {
   return new Promise(function(resolve, reject) {
     var stream = gulp.src(scriptsJsPath+'/scripts.js')
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(gulp.dest(distFolder+'/assets/js'));
 
     stream.on('finish', function() {
