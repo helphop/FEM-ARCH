@@ -13,28 +13,26 @@
    //HERITAGE SECTION
    .heritage {
       .text-component {
-         --text-vspace-multiplier: 2.5;
-      }
-
-      @include breakpoint(sm) {
-         .text-component {
-            h2 {
-               --text-vspace-multiplier: 3;
-            }
-            --text-vspace-multiplier: 2;
-         }
+         --text-vspace-multiplier: 2.4;
+         h2 { margin-bottom: var(--space-sm); }
       }
 
       @include breakpoint(md) {
          &__main {
            display: grid;
-            grid-template-columns: 40% 45%;
-            gap: 15%;
+            grid-template-columns: auto 48.5%;
+            gap: var(--space-xs);
          }
 
-         &__image {
+         .text-component {
+             --text-vspace-multiplier: 1.6;
+            p {max-width: var(--paragraph-width);}
+         }
+
+         &__img {
             background: url(../images/about/desktop/image-heritage.jpg) no-repeat;
             background-size: cover;
+            background-position: right center;
          }
       }
    }
@@ -77,7 +75,6 @@
       .leaders__main {
          display: grid;
          grid-template-columns: 0.3333fr 0.6666667fr;
-         justify-content: space-between;
       }
 
       .cards {

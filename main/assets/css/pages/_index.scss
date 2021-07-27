@@ -67,7 +67,7 @@
 .welcome {
   .text-component {
     --text-vspace-multiplier: 2.4;
-    h2 { --text-vspace-multiplier: 2.8;}
+    h2 { margin-bottom: var(--space-sm); }
   }
 
   @include breakpoint(sm) {
@@ -76,29 +76,27 @@
       top: -7.5rem;
       left: 0;
     }
-    .text-component h2 { --text-vspace-multiplier: 4; }
   }
 
   @include breakpoint(md) {
-    .grid-container {
+    &__main {
       display: grid;
-      grid-template-columns: .6667fr .3333fr;
+      grid-template-columns: 66.66% 1fr;
+      gap: var(--space-xs);
     }
 
     h1 {top: -5.5rem;}
 
     .text-component {
-      justify-self: center;
-      margin-top: var(--space-xxl);
-      margin-left: 80px;
-      --text-vspace-multiplier: 1.2;
-      h2 { --text-vspace-multiplier: 2.4;}
+      --text-vspace-multiplier: 1.6;
       p {max-width: var(--paragraph-width);}
+      margin: var(--space-xxl) var(--space-lg) 0 var(--element-indent);
     }
+
     &__img {
       background: url(../images/home/desktop/image-welcome.jpg) no-repeat;
-      background-position: right center;
       background-size: cover;
+      background-position: right center;
     }
   }
 }
@@ -147,9 +145,7 @@
     .btn {flex-grow: 1;}
 
     @include breakpoint(sm) {
-      .btn {
-        flex-grow: 0;
-      }
+      .btn {flex-grow: 0;}
     }
 
     // PROJECT CARDS
