@@ -7286,8 +7286,7 @@ mark {
 @media (min-width: 64rem) {
   .about .leaders__main {
     display: grid;
-    grid-template-columns: 0.3333fr 0.6666667fr;
-    justify-content: space-between; }
+    grid-template-columns: 0.3333fr 0.6666667fr; }
   .about .cards {
     row-gap: var(--space-xl);
     -moz-column-gap: var(var(--space-sm));
