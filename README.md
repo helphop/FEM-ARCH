@@ -44,7 +44,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github for Solution](https://github.com/helphop/FEM-ARCH)
-- Live Site URL: [Live Site](https://frm-arch-fem.vercel.app)
+- Live Site URL: [Live Site](https://frm-arch.vercel.app)
 
 ## My process
 I use Trello to organize my work.  I find it helps to have a list of what I need to do and what I'm working on so that if I am away from the project for a few days I can see where I left off and what still needs to be done.
@@ -135,6 +135,9 @@ I really like the way it works.
 
 The coding of the slides was really difficult.  I had to dive deep into how the grid works and the grid container.
 I have created a sort of plugin that works as long as the html elements are present.
+
+Please note to see how the mobile carousel works you will need to enable touch simulation.
+Sometimes you need  to reload the page when you activate it on some browsers.
 
 ```js
 const carousel = document.querySelector('.carousel');
