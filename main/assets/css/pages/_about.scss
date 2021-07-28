@@ -96,7 +96,6 @@
                filter: invert(100%) sepia(96%) saturate(15%) hue-rotate(212deg) brightness(104%) contrast(104%);
             }
          }
-
          .social:hover {
             opacity: 1;
             background-color: alpha(var(--color-primary), 0.5);
@@ -105,6 +104,6 @@
             }
          }
       }
-
    }
+
 }
