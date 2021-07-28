@@ -337,6 +337,6 @@ I am currently enrolled in Kevin Powell's Flexbox Simplified course.  I am still
 
 
 ## Author
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@helphop](https://www.frontendmentor.io/profile/helphop)
 
 
