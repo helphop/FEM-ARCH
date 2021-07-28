@@ -1,5 +1,5 @@
 
-//==================================================FORM VALIDATION=============================================
+//add event listeners
 
 const connectForm = document.querySelector('.connect__form');
 
@@ -29,23 +29,36 @@ if(elementExists(connectForm)) {
       }
   }
 }
-
-//==========================================================MAP CREATION========================================================
-
 const map = document.getElementById('mapContainer')
 
 if (elementExists(map)) {
-  //location coordinates
+  //Toronto Map
 	const coordinatesTen = [36.17006, -86.78382];
   const coordinatesTex = [32.51935, -94.474008];
   const coordinatesUSA = [34.91735, -90.92906];
   const details = document.querySelector('.details');
+
 	const mapUSA = L.map('mapContainer').setView(coordinatesUSA, 5.5);
+	createMapTile(mapUSA);
 	const markerTen = L.marker(coordinatesTen).addTo(mapUSA);
   const markerTex = L.marker(coordinatesTex).addTo(mapUSA);
 
-	createMapTile(mapUSA);
+  //Setup how the user interacts with the map
 	setMapControl(mapUSA);
+
+  details.addEventListener('click', (e) => {
+    e.preventDefault()
+    link = e.target;
+    addressId = link.dataset.addressId;
+    address = document.getElementById(addressId).textContent;
+    title = document.getElementById(link.dataset.titleId).textContent;
+    marker = addressId === "mainOffice" ? markerTen : markerTex;
+    openMarkerPopup(marker, address, title);
+  })
+
+  function openMarkerPopup(marker, address, title) {
+    marker.bindPopup(`<span class='font-bold'>${title}</span><br>${address}.`).openPopup();
+  }
 
   function createMapTile(mapName) {
 			L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -63,23 +76,7 @@ if (elementExists(map)) {
 			mapName.on('blur', () => { mapName.scrollWheelZoom.disable(); });
 	}
 
-  function openMarkerPopup(marker, address, title) {
-    marker.bindPopup(`<span class='font-bold'>${title}</span><br>${address}.`).openPopup();
-  }
-
-  details.addEventListener('click', (e) => {
-    e.preventDefault()
-    link = e.target;
-    addressId = link.dataset.addressId;
-    address = document.getElementById(addressId).textContent;
-    title = document.getElementById(link.dataset.titleId).textContent;
-    marker = addressId === "mainOffice" ? markerTen : markerTex;
-    openMarkerPopup(marker, address, title);
-  })
 }
-
-//=========================================================NAVIGATION============================================
-
 const navigation = document.querySelector('.navigation');
 const navIcon = document.querySelector('.nav-icon');
 const nav = document.querySelector('.nav');
@@ -108,10 +105,6 @@ const navigationOpen = () => navigation.classList.contains('open') ? true : fals
 
 //check if key has been pressed
 const keyPressed = (event, key, label) => (event.key && event.key == key) || (event.key && event.key.toLowerCase() == label)
-
-
-
-//===========================================================CAROUSEL=================================================================
 
 const carousel = document.querySelector('.carousel');
 
@@ -284,8 +277,6 @@ if (elementExists(carousel)) {
   window.addEventListener("resize",debounce(resetCarousel));
 
 }
-
-//===============================================UTILITY FUNCTIONS======================================================
 
 //Capitalizes the first letter of a string
 const capitalizeFirstLetter = (string) =>  string.charAt(0).toUpperCase() + string.slice(1);
