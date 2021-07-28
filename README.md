@@ -38,6 +38,9 @@ Users should be able to:
 ### Screenshot
 
 ![Index Page](./index.png)
+![Portfolio Page](./portfolio.png)
+![About Page](./about.png)
+![Contact Page](./contact.png)
 ### Links
 
 - Solution URL: [Github for Solution](https://github.com/helphop/FEM-ARCH)
