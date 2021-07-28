@@ -47,9 +47,9 @@ Users should be able to:
 - Live Site URL: [Live Site](https://frm-arch-fem.vercel.app)
 
 ## My process
-I use trello to organize my work.  I find it helps to have a list of what I need to do and what I'm working on so that if I am away from the project for a few days I can see where I left off and what still needs to be done.
+I use Trello to organize my work.  I find it helps to have a list of what I need to do and what I'm working on so that if I am away from the project for a few days I can see where I left off and what still needs to be done.
 
-I examine the entire site in Sketch looking for any reusable elements that may become a component.  I take note of these elements in trello.
+I examine the entire site in Sketch looking for any reusable elements that may become a component.  I take note of these elements in Trello.
 
 Then I examine the style guide and use it to setup my project in the Codyhouse Framework. They have a fantastic interface to set your spacing, typography, forms, buttons and a lot of excellent utilities.  The files they create are very small and the codebase is very well organized.  This gives me a good base from which to build.  The utilities really speed development and with everything organized into different scss files such as colors, forms, breakpoints, spacing etc its easy to find your way around.
 
